@@ -1,0 +1,5 @@
+node_modules/
+datasworn/
+dist/
+.DS_Store
+
