@@ -1,0 +1,25 @@
+{
+  "name": "@datasworn-community/community-content",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Org-supported Datasworn community content packages.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datasworn-community/community-content.git"
+  },
+  "scripts": {
+    "build": "datasworn-build --config datasworn.config.yaml",
+    "validate": "test -f dist/packages/starsmith/package.json && test -f dist/packages/starsmith/json/starsmith.json && test -f dist/packages/fe_runners/package.json && test -f dist/packages/fe_runners/json/fe_runners.json && test -f dist/packages/ironsmith/package.json && test -f dist/packages/ironsmith/json/ironsmith.json && test -f dist/packages/ancient_wonders/package.json && test -f dist/packages/ancient_wonders/json/ancient_wonders.json && test -f generated-datasworn/manifest.json && test -f generated-datasworn/starsmith.json && test -f generated-datasworn/fe_runners.json && test -f generated-datasworn/ironsmith.json && test -f generated-datasworn/ancient_wonders.json"
+  },
+  "engines": {
+    "bun": ">=1.3"
+  },
+  "devDependencies": {
+    "@datasworn-community/build-tools": "0.2.8",
+    "@datasworn-community/core": "0.2.8",
+    "@datasworn-community/ironsworn-classic": "0.2.1",
+    "@datasworn-community/ironsworn-classic-delve": "0.2.2",
+    "@datasworn-community/starforged": "0.2.1"
+  }
+}

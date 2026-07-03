@@ -1,0 +1,66 @@
+outDir: datasworn
+publicJsonOutDir: generated-datasworn
+packageOutDir: dist/packages
+repository:
+  type: git
+  url: git+https://github.com/datasworn-community/community-content.git
+packages:
+  - id: starsmith
+    type: expansion
+    source: source_data/starsmith
+    packageName: "@datasworn-community/starsmith"
+    schemaLine: "0.2"
+    description: "Datasworn JSON data for Starsmith Expanded Oracles by Eric Bright."
+    license: "CC-BY-4.0"
+    dependencies:
+      - starforged
+    publishDependencies:
+      - id: starforged
+        packageName: "@datasworn-community/starforged"
+        schemaLine: "0.2"
+
+  - id: fe_runners
+    type: expansion
+    source: source_data/fe_runners
+    packageName: "@datasworn-community/fe-runners"
+    schemaLine: "0.2"
+    description: "Datasworn JSON data for Fe-Runners, a cyberpunk Starforged expansion by Craig Smith."
+    license: "CC-BY-NC-SA-4.0"
+    dependencies:
+      - starforged
+    publishDependencies:
+      - id: starforged
+        packageName: "@datasworn-community/starforged"
+        schemaLine: "0.2"
+
+  - id: ironsmith
+    type: expansion
+    source: source_data/ironsmith
+    packageName: "@datasworn-community/ironsmith"
+    schemaLine: "0.2"
+    description: "Datasworn JSON data for Ironsmith, a Classic Ironsworn expansion by Eric Bright."
+    license: "CC-BY-4.0"
+    dependencies:
+      - classic
+      - delve
+    publishDependencies:
+      - id: classic
+        packageName: "@datasworn-community/ironsworn-classic"
+        schemaLine: "0.2"
+      - id: delve
+        packageName: "@datasworn-community/ironsworn-classic-delve"
+        schemaLine: "0.2"
+
+  - id: ancient_wonders
+    type: expansion
+    source: source_data/ancient_wonders
+    packageName: "@datasworn-community/ancient-wonders"
+    schemaLine: "0.2"
+    description: "Datasworn JSON data for Ancient Wonders, a Starforged expansion by Ludic Pen."
+    license: "CC-BY-NC-SA-4.0"
+    dependencies:
+      - starforged
+    publishDependencies:
+      - id: starforged
+        packageName: "@datasworn-community/starforged"
+        schemaLine: "0.2"
