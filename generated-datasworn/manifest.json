@@ -1,0 +1,54 @@
+{
+  "datasworn_version": "0.2.0",
+  "packages": {
+    "ancient_wonders": {
+      "id": "ancient_wonders",
+      "type": "expansion",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/ancient-wonders",
+      "path": "ancient_wonders.json",
+      "description": "Datasworn JSON data for Ancient Wonders, a Starforged expansion by Ludic Pen.",
+      "license": "CC-BY-NC-SA-4.0",
+      "dependencies": [
+        "starforged"
+      ]
+    },
+    "fe_runners": {
+      "id": "fe_runners",
+      "type": "expansion",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/fe-runners",
+      "path": "fe_runners.json",
+      "description": "Datasworn JSON data for Fe-Runners, a cyberpunk Starforged expansion by Craig Smith.",
+      "license": "CC-BY-NC-SA-4.0",
+      "dependencies": [
+        "starforged"
+      ]
+    },
+    "ironsmith": {
+      "id": "ironsmith",
+      "type": "expansion",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/ironsmith",
+      "path": "ironsmith.json",
+      "description": "Datasworn JSON data for Ironsmith, a Classic Ironsworn expansion by Eric Bright.",
+      "license": "CC-BY-4.0",
+      "dependencies": [
+        "classic",
+        "delve"
+      ]
+    },
+    "starsmith": {
+      "id": "starsmith",
+      "type": "expansion",
+      "schemaLine": "0.2",
+      "packageName": "@datasworn-community/starsmith",
+      "path": "starsmith.json",
+      "description": "Datasworn JSON data for Starsmith Expanded Oracles by Eric Bright.",
+      "license": "CC-BY-4.0",
+      "dependencies": [
+        "starforged"
+      ]
+    }
+  }
+}

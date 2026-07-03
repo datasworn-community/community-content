@@ -14,6 +14,15 @@ Packages are configured for public publication under the
 `@datasworn-community` npm scope. Use experimental PR publishes first to verify
 package artifacts before relying on the stable main-branch release.
 
+## Raw JSON
+
+Generated raw Datasworn JSON is committed in `generated-datasworn/` for users
+who want to download or browse files directly from GitHub.
+
+Use `generated-datasworn/manifest.json` to see the current generated file,
+package name, schema line, license, and dependency metadata for each content
+package.
+
 ## Quick Start
 
 ```sh
@@ -24,6 +33,7 @@ bun run validate
 
 Generated artifacts are written to:
 
+- `generated-datasworn/<package>.json`
 - `datasworn/<package>/<package>.json`
 - `dist/packages/<package>/`
 
@@ -68,6 +78,7 @@ Project notes:
 ```text
 source_data/           Datasworn source YAML you edit
 datasworn.config.yaml  Build and package metadata
+generated-datasworn/   Generated raw JSON committed for GitHub users
 datasworn/             Generated built JSON, ignored by git
 dist/packages/         Generated npm package artifacts, ignored by git
 .github/workflows/    Build, stable release, and experimental release callers
