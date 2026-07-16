@@ -16,10 +16,10 @@
     "bun": ">=1.3"
   },
   "devDependencies": {
-    "@datasworn-community/build-tools": "0.2.8",
-    "@datasworn-community/core": "0.2.8",
-    "@datasworn-community/ironsworn-classic": "0.2.1",
-    "@datasworn-community/ironsworn-classic-delve": "0.2.2",
-    "@datasworn-community/starforged": "0.2.1"
+    "@datasworn-community/build-tools": "0.2.9",
+    "@datasworn-community/core": "0.2.9",
+    "@datasworn-community/ironsworn-classic": "0.2.2",
+    "@datasworn-community/ironsworn-classic-delve": "0.2.3",
+    "@datasworn-community/starforged": "0.2.2"
   }
 }
