@@ -2548,7 +2548,7 @@
       "name": "Craig Smith"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2024-08-10",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0",
@@ -32613,5 +32613,34 @@
     }
   },
   "type": "expansion",
-  "url": "https://zombiecraig.itch.io/fe-runners"
+  "url": "https://zombiecraig.itch.io/fe-runners",
+  "worlds": {
+    "net": {
+      "_id": "world:fe_runners/net",
+      "_source": {
+        "authors": [
+          {
+            "name": "Craig Smith"
+          }
+        ],
+        "date": "2024-08-10",
+        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0",
+        "page": 40,
+        "title": "Fe-Runners Rulebook",
+        "url": "https://zombiecraig.itch.io/fe-runners"
+      },
+      "name": "The Net",
+      "truths": [
+        "truth:fe_runners/netdependency",
+        "truth:fe_runners/previoustech",
+        "truth:fe_runners/moderntech",
+        "truth:fe_runners/ironvows",
+        "truth:fe_runners/digitalcrimes",
+        "truth:fe_runners/magic",
+        "truth:fe_runners/artificial_intelligence",
+        "truth:fe_runners/virus_worms_botnets"
+      ],
+      "type": "world"
+    }
+  }
 }

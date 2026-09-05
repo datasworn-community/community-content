@@ -40,7 +40,7 @@ dependencies:
 publishDependencies:
   - id: starforged
     packageName: "@datasworn-community/starforged"
-    schemaLine: "0.2"
+    schemaLine: "0.3"
 ```
 
 Keep `@datasworn-community/starforged` in `devDependencies` when your source

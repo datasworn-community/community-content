@@ -4854,7 +4854,7 @@
       "name": "Eric Bright"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2021-10-21",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by/4.0",
@@ -37517,5 +37517,6 @@
   "title": "Ironsmith",
   "truths": {},
   "type": "expansion",
-  "url": "https://www.drivethrurpg.com/product/351813/Ironsmith"
+  "url": "https://www.drivethrurpg.com/product/351813/Ironsmith",
+  "worlds": {}
 }

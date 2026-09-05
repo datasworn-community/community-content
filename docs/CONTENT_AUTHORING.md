@@ -15,7 +15,7 @@ type: expansion
 ruleset: starforged
 ```
 
-For schema generation `0.2`, build-tools accepts compatible `0.1.0` source YAML
+For schema generation `0.3`, build-tools accepts compatible `0.1.0` source YAML
 and normalizes generated output to the installed schema version.
 
 Use a shared source block for attribution:
@@ -31,6 +31,24 @@ Use a shared source block for attribution:
 ```
 
 Then attach `_source: *Source` to collections and entries.
+
+## World Authoring
+
+Worlds group named truths in presentation order. Define the truths and reference
+them from a `worlds` entry:
+
+```yaml
+worlds:
+  home:
+    name: Home World
+    _source: *Source
+    truths:
+      - truth:my_package/iron
+    type: world
+```
+
+The builder assigns each world an ID from its package and key, such as
+`world:my_package/home`. A world must reference at least one unique truth ID.
 
 ## IDs and References
 
@@ -57,13 +75,13 @@ Use one of these package IDs in `dependencies` and `publishDependencies`:
 ```yaml
 - id: starforged
   packageName: "@datasworn-community/starforged"
-  schemaLine: "0.2"
+  schemaLine: "0.3"
 ```
 
 ```yaml
 - id: classic
   packageName: "@datasworn-community/ironsworn-classic"
-  schemaLine: "0.2"
+  schemaLine: "0.3"
 ```
 
 Add the same npm package to `devDependencies` so local builds can validate
@@ -75,4 +93,3 @@ For full source examples, compare this template with:
 
 - <https://github.com/datasworn-community/official-content>
 - <https://github.com/datasworn-community/datasworn>
-
