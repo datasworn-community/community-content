@@ -1,0 +1,27 @@
+_id: fe_runners
+datasworn_version: "0.1.0"
+type: expansion
+ruleset: starforged
+<<: &Source
+  date: 2024-08-10
+  title: 'Fe-Runners Rulebook'
+  url: https://zombiecraig.itch.io/fe-runners
+  license: https://creativecommons.org/licenses/by-nc-sa/4.0
+  authors:
+    - name: Craig Smith
+worlds:
+  net:
+    name: The Net
+    type: world
+    _source:
+      <<: *Source
+      page: 40
+    truths:
+      - truth:fe_runners/netdependency
+      - truth:fe_runners/previoustech
+      - truth:fe_runners/moderntech
+      - truth:fe_runners/ironvows
+      - truth:fe_runners/digitalcrimes
+      - truth:fe_runners/magic
+      - truth:fe_runners/artificial_intelligence
+      - truth:fe_runners/virus_worms_botnets

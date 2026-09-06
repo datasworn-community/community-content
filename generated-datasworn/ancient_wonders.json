@@ -2574,7 +2574,7 @@
       "name": "Ludic Pen"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2024-01-01",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0",
@@ -63167,5 +63167,6 @@
   "title": "Ancient Wonders",
   "truths": {},
   "type": "expansion",
-  "url": "https://www.drivethrurpg.com/en/product/505365/ancient-wonders"
+  "url": "https://www.drivethrurpg.com/en/product/505365/ancient-wonders",
+  "worlds": {}
 }

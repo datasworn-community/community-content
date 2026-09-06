@@ -20,10 +20,10 @@ packages.
 Package versions use the Datasworn schema line:
 
 ```text
-0.2.0
+0.3.0
 ```
 
-For schema line `0.2`, content packages publish as `0.2.x`.
+For schema line `0.3`, content packages publish as `0.3.x`.
 
 ## Experimental Releases
 

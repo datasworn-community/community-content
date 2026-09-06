@@ -1936,7 +1936,7 @@
       "name": "Eric Bright"
     }
   ],
-  "datasworn_version": "0.2.0",
+  "datasworn_version": "0.3.0",
   "date": "2024-03-22",
   "delve_sites": {},
   "license": "https://creativecommons.org/licenses/by/4.0",
@@ -120373,5 +120373,6 @@
   "title": "Starsmith Expanded Oracles",
   "truths": {},
   "type": "expansion",
-  "url": "https://playeveryrole.com/starsmith-products/"
+  "url": "https://playeveryrole.com/starsmith-products/",
+  "worlds": {}
 }
