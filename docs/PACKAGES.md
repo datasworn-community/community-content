@@ -14,6 +14,7 @@ artifacts before merging changes that ship to the stable npm dist-tag.
 | `fe_runners` | [`@datasworn-community/fe-runners`](https://www.npmjs.com/package/@datasworn-community/fe-runners) | Craig Smith | `@datasworn-community/starforged` | CC-BY-NC-SA-4.0 | Published |
 | `ironsmith` | [`@datasworn-community/ironsmith`](https://www.npmjs.com/package/@datasworn-community/ironsmith) | Eric Bright | `@datasworn-community/ironsworn-classic`, `@datasworn-community/ironsworn-classic-delve` | CC-BY-4.0 | Published |
 | `ancient_wonders` | [`@datasworn-community/ancient-wonders`](https://www.npmjs.com/package/@datasworn-community/ancient-wonders) | Ludic Pen | `@datasworn-community/starforged` | CC-BY-NC-SA-4.0 | Published |
+| `revenant` | [`@datasworn-community/revenant`](https://www.npmjs.com/package/@datasworn-community/revenant) | Killian Gillespie | - | CC-BY-4.0 | WIP |
 
 ## Adding a new package
 

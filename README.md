@@ -9,6 +9,7 @@ The repo starts with migrated source data for:
 - Fe-Runners
 - Ironsmith
 - Ancient Wonders
+- Revenant
 
 Packages are configured for public publication under the
 `@datasworn-community` npm scope. Use experimental PR publishes first to verify
@@ -49,6 +50,7 @@ by build-tools. Do not edit generated files by hand; edit `source_data/` and
 | `fe_runners` | `@datasworn-community/fe-runners` | Starforged | Ready for experimental publish |
 | `ironsmith` | `@datasworn-community/ironsmith` | Ironsworn Classic, Delve | Ready for experimental publish |
 | `ancient_wonders` | `@datasworn-community/ancient-wonders` | Starforged | Ready for experimental publish |
+| `revenant` | `@datasworn-community/revenant` | - | Ready for experimental publish |
 
 See [Packages](docs/PACKAGES.md), [Tier Policy](docs/TIER_POLICY.md), and
 [Community Index](docs/COMMUNITY_INDEX.md) for Phase 4 tracking.

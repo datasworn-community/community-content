@@ -1,0 +1,105 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+<<: &Source
+  title: 'Revenant'
+  license: https://creativecommons.org/licenses/by-sa/4.0
+  url: https://www.drivethrurpg.com/en/product/457762/revenant
+  date: 2025-06-23
+  authors:
+    - name: Killian Gillespie
+rules:
+  condition_meters:
+    endurance:
+      label: endurance
+      max: 5
+      value: 5
+      description: Health represents your current physical condition and stamina.
+    morale:
+      label: morale
+      max: 5
+      value: 5
+      description: Morale is your current mental state.
+    supply:
+      label: supply
+      max: 5
+      value: 5
+      shared: true
+      description: Supply is an abstract representation of your preparedness, including ammunition, provisions, fuel, medicine, tools, and general upkeep.
+    radiation:
+      label: radiation
+      max: 5
+      value: 5
+      description: Radiation represents your current protection level against radiation.
+  impacts:
+    misfortunes:
+      label: misfortunes
+      description: As with all impacts, misfortunes affect your max momentum and momentum reset. In addition, if you are wounded, shaken, or unprepared, you cannot increase the associated condition meter.
+      contents:
+        wounded:
+          label: wounded
+          description: Wounded may be marked when you are at 0 endurance and fail to [Endure Harm](datasworn:move:revenant/suffer/endure_harm). You are severely injured and need treatment to recover.
+          prevents_recovery:
+            - endurance
+        shaken:
+          label: shaken
+          description: Shaken (Dispirited) may be marked when you are at 0 morale and fail to [Endure Stress](datasworn:move:revenant/suffer/endure_stress). You are despairing or distraught, and need comfort to recover.
+          prevents_recovery:
+            - morale
+        unprepared:
+          label: unprepared
+          description: Unprepared is marked when you [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and are reduced to 0 supply. You and your allies share the same supply value, and will mark unprepared together.
+          shared: true
+          prevents_recovery:
+            - supply
+        encumbered:
+          label: encumbered
+          description: Encumbered is marked as appropriate to the circumstances when you are carrying excessive or cumbersome weight.
+        irradiated:
+          label: irradiated
+          description: Irradiated is marked when you are at 0 radiation and fail to [Endure Radiation](datasworn:move:revenant/suffer/endure_radiation). You suffer acute radiation syndrome, and need comfort to recover.
+    vehicle_troubles:
+      label: vehicle troubles
+      description: Vehicle troubles are linked to a specific vehicle. These impacts are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact and do not affect your maximum momentum and momentum reset values.
+      contents:
+        battered:
+          label: battered
+          description: Battered may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage). The vehicle is barely holding together.
+    lasting_effects:
+      label: lasting effects
+      description: Lasting effects are permanent. They forever impact your character through the momentum adjustment and - more importantly - the narrative impact of being permanently harmed or traumatized. You should factor this impact into how you perform moves and how you interact with the world.
+      contents:
+        permanently_harmed:
+          label: permanently harmed
+          description: Permanently harmed may be marked when you are at 0 endurance and fail to [Endure Harm](datasworn:move:revenant/suffer/endure_harm). You have suffered a wound such as the loss of an eye or hand. Or you bear physical scars which serve as a constant reminder of a harrowing incident.
+          permanent: true
+        traumatized:
+          label: traumatized
+          description: Traumatized may be marked when you are at 0 morale and fail to [Endure Stress](datasworn:move:revenant/suffer/endure_stress). Your experiences have left you emotionally scarred.
+          permanent: true
+  special_tracks:
+    plans_legacy:
+      label: plans
+      description: Make plans and do what you must to see them fulfilled.
+    bonds_legacy:
+      label: bonds
+      description: Create connections and build relationships.
+    discoveries_legacy:
+      label: discoveries
+      description: Explore the savage lands you inhabit and overcome their chaos.
+  stats:
+    edge:
+      label: edge
+      description: Quickness, agility, and prowess in ranged combat.
+    heart:
+      label: heart
+      description: Courage, willpower, empathy, sociability, and loyalty.
+    iron:
+      label: iron
+      description: Physical strength, aggression, and skill in close combat.
+    dark:
+      label: dark
+      description: Furtiveness, duplicity, and cunning.
+    wits:
+      label: wits
+      description: Expertise, knowledge, and observation.

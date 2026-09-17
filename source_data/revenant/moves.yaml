@@ -1,0 +1,2598 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+moves:
+  session:
+    name: Session Moves
+    type: move_category
+    color: '#3F8C8A'
+    _source:
+      <<: &Source
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
+        authors:
+          - name: Killian Gillespie
+      page: 74
+    summary: |-
+      __Session moves__ are used to start and finish the time you have to play. They also ensure the content is managed in a way that does not cause distress.
+    description: |-
+      _Session Moves_ are used to set boundaries of what content can be included in your game and adjust the content as you play. They are also used to frame the start and finish of your game and to provide a space to take a break from *Revenant*. They are intended for all modes of play.
+
+      Unlike other moves, the session moves are written from the perspective of the players rather than the character. They are a tool to facilitate and moderate a safe and enjoyable experience for everyone at your game.
+    contents:
+      begin_a_session:
+        name: Begin a Session
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you begin a significant session or chapter of play...
+        oracles:
+          begin_a_session:
+            name: Begin a Session
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: "Flashback reveals an aspect of a character's background"
+              - roll: { min: 11, max: 20 }
+                text: 'Flashback reveals an aspect of another place, or faction'
+              - roll: { min: 21, max: 30 }
+                text: 'A character or faction is introduced or given new detail'
+              - roll: { min: 31, max: 40 }
+                text: 'Unrelated situations are shown to be connected'
+              - roll: { min: 41, max: 50 }
+                text: 'External danger, urgency, or new importance for a plan'
+              - roll: { min: 51, max: 60 }
+                text: 'Important character is put in danger'
+              - roll: { min: 61, max: 70 }
+                text: 'Key location is made unsafe or becomes mired in conflict'
+              - roll: { min: 71, max: 80 }
+                text: 'Unexpected return of an enemy or threat'
+              - roll: { min: 81, max: 90 }
+                text: 'Peril lies ahead or lurks just out of view'
+              - roll: { min: 91, max: 100 }
+                text: 'Unforeseen aid is on the way or within reach'
+
+        text: |-
+          __When you begin a significant session or chapter of play__, do all of the following.
+
+            * Identify or adjust flagged content and [Set a Flag](datasworn:move:revenant/session/set_a_flag).
+            * Review or recap what happened last session.
+            * Set the scene by envisioning all of the player character's current situation and intent.
+
+          In addition, you may spotlight a new danger, opportunity, or insight. This can include a scene hidden from your character's perspective. If you do, envision a brief vignette (you may roll or choose on the table below for inspiration). Then, all players take +1 momentum as you return to play from the viewpoint of your characters.
+
+          {{table>move.oracle_rollable:revenant/session/begin_a_session.begin_a_session}}
+        _source:
+          <<: *Source
+          page: 76
+      set_a_flag:
+        name: Set a Flag
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you identify situations or topics you don't want to include, don't want to envision in detail, or otherwise may need mindfulness when approaching...
+        text: |-
+          __When you identify situations or topics you don't want to include, don't want to envision in detail, or otherwise may need mindfulness when approaching__, that content is now flagged.
+
+          When you encounter content flagged as something to approach mindfully, pause to consider or discuss its role in your story. When you come across flagged content that you would rather adjust or omit, [Change Your Fate](datasworn:move:revenant/session/change_your_fate).
+        _source:
+          <<: *Source
+          page: 78
+      change_your_fate:
+        name: Change Your Fate
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you encounter flagged content, reject an oracle, resist a consequence, or otherwise need to shift your circumstances within the game for your comfort or enjoyment...
+        text: |-
+          __When you encounter flagged content, reject an oracle, resist a consequence, or otherwise need to shift your circumstances within the game for your comfort or enjoyment__, pause and identify what needs to be changed. Choose as many options as appropriate.
+
+            * __Reframe:__ This didn't happen the way you first thought. Envision the moment from another perspective in a way that diminishes or changes the content.
+            * __Refocus:__ This is not the most important thing happening right now. Envision how the spotlight shifts to change the focus.
+            * __Replace:__ This happens but with a small adjustment. Switch out an element and envision how this new detail changes the scenario.
+            * __Redirect:__ Adjust the trajectory to involve a helping hand. Envision how another person or party becomes involved.
+            * __Reshape:__ The situation changes completely. Envision what happened instead.
+        _source:
+          <<: *Source
+          page: 79
+      take_a_break:
+        name: Take a Break
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you resolve a progress move or complete an intense scenario...
+        text: |-
+          __When you resolve a progress move or complete an intense scenario__, take a few deep breaths and take some time to attend to the needs of your body. Reflect on what just happened and how it made you feel. Then, choose one.
+
+            * Move on: Continue the session. You or an ally may add +1 on the next move (not a progress move), bolstered by your reflection and past experiences.
+            * Stop for now: [End a Session](datasworn:move:revenant/session/end_a_session).
+        _source:
+          <<: *Source
+          page: 80
+      end_a_session:
+        name: End a Session
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you end a significant session or chapter of play...
+        text: |-
+          __When you end a significant session or chapter of play__, reflect on the events of the game and identify any missed opportunities to mark progress.
+
+            * If you strengthened your ties to a connection, [Develop Your Relationship](datasworn:move:revenant/connection/develop_your_relationship).
+            * If you moved forward on a quest, [Reach a Milestone](datasworn:move:revenant/plan/reach_a_milestone).
+            * If there is a plan, connection, or other situation you would like to give focus in your next session, make note of it and take +1 momentum.
+        _source:
+          <<: *Source
+          page: 81
+  basic:
+    name: Basic Moves
+    type: move_category
+    color: '#206087'
+    _source:
+      <<: *Source
+      page: 146
+    summary: |-
+      __Basic moves__ cover a variety of common situations but are generally unrelated. They may trigger at any time.
+    description: |-
+      The __Basic Moves__ encompass broadly useful actions to overcome obstacles, reinforce your position, conduct investigations, influence others, and support your fellow allies. When you face peril or try to gain leverage and another move does not apply, you'll likely find your answer among these moves.
+    contents:
+      defy_danger:
+        name: Defy Danger
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you attempt something risky or react to an imminent threat...
+          conditions:
+            - method: player_choice
+              text: With finesse, mobility, or agility
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: With resolve, command, or sociability
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: With strength, endurance, or aggression
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: With deception, stealth, or betrayal
+              roll_options:
+                - using: stat
+                  stat: dark
+            - method: player_choice
+              text: With expertise, focus, or observation
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you attempt something risky or react to an imminent threat__, envision your action and roll. If you act...
+
+            * With finesse, mobility, or agility: Roll +edge
+            * With resolve, command, or sociability: Roll +heart
+            * With strength, endurance, or aggression: Roll +iron
+            * With deception, stealth, or betrayal: Roll +dark
+            * With expertise, focus, or observation: Roll +wits
+
+          On a __strong hit__, you are successful. Take +1 momentum.
+
+          On a __weak hit__, you succeed, but not without a cost. Make a suffer move (-1).
+
+          On a __miss__, you fail, or a momentary success is undermined by a dire turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are successful. Take +1 momentum.
+          weak_hit:
+            text: On a __weak hit__, you succeed, but not without a cost. Make a suffer move (-1).
+          miss:
+            text: On a __miss__, you fail, or a momentary success is undermined by a dire turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 84
+      secure_an_advantage:
+        name: Secure an Advantage
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you assess a situation, make preparations, or attempt to gain leverage...
+          conditions:
+            - method: player_choice
+              text: With finesse, mobility, or agility
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: With resolve, command, or sociability
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: With strength, endurance, or aggression
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: With deception, stealth, or betrayal
+              roll_options:
+                - using: stat
+                  stat: dark
+            - method: player_choice
+              text: With expertise, focus, or observation
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you assess a situation, make preparations, or attempt to gain leverage__, envision your action and roll. If you act...
+
+            * With finesse, mobility, or agility: Roll +edge
+            * With resolve, command, or sociability: Roll +heart
+            * With strength, endurance, or aggression: Roll +iron
+            * With deception, stealth, or betrayal: Roll +dark
+            * With expertise, focus, or observation: Roll +wits
+
+          On a __hit__, you succeed. On a __strong hit__, take both. On a __weak hit__, choose one.
+
+            * Take +2 momentum
+            * Add +1 on your next move (not a progress move)
+
+          On a __miss__, you fail or your assumptions betray you. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you succeed. Take +2 momentum. Add +1 on your next move (not a progress move).
+          weak_hit:
+            text: |-
+              On a __weak hit__, you succeed. Choose one.
+
+                * Take +2 momentum
+                * Add +1 on your next move (not a progress move)
+          miss:
+            text: On a __miss__, you fail or your assumptions betray you. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 85
+      aid_your_ally:
+        name: Aid Your Ally
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you act in direct support of an ally...
+        text: |-
+          __When you act in direct support of an ally__, envision how you aid them. Then, [Secure an Advantage](datasworn:move:revenant/basic/secure_an_advantage), [Obtain an Opportunity](datasworn:move:revenant/scene_challenge/obtain_an_opportunity), or [Gain Ground](datasworn:move:revenant/combat/gain_ground) to take action. If you score a hit, they (instead of you) take the benefits of the move.
+
+          If you [Gain Ground](datasworn:move:revenant/combat/gain_ground) and score a __strong hit__, you both have the upper hand. On a __weak hit__, your ally has the upper hand but you are in a bad spot.
+        _source:
+          <<: *Source
+          page: 86
+      compel:
+        name: Compel
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you try to persuade someone or make them an offer...
+          conditions:
+            - method: player_choice
+              text: Charm, pacify, encourage, or barter
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: Threaten, intimidate, or incite
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Lie, bluff, or swindle
+              roll_options:
+                - using: stat
+                  stat: dark
+        text: |-
+          __When you try to persuade someone or make them an offer__, envision your approach. If you...
+
+            * Charm, pacify, encourage, or barter: Roll +heart
+            * Threaten or incite: Roll +iron
+            * Lie or swindle: Roll +dark
+
+          On a __strong hit__, they'll do what you want or agree to your conditions. Take +1 momentum.
+
+          On a __weak hit__, as above, but their agreement comes with a demand or complication. Envision their counteroffer.
+
+          On a __miss__, they refuse or make a demand that costs you greatly. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, they'll do what you want or agree to your conditions. Take +1 momentum.
+          weak_hit:
+            text: On a __weak hit__, they'll do what you want or agree to your conditions, but their agreement comes with a demand or complication. Envision their counteroffer and take +1 momentum.
+          miss:
+            text: On a __miss__, they refuse or make a demand that costs you greatly. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 87
+      gather_information:
+        name: Gather Information
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you conduct an investigation, ask questions, do research, or search an area for clues...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you conduct an investigation, ask questions, do research, or search an area for clues__, roll +wits.
+
+          On a __strong hit__, you discover something helpful and specific. The path you must follow or action you must take to make progress is made clear. Envision what you learn. Then, take +2 momentum.
+
+          On a __weak hit__, the information provides new insight, but also complicates your quest. Envision what you discover. Then, take +1 momentum.
+
+          On a __miss__, your investigation unearths a dire threat or reveals an unwelcome truth that undermines your quest. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you discover something helpful and specific. The path you must follow or action you must take to make progress is made clear. Envision what you learn. Then, take +2 momentum.
+          weak_hit:
+            text: On a __weak hit__, the information provides new insight, but also complicates your quest. Envision what you discover. Then, take +1 momentum.
+          miss:
+            text: On a __miss__, your investigation unearths a dire threat or reveals an unwelcome truth that undermines your quest. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 89
+      check_your_gear:
+        name: Check Your Gear
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you check to see if you have a specific helpful item or resource...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: supply
+        text: |-
+          __When you check to see if you have a specific helpful item or resource__, roll +supply.
+
+          On a __strong hit__, you have it, and are ready to act. Take +1 momentum.
+
+          On a __weak hit__, you have it, but must choose one.
+
+            * Your supply is diminished: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1)
+            * It's not quite right, and causes a complication or delay: [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2)
+
+          On a __miss__, you don't have it and the situation becomes dire. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you have it, and are ready to act. Take +1 momentum.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you have it, but must choose one.
+
+                * Your supply is diminished: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1)
+                * It's not quite right, and causes a complication or delay: [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2)
+          miss:
+            text: On a __miss__, you don't have it and the situation becomes dire. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 90
+  plan:
+    name: Plan Moves
+    type: move_category
+    color: '#805A90'
+    summary: __Plan moves__ encompass making plans, including making progress in a plan and resolving the outcome of a plan. It also includes the rules for when a Nemesis arises and their effect on your character.
+    description: |-
+      In *Revenant*, the people with the plans are the ones who change the world. Plans can be made to yourself, as a representation of your personal commitment, or they can be made in service to someone else. Some plans might be made grudgingly - out of duty or necessity. Others will be made with your entire conviction.
+
+      Make these __Plan Moves__ when you make plans, make progress on your plans, when your plan comes to an end, and when you make use of those plans that you achieved.
+    _source:
+      <<: *Source
+      page: 92
+    contents:
+      make_a_plan:
+        name: Make a Plan
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you aim to undertake a task...
+          conditions:
+            - method: highest
+              roll_options:
+                - using: stat
+                  stat: heart
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you aim to undertake a task__, give your plan a name and a rank. Then, roll +heart or +wits, whichever is higher.
+
+          If you make this plan to aid a connection, add +1; if you share a bond, add +2.
+
+          On a __strong hit__, you are emboldened and it is clear what you must do next. Take +2 momentum.
+
+          On a __weak hit__, you are determined but begin your plan with more questions than answers. Take +1 momentum, and envision what you do to find a path forward.
+
+          On a __miss__, you must overcome a significant obstacle before you begin your plan. Envision what stands in your way.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are emboldened and it is clear what you must do next. Take +2 momentum.
+          weak_hit:
+            text: On a __weak hit__, you are determined but begin your plan with more questions than answers. Take +1 momentum, and envision what you do to find a path forward.
+          miss:
+            text: On a __miss__, you must overcome a significant obstacle before you begin your plan. Envision what stands in your way.
+        _source:
+          <<: *Source
+          page: 94
+      reach_a_milestone:
+        name: Reach a Milestone
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When your actions benefit a plan...
+        text: |-
+          __When your actions benefit a plan__ by doing any of the following...
+
+            * overcoming a critical obstacle
+            * gaining meaningful insight
+            * completing a perilous expedition
+            * acquiring a crucial item or resource
+            * earning vital support
+            * defeating a notable foe
+
+          ...you may mark progress per the rank of the plan.
+        _source:
+          <<: *Source
+          page: 96
+      accomplish_your_plan:
+        name: Accomplish Your Plan
+        roll_type: progress_roll
+        type: move
+        tracks:
+          category: Plan
+        trigger:
+          text: When you reach the end of your plan...
+          conditions:
+            - roll_options:
+                - using: progress_track
+        text: |-
+          __When you reach the end of your plan__, roll the challenge dice and compare to your progress.
+
+          On a __strong hit__, your plan is complete. Mark a reward on your plans legacy track per the plan's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who shared this plan also mark the reward.
+
+          On a __weak hit__, as above, but there is more to be done or you realize a fault in your plan. If you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to set things right, take your full legacy reward. Otherwise, make the reward one rank lower (none for a troublesome plan).
+
+          On a __miss__, your plan is undone through an unexpected complication or a significant flaw or resource requirement that causes hardship. Envision what happens and choose one.
+
+            * [Abandon Your Plan](datasworn:move:revenant/plan/abandon_your_plan).
+            * Recommit to the plan: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the plan's rank by one (if not already epic).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, your plan is complete. Mark a reward on your plans legacy track per the plan's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who shared this plan also mark the reward.
+          weak_hit:
+            text: |-
+              On a __weak hit__, your plan is complete, but there is more to be done or you realize a fault in your plan. If you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to set things right, take your full legacy reward per the plan's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Otherwise, make the reward one rank lower (none for a troublesome plan). Any allies who shared this vow also mark the reward.
+          miss:
+            text: |-
+              On a __miss__, your plan is undone through an unexpected complication or a significant flaw or resource requirement that causes hardship. Envision what happens and choose one.
+
+                * [Abandon Your Plan](datasworn:move:revenant/plan/abandon_your_plan).
+                * Recommit to the plan: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the plan's rank by one (if not already epic).
+        _source:
+          <<: *Source
+          page: 97
+      abandon_your_plan:
+        name: Abandon Your Plan
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you fail your plans mission or the goal is lost to you...
+        text: |-
+          __When you fail your plans mission or the goal is lost to you__, clear the plan.
+
+          Then, envision the impact of this failure and choose one or more as appropriate to the nature of the plan. Any allies who shared this plan may also envision a cost.
+
+            * You are demoralized: [Endure Stress](datasworn:move:revenant/suffer/endure_stress).
+            * A connection loses faith: [Test Your Relationship](datasworn:move:revenant/connection/test_your_relationship) when you next interact.
+            * You must abandon a resource: Clear a previously completed plan.
+            * Someone else pays a price: Envision how a person, being, or community bears the cost of the failure.
+            * Someone else takes advantage: Envision how an enemy gains power and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).
+            * Your reputation suffers: Envision how this failure marks you.
+        _source:
+          <<: *Source
+          page: 99
+      leverage_a_plan:
+        name: Leverage a Plan
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you make use of a plan you have successfully completed...
+        text: |-
+          __When you make use of a plan you have successfully completed__, and you need to roll for a move, you may (decide before rolling) choose one.
+            * Rely on experience: Roll +the rank of the plan, instead of rolling +stat.
+            * Take command: Take +momentum equal to the rank of the plan on a strong hit.
+
+          On a __strong hit with a match__, you may also envision how recent events or leveraging this plan has enhanced it and raise its rank by one (if not already epic).
+
+          On a __miss with a match__, envision the impact of this failure. Until you successfully Repair it, take no benefit from this plan. Or, if you have no interest in retaining this plan, clear the plan.
+        _source:
+          <<: *Source
+          page: 100
+      advance_a_nemesis:
+        name: Advance a Nemesis
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you give ground to a Nemesis through inaction, failure, or delay...
+        oracles:
+          advance_a_nemesis:
+            name: Advance a Nemesis
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 40 }
+                text: 'The Nemesis works subtly to advance toward its goal, or the danger escalates. This may include scenes outside of the characters perspective. Mark menace.'
+              - roll: { min: 41, max: 70 }
+                text: 'The Nemesis readies its next step, or a new danger looms. If you are in a position to prevent this development, you may attempt to do so. If you succeed, [Reach a Milestone](datasworn:move:revenant/plan/reach_a_milestone). Otherwise, mark menace.'
+              - roll: { min: 71, max: 100 }
+                text: 'The Nemesis makes a dramatic and immediate move, or a major event reveals new complications. Mark menace twice.'
+
+        text: |-
+          __When you give ground to a Nemesis through inaction, failure, or delay__, roll on the table below and envision how the change manifests in your world.
+
+          {{table>move.oracle_rollable:revenant/plan/advance_a_nemesis.advance_a_nemesis}}
+
+          On a match, this development also exposes a surprising aspect of the Nemesis' plan or nature.
+
+          __If you fill the last circle on the Nemesis' menace track__, they achieve their goal, or the final dire outcome occurs. You must [Abandon your plan](datasworn:move:revenant/plan/abandon_your_plan).
+        _source:
+          <<: *Source
+          page: 104
+      take_a_hiatus:
+        name: Take a Hiatus
+        # optional: true
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you spend an extended time recovering in a safe place while a Nemesis is active...
+        text: |-
+          When __you spend an extended time recovering in a safe place while a Nemesis is active__, do any of the following.
+
+            * Clear any marked impacts.
+            * Set your endurance, morale, supply, and radiation (if used) to +5.
+            * Set your companion's endurance to +5.
+            * Set your momentum to its reset value.
+
+          Then, for each active Nemesis, [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).
+        _source:
+          <<: *Source
+          page: 106
+  connection:
+    name: Connection Moves
+    type: move_category
+    color: '#4A5791'
+    _source:
+      <<: *Source
+      page: 110
+    summary: |-
+      __Connection moves__ involve building bonds with people.
+    description: |-
+      __Connections__ are NPCs (non-player characters) who represent a deep, vital, or interesting relationship in your story. They are not your allies (protagonists portrayed by other players). Instead, connections are characters who are independent of you, but whose lives occasionally intersect with your own.
+
+      Connections provide story hooks and support you within the scope of their role. They usually represent positive relationships, but not always; a connection might instead be a rival or someone who wields power over you.
+
+      Make these __connection moves__ when you introduce connections and as you build influence or understanding with them.
+    contents:
+      make_a_connection:
+        name: Make a Connection
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you search out a new relationship or give focus to an existing relationship (not an ally)...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        text: |-
+          __When you search out a new relationship or give focus to an existing relationship (not an ally)__, roll +heart.
+
+          On a __strong hit__, you create a connection. Give them a role and rank. Whenever your connection aids you on a move closely associated with their role, add +1 and take +1 momentum on a hit.
+
+          On a __weak hit__, as above, but this connection comes with a complication or cost. Envision what they reveal or demand.
+
+          On a __miss__, you don't make a connection and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you create a connection. Give them a role and rank. Whenever your connection aids you on a move closely associated with their role, add +1 and take +1 momentum on a hit.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you create a connection, but it comes with a complication or cost. Envision what they reveal or demand.
+
+              Give the connection a role and rank. Whenever your connection aids you on a move closely associated with their role, add +1 and take +1 momentum on a hit.
+          miss:
+            text: On a __miss__, you don't make a connection and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 112
+      develop_your_relationship:
+        name: Develop Your Relationship
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you reinforce your relationship with a connection...
+          conditions:
+            - method: player_choice
+              text: If you already share a bond with the connection
+              roll_options:
+                - label: troublesome
+                  using: custom
+                  value: 1
+                - label: dangerous
+                  using: custom
+                  value: 2
+                - label: formidable
+                  using: custom
+                  value: 3
+                - label: extreme
+                  using: custom
+                  value: 4
+                - label: epic
+                  using: custom
+                  value: 5
+        text: |-
+          __When you reinforce your relationship with a connection__ by doing any of the following...
+
+            * making a plan to undertake a plan in their service
+            * completing a plan to their benefit
+            * leveraging their help in desperate circumstances
+            * giving them something of worth
+            * sharing a profound moment
+            * standing with them against hardship
+            * overcoming a test of your relationship
+
+          ...you may mark progress per the rank of the connection.
+
+          If you already share a bond with the connection, do not mark progress. Instead, roll +their rank to learn the impact on your legacy: troublesome=+1; dangerous=+2; formidable=+3; extreme=+4; epic=+5.
+
+          On a __strong hit__, mark 2 ticks on your bonds legacy track.
+
+          On a __strong hit with a match__, you may also envision how recent events bolstered your connection's standing and raise their rank by one (if not already epic).
+
+          On a __weak hit__, take +2 momentum.
+
+          On a __miss__, take no lasting benefit.
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, mark 2 ticks on your bonds legacy track.
+
+              On a __strong hit with a match__, you may also envision how recent events bolstered your connection's standing and raise their rank by one (if not already epic).
+          weak_hit:
+            text: On a __weak hit__, take +2 momentum.
+          miss:
+            text: On a __miss__, take no lasting benefit.
+        _source:
+          <<: *Source
+          page: 114
+      test_your_relationship:
+        name: Test Your Relationship
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When your relationship with a connection is tested through conflict, betrayal, or circumstance...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        text: |-
+          __When your relationship with a connection is tested through conflict, betrayal, or circumstance__, roll +heart. If you share a bond, add +1.
+
+          On a __strong hit__, [Develop Your Relationship](datasworn:move:revenant/connection/develop_your_relationship).
+
+          On a __weak hit__, [Develop Your Relationship](datasworn:move:revenant/connection/develop_your_relationship), but also envision a demand or complication as a consequence of this test.
+
+          On a __miss__, or if you have no interest in maintaining this relationship, choose one.
+
+            * Lose the connection: Envision how this impacts you and [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+            * Prove your loyalty: Envision what you offer or what they demand, and [Make a Plan](datasworn:move:revenant/plan/make_a_plan) (formidable or greater) to see it done. Until you complete the plan, take no benefit for this connection. If you refuse or fail, the connection is permanently undone.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, [Develop Your Relationship](datasworn:move:revenant/connection/develop_your_relationship).
+          weak_hit:
+            text: |-
+              On a __weak hit__, [Develop Your Relationship](datasworn:move:revenant/connection/develop_your_relationship), but also envision a demand or complication as a consequence of this test.
+          miss:
+            text: |-
+              On a __miss__, choose one.
+
+                * Lose the connection: Envision how this impacts you and [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+                * Prove your loyalty: Envision what you offer or what they demand, and [Make a Plan](datasworn:move:revenant/plan/make_a_plan) (formidable or greater) to see it done. Until you complete the plan, take no benefit for this connection. If you refuse or fail, the connection is permanently undone.
+        _source:
+          <<: *Source
+          page: 115
+      forge_a_bond:
+        name: Forge a Bond
+        roll_type: progress_roll
+        type: move
+        tracks:
+          category: Connection
+        trigger:
+          text: When your relationship with a connection is ready to mature...
+          conditions:
+            - roll_options:
+                - using: progress_track
+        text: |-
+          __When your relationship with a connection is ready to mature__, roll the challenge dice and compare to your progress.
+
+          On a __strong hit__, you now share a bond. Mark a reward on your bonds legacy track per the connection's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who share this connection also mark the reward.
+
+          When a connection with whom you share a bond aids you on a move closely associated with their role, add +2 instead of the usual +1.
+
+          On a __weak hit__, as above, but they ask something more of you first. To gain the bond and the legacy reward, envision the nature of the request, and do it (or [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done).
+
+          On a __miss__, they reveal something that fundamentally alters or undermines your relationship. If you recommit to this relationship, roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the connection's rank by one (if not already epic).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, you now share a bond. Mark a reward on your bonds legacy track per the connection's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who share this connection also mark the reward.
+
+              When a connection with whom you share a bond aids you on a move closely associated with their role, add +2 instead of the usual +1.
+          weak_hit:
+            text: |-
+              On a __weak hit__, they ask something more of you first. To gain the bond and the legacy reward, envision the nature of the request, and do it (or [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done).
+
+              If you do, you now share a bond. Mark a reward on your bonds legacy track per the connection's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who share this connection also mark the reward.
+
+              When a connection with whom you share a bond aids you on a move closely associated with their role, add +2 instead of the usual +1.
+          miss:
+            text: On a __miss__, they reveal something that fundamentally alters or undermines your relationship. If you recommit to this relationship, roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the connection's rank by one (if not already epic).
+        _source:
+          <<: *Source
+          page: 116
+      rise_to_the_challenge:
+        name: Rise to the Challenge
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When a connection takes up the mantle...
+        text: |-
+          __When a connection takes up the mantle__ of being a player character, if you share a bond, you may create a new character and begin play as that connection.
+
+          When you choose your talents, consider what skills are related to the connections role.
+
+          If they are a companion, set your endurance meter to their current endurance.
+
+          Then, unless you are making this move when you [Continue a Legacy](datasworn:move:revenant/legacy/continue_a_legacy), you may [Make a Connection](datasworn:move:revenant/connection/make_a_connection) with your previous character and immediately [Forge a Bond](datasworn:move:revenant/connection/forge_a_bond) and assume a strong hit.
+
+          For each plan the connection was currently assisting with, [Make a Plan](datasworn:move:revenant/plan/make_a_plan) with the same rank and assume a strong hit. Then, mark progress equal to the progress already made.
+
+          When you have finished, [Begin a Session](datasworn:move:revenant/session/begin_a_session) from the perspective of your new character.
+        _source:
+          <<: *Source
+          page: 118
+  exploration:
+    name: Exploration Moves
+    type: move_category
+    color: '#427FAA'
+    summary: |-
+      __Exploration moves__ form the majority of the structure when travelling or exploring within the ruins of the old world.
+    description: |-
+      The savage lands you inhabit are chaotic and fraught with peril. In your efforts to turn your plans into your reality you will need to overcome the dangers of cities teeming with the living dead, war-torn contested lands, and a wilderness that is reclaiming its domain.
+    _source:
+      <<: *Source
+      page: 120
+    contents:
+      journey:
+        name: Journey
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you travel a known route through perilous lands or across hazardous terrain...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: supply
+        text: |-
+          __When you travel a known route through perilous lands or across hazardous terrain__, roll +supply.
+
+          On a __strong hit__, you reach your destination and the situation there favors you. Take +1 momentum.
+
+          On a __weak hit__, you arrive, but face a cost or complication. Choose one.
+
+            * Suffer costs en route: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1).
+            * Face a complication at the destination: Envision what you encounter.
+
+          On a __miss__, you are waylaid by a significant threat, and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster). If you overcome this obstacle, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) and push on safely to your destination.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you reach your destination and the situation there favors you. Take +1 momentum.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you arrive, but face a cost or complication. Choose one.
+
+                * Suffer costs en route: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1).
+                * Face a complication at the destination: Envision what you encounter.
+          miss:
+            text: |-
+              On a __miss__, you are waylaid by a significant threat, and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster). If you overcome this obstacle, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) and push on safely to your destination.
+        _source:
+          <<: *Source
+          page: 122
+      out_of_fuel:
+        name: Out of Fuel
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: If you use or travel in a vehicle...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: supply
+        text: |-
+          __If you use or travel in a vehicle__ and roll a 1 on your action die, and you are not unprepared, you are running low of fuel. If you are unprepared, you have instead run out of fuel. Otherwise, to refuel, roll +supply.
+
+          On a __strong hit__, you refuel your vehicle quickly and safely.
+
+          On a __weak hit__, you are able to refuel your vehicle, but you face a complication. Choose one.
+
+            * Your fuel is running low: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1)
+            * You need to maintain your vehicle: [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2)
+
+          On a __miss__, your vehicle has suffered damage and is not able to be used until you [Repair](datasworn:move:revenant/recover/repair) it. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you refuel your vehicle quickly and safely.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you are able to refuel your vehicle, but you face a complication. Choose one.
+
+                * Your fuel is running low: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1)
+                * You need to maintain your vehicle: [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2)
+          miss:
+            text: On a __miss__, your vehicle has suffered damage and is not able to be used until you [Repair](datasworn:move:revenant/recover/repair) it. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 123
+      hunker_down:
+        name: Hunker Down
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you take shelter to rest and recover for several hours...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: supply
+        text: |-
+          __When you take shelter to rest and recover for several hours__, roll +supply.
+
+          On a __strong hit__, you and your allies may each choose two. On a __weak hit__,you and your allies may each choose one.
+
+            * Prepare: When you leave, add +1 if you [Undertake a Journey](datasworn:move:revenant/exploration/undertake_an_expedition).
+            * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.
+            * Focus: Take +1 momentum.
+            * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)
+
+          In addition, on a __strong hit__, if you use the __Radiation__ meter, take +1 radiation.
+
+          On a __miss__, you take no comfort. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, you and your allies may each choose two.
+
+                * Prepare: When you leave, add +1 if you [Undertake a Journey](datasworn:move:revenant/exploration/undertake_an_expedition).
+                * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.
+                * Focus: Take +1 momentum.
+                * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)
+
+              In addition, if you use the __Radiation__ meter, take +1 radiation.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you and your allies may each choose one.
+
+                * Prepare: When you leave, add +1 if you [Undertake a Journey](datasworn:move:revenant/exploration/undertake_an_expedition).
+                * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.
+                * Focus: Take +1 momentum.
+                * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)
+          miss:
+            text: On a __miss__, you take no comfort. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 124
+      undertake_an_expedition:
+        name: Undertake an Expedition
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you trailblaze a route through perilous lands, journey over hazardous terrain, or survey a site...
+          conditions:
+            - method: player_choice
+              text: Travel at speed or with haste
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: Travel with persistence or endurance
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Travel quietly or discreetly
+              roll_options:
+                - using: stat
+                  stat: dark
+        text: |-
+          __When you trailblaze a route through perilous lands, journey over hazardous terrain, or survey a site__, give the expedition a name and rank.
+
+          Then, for each segment of the expedition, envision your approach. If you travel...
+
+            * at speed or with haste: Roll +edge
+            * with persistence or endurance: Roll +iron
+            * quietly or discreetly: Roll +dark
+
+          On a __strong hit__, you reach a waypoint. Envision the location and mark progress per the rank of the expedition.
+
+          On a __weak hit__, as above, but this progress costs you. Choose one.
+
+            * Suffer costs en route: Make a suffer move (-2), or two suffer moves (-1).
+            * Face a hazard at the waypoint: Envision what you encounter.
+
+          On a __miss__, you are waylaid by a crisis, or arrive at a waypoint to confront an immediate hardship or threat. Do not mark progress, and [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you reach a waypoint. Envision the location and mark progress per the rank of the expedition.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you reach a waypoint, but this progress costs you. Envision the location and mark progress per the rank of the expedition, but choose one.
+
+                * Suffer costs en route: Make a suffer move (-2), or two suffer moves (-1).
+                * Face a hazard at the waypoint: Envision what you encounter.
+          miss:
+            text: On a __miss__, you are waylaid by a crisis, or arrive at a waypoint to confront an immediate hardship or threat. Do not mark progress, and [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 127
+      explore_a_waypoint:
+        name: Explore a Waypoint
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you divert from an expedition to examine a notable location...
+          conditions:
+            - method: highest
+              roll_options:
+                - using: stat
+                  stat: wits
+                - using: stat
+                  stat: dark
+        oracles:
+          explore_a_waypoint:
+            name: Explore a Waypoint
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 25 }
+                text: 'The terrain favours you, or you find a hidden path.'
+              - roll: { min: 26, max: 45 }
+                text: 'An aspect of the past or nature of this place is revealed.'
+              - roll: { min: 46, max: 57 }
+                text: 'You locate a secure area.'
+              - roll: { min: 58, max: 68 }
+                text: 'A clue offers insight or direction.'
+              - roll: { min: 69, max: 78 }
+                text: 'You get the drop on a denizen.'
+              - roll: { min: 79, max: 86 }
+                text: 'This area provides an opportunity to [Resupply](datasworn:move:revenant/recover/resupply).'
+              - roll: { min: 87, max: 90 }
+                text: 'You locate an interesting or helpful object.'
+              - roll: { min: 91, max: 94 }
+                text: 'You are alerted to a potential threat.'
+              - roll: { min: 95, max: 98 }
+                text: 'You encounter a denizen who might support you.'
+              - roll: { min: 99, max: 100 }
+                text: 'You encounter a cache of forgotten resources.'
+        text: |-
+          __When you divert from an expedition to examine a notable location__, roll +wits or +dark, whichever is higher.
+
+          On a __strong hit__, choose one. On a __strong hit with a match__, you may instead [Establish a Sanctum](datasworn:move:revenant/exploration/establish_a_sanctum). If you do, instead of rolling you may assume a strong hit and mark two ticks on your discoveries legacy track.
+
+            * Find an opportunity: Roll or choose from the table below and envision a favourable encounter, situation, resource, or insight. Then, take +2 momentum.
+            * Gain progress: Mark progress on your expedition, per its rank.
+
+          On a __weak hit__, you uncover something interesting, but it is uncertain, dangerous, or reveals an ominous aspect of this place. Roll on the table below and envision what you encounter. Then, take +1 momentum.
+
+          On a __miss__, you encounter an immediate hardship or threat, and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster). On a __miss with a match__, you may instead [Reveal a Danger](datasworn:move:revenant/exploration/reveal_a_danger).
+
+          {{table>move.oracle_rollable:revenant/exploration/explore_a_waypoint.explore_a_waypoint}}
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one. On a __strong hit with a match__, you may instead [Establish a Sanctum](datasworn:move:revenant/exploration/establish_a_sanctum).
+
+               * Find an opportunity: Envision a favorable insight, situation, resource, or encounter. Then, take +2 momentum.
+               * Gain progress: Mark progress on your expedition, per its rank.
+          weak_hit:
+            text: On a __weak hit__, you uncover something interesting, but it is bound up in a peril or reveals an ominous aspect of this place. Envision what you encounter. Then, take +1 momentum.
+          miss:
+            text: |-
+              On a __miss__, you encounter an immediate hardship or threat, and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster). On a __miss with a match__, you may instead [Reveal a Danger](datasworn:move:revenant/exploration/reveal_a_danger).
+        _source:
+          <<: *Source
+          page: 130
+      establish_a_sanctum:
+        name: Establish a Sanctum
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you secure a safe area while on an expedition...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you secure a safe area while on an expedition__, by doing any of the following...
+
+            * overcoming a critical obstacle
+            * gaining meaningful insight
+            * defeating a notable foe
+
+          ...envision the location and what benefit it provides, if any. Then, mark progress and roll +wits
+
+          On a __strong hit__, you create a reliable sanctum. Instead of rolling, you may assume a strong hit when you [Hunker Down](datasworn:move:revenant/exploration/hunker_down) here.
+
+          On a __weak hit__, you find temporary relief from hardship. Envision what you find and make a recover move: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit.
+
+          On a __miss__, you underestimate your safety. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you create a reliable sanctum. Instead of rolling, you may assume a strong hit when you [Hunker Down](datasworn:move:revenant/exploration/hunker_down) here.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you find temporary relief from hardship. Envision what you find and make a recover move: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit.
+          miss:
+            text: On a __miss__, you underestimate your safety. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 133
+      reveal_a_danger:
+        name: Reveal a Danger
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When your exploration of a waypoint uncovers something dreadful...
+        oracles:
+          reveal_a_danger:
+            name: Reveal a Danger
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+            - roll: { min: 1, max: 22 }
+              text: 'You encounter a notable hostile denizen.'
+            - roll: { min: 23, max: 42 }
+              text: 'You face an environmental or architectural hazard.'
+            - roll: { min: 43, max: 58 }
+              text: 'A discovery undermines or complicates your quest.'
+            - roll: { min: 59, max: 64 }
+              text: 'You confront a harrowing situation or sensation.'
+            - roll: { min: 65, max: 70 }
+              text: 'You face the consequences of an earlier choice or approach.'
+            - roll: { min: 71, max: 76 }
+              text: 'Your way is blocked or trapped.'
+            - roll: { min: 77, max: 82 }
+              text: 'You need the right equipment to move forward.'
+            - roll: { min: 83, max: 88 }
+              text: 'You face a perplexing mystery or tough choice.'
+            - roll: { min: 89, max: 94 }
+              text: 'You lose your way or are delayed.'
+            - roll: { min: 95, max: 100 }
+              text: 'Your insights are incorrect and make matters worse.'
+        text: |-
+          __When your exploration of a waypoint uncovers something dreadful__, decide the number of aspects: one, two, or three. Roll that number of times or choose that number of aspects on the table below. Then, envision how the encounter begins.
+
+          For each result, when you first confront that aspect within the scope of the encounter, you and your allies may mark one tick on your discoveries legacy track.
+
+          {{table>move.oracle_rollable:revenant/exploration/reveal_a_danger.reveal_a_danger}}
+        _source:
+          <<: *Source
+          page: 134
+      finish_an_expedition:
+        name: Finish an Expedition
+        roll_type: progress_roll
+        type: move
+        tracks:
+          category: Expedition
+        trigger:
+          text: When your expedition or survey comes to an end...
+          conditions:
+            - roll_options:
+                - using: progress_track
+        text: |-
+          __When your expedition or survey comes to an end__, roll the challenge dice and compare to your progress for that track.
+
+          On a __strong hit__, you reach your destination or complete your survey. Mark a reward on your discoveries legacy track per expedition's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who shared this expedition also mark the reward.
+
+          On a __weak hit__, as above, but you face an unforeseen complication at the end of your expedition. Make the legacy reward one rank lower (none for a troublesome expedition), and envision what you encounter.
+
+          On a __miss__, your destination is lost to you, or you come to understand the true nature or cost of the expedition. Envision what happens and choose one.
+
+            * Abandon the expedition: Envision the cost of this setback and [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+            * Return to the expedition: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the expedition's rank by one (if not already epic).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, you reach your destination or complete your survey. Mark a reward on your discoveries legacy track per expedition's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Any allies who shared this expedition also mark the reward.
+          weak_hit:
+            text: On a __weak hit__, you reach your destination or complete your survey, but you face an unforeseen complication at the end of your expedition. Make the legacy reward one rank lower (troublesome=0 ticks; dangerous=1 tick; formidable=2 box; extreme=1 box; epic=2 boxes), and envision what you encounter.
+          miss:
+            text: |-
+              On a __miss__, your destination is lost to you, or you come to understand the true nature or cost of the expedition. Envision what happens and choose one.
+
+                * Abandon the expedition: Envision the cost of this setback and [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+                * Return to the expedition: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the expedition's rank by one (if not already epic).
+        _source:
+          <<: *Source
+          page: 135
+  combat:
+    name: Combat Moves
+    type: move_category
+    color: '#818992'
+    _source:
+      <<: *Source
+      page: 138
+    summary: |-
+      __Combat moves__ are used when fighting (but not exclusively; other moves may come into play as well).
+    description: |-
+      The world is a dangerous place. Nomadic warriors prey on vulnerable travellers. Rival enclaves raid each other's settlements. Exotic creatures escaped from zoos stalk the unwary. The living dead wander battle-torn cities and hordes gather in the countryside.
+
+      When you face one or more foes in high-stakes, action-oriented  conflict, use the __combat moves__. These moves encompass on-foot action and vehicle sorties—or both as part of the same challenge.
+    contents:
+      enter_the_fray:
+        name: Enter the Fray
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you initiate combat or are forced into a fight...
+          conditions:
+            - method: player_choice
+              text: On the move
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: Facing off against your foe
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: In the thick of it at close quarters
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Preparing to act against an unaware foe
+              roll_options:
+                - using: stat
+                  stat: dark
+            - method: player_choice
+              text: Caught in a trap or sizing up the situation
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you initiate combat or are forced into a fight__, envision your objective and give it a rank. If the combat includes discrete challenges or phases, set an objective with a rank for each.
+
+          Then, roll to determine your position. If you are...
+
+            * On the move: Roll +edge
+            * Facing off against your foe: Roll +heart
+            * In the thick of it at close quarters: Roll +iron
+            * Preparing to act against an unaware foe: Roll +dark
+            * Caught in a trap or sizing up the situation: Roll +wits
+
+          On a __strong hit__, take both. On a __weak hit__, choose one.
+
+            * Take +2 momentum
+            * You have the upper hand
+
+          On a __miss__, the fight begins with you in a bad spot.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, take +2 momentum. You have the upper hand.
+          weak_hit:
+            text: |-
+              On a __weak hit__, choose one.
+
+                * Take +2 momentum
+                * You have the upper hand
+          miss:
+            text: On a __miss__, the fight begins with you in a bad spot.
+        _source:
+          <<: *Source
+          page: 148
+      gain_ground:
+        name: Gain Ground
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you have the upper hand and take action in a fight to reinforce your position or move toward an objective...
+          conditions:
+            - method: player_choice
+              text: In pursuit, fleeing, or maneuvering
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: Coming to the aid of others, or commanding
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: Gaining leverage with force, or making a threat
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Hiding, preparing an ambush, or misdirecting
+              roll_options:
+                - using: stat
+                  stat: dark
+            - method: player_choice
+              text: Coordinating a plan, or studying a situation
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you have the upper hand and take action in a fight to reinforce your position or move toward an objective__, envision your approach and roll. If you are...
+
+            * In pursuit, fleeing, or maneuvering: Roll +edge
+            * Coming to the aid of others, or commanding: Roll +heart
+            * Gaining leverage with force, or making a threat: Roll +iron
+            * Hiding, preparing an ambush, or misdirecting: Roll +dark
+            * Coordinating a plan, or studying a situation: Roll +wits
+
+          On a __hit__, you stay in control. On a __strong hit__, choose two. On a __weak hit__, choose one.
+
+            * Mark progress
+            * Take +2 momentum
+            * Add +1 on your next move (not a progress move)
+
+          On a __miss__, your foe gains control, the fight moves to a new location, or you encounter a new peril. You are in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, you stay in control. Choose two.
+
+                * Mark progress
+                * Take +2 momentum
+                * Add +1 on your next move (not a progress move)
+          weak_hit:
+            text: |-
+              On a __weak hit__, you stay in control. Choose one.
+
+                * Mark progress
+                * Take +2 momentum
+                * Add +1 on your next move (not a progress move)
+          miss:
+            text: On a __miss__, your foe gains control, the fight moves to a new location, or you encounter a new peril. You are in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 150
+      react_under_fire:
+        name: React Under Fire
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you are in a bad spot and take action in a fight to avoid danger or overcome an obstacle...
+          conditions:
+            - method: player_choice
+              text: In pursuit, fleeing, dodging, or taking cover
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: Remaining stalwart against fear or temptation
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: Blocking or diverting with force, or taking the hit
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Moving into hiding or creating a distraction
+              roll_options:
+                - using: stat
+                  stat: dark
+            - method: player_choice
+              text: Changing the plan, or bypassing an obstacle
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you are in a bad spot and take action in a fight to avoid danger or overcome an obstacle__, envision your approach and roll. If you are...
+
+            * In pursuit, fleeing, dodging, or taking cover: Roll +edge
+            * Remaining stalwart against fear or temptation: Roll +heart
+            * Blocking or diverting with force, or taking the hit: Roll +iron
+            * Moving into hiding or creating a distraction: Roll +dark
+            * Changing the plan, or bypassing an obstacle: Roll +wits
+
+          On a __strong hit__, you succeed and gain the upper hand. Take +1 momentum.
+
+          On a __weak hit__, you avoid the worst of the danger or overcome the obstacle, but not without a cost. Make a suffer move (-1). You stay in a bad spot.
+
+          On a __miss__, the situation worsens. You stay in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you succeed and gain the upper hand. Take +1 momentum.
+          weak_hit:
+            text: On a __weak hit__, you avoid the worst of the danger or overcome the obstacle, but not without a cost. Make a suffer move (-1). You stay in a bad spot.
+          miss:
+            text: On a __miss__, the situation worsens. You stay in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 151
+      strike:
+        name: Strike
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you have the upper hand and assault a foe at close quarters, or when you attack at a distance...
+          conditions:
+            - method: player_choice
+              text: Assault a foe at close quarters
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Attack at a distance
+              roll_options:
+                - using: stat
+                  stat: edge
+        text: |-
+          __When you have the upper hand and assault a foe at close quarters__, roll +iron; __when you attack at a distance__, roll +edge.
+
+          On a __strong hit__, mark progress twice. You dominate your foe and retain the upper hand.
+
+          On a __weak hit__, mark progress twice, but you expose yourself to danger. You are in a bad spot.
+
+          On a __miss__, the fight turns against you. You are in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, mark progress twice. You dominate your foe and retain the upper hand.
+          weak_hit:
+            text: On a __weak hit__, mark progress twice, but you expose yourself to danger. You are in a bad spot.
+          miss:
+            text: On a __miss__, the fight turns against you. You are in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 152
+      clash:
+        name: Clash
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you are in a bad spot and fight back against a foe at close quarters, or when you return fire at a distance...
+          conditions:
+            - method: player_choice
+              text: Fight back against a foe at close quarters
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Exchange fire at a distance
+              roll_options:
+                - using: stat
+                  stat: edge
+        text: |-
+          __When you are in a bad spot and fight back against a foe at close quarters__, roll +iron; __when you return fire at a distance__, roll +edge.
+
+          On a __strong hit__, mark progress twice. You overwhelm your foe and gain the upper hand.
+
+          On a __weak hit__, mark progress, but you are dealt a counterblow or setback. You stay in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+
+          On a __miss__, your foe dominates this exchange. You stay in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, mark progress twice. You overwhelm your foe and gain the upper hand.
+          weak_hit:
+            text: On a __weak hit__, mark progress, but you are dealt a counterblow or setback. You stay in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+          miss:
+            text: On a __miss__, your foe dominates this exchange. You stay in a bad spot and must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 153
+      reload:
+        name: Reload
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: If you shoot a firearm...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: supply
+        text: |-
+          __If you shoot a firearm__ and roll a 1 on your action die, you have used your last round. If you have the unprepared impact marked, you have run out of ammunition. Otherwise, to reload, roll +supply.
+
+          On a __strong hit__, you are well stocked and reload your weapon easily. If you are in combat, you have the upper hand.
+
+          On a __weak hit__, you reload your empty weapon, but your supply is running low. [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1). If you are in combat, you are in a bad spot.
+
+          On a __miss__, you have no more ammunition for this weapon. If you are in combat, you are in a bad spot. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are well stocked and reload your weapon easily. If you are in combat, you have the upper hand.
+          weak_hit:
+            text: On a __weak hit__, you reload your empty weapon, but your supply is running low. [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1). If you are in combat, you are in a bad spot.
+          miss:
+            text: On a __miss__, you have no more ammunition for this weapon. If you are in combat, you are in a bad spot. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 154
+      avoid_being_bitten:
+        name: Avoid Being Bitten
+        roll_type: action_roll # technically a progress_roll, but schema insists on "progress_track" as roll option
+        type: move
+        trigger:
+          text: When you are in close quarters combat with a creature capable of transmitting the Revenant pathogen...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: momentum
+        text: |-
+          __When you are in close quarters combat with a creature capable of transmitting the Revenant pathogen__ and roll a 1 on your action die when you make a suffer move, roll your challenge dice and compare to your momentum.
+
+          If you have the upper hand, check the result as normal. If you are in a bad spot, count a strong hit without a match as a weak hit, and a weak hit as a miss.
+
+          On a __strong hit__, you prevail. Take +1 momentum. You gain the upper hand and may immediately [Take Decisive Action](datasworn:move:revenant/combat/take_decisive_action). If you do you may reroll your challenge dice.
+
+          On a __weak hit__, you avoid begin bitten, but it is stressful. [Endure Stress](datasworn:move:revenant/suffer/endure_stress) (-2) and you are in a bad spot.
+
+          On a __miss__, you get bitten and must immediately [Face Death](datasworn:move:revenant/suffer/face_death).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you prevail. Take +1 momentum. You gain the upper hand and may immediately [Take Decisive Action](datasworn:move:revenant/combat/take_decisive_action). If you do you may reroll your challenge dice.
+          weak_hit:
+            text: On a __weak hit__, you avoid begin bitten, but it is stressful. [Endure Stress](datasworn:move:revenant/suffer/endure_stress) (-2) and you are in a bad spot.
+          miss:
+            text: On a __miss__, you get bitten and must immediately [Face Death](datasworn:move:revenant/suffer/face_death).
+        _source:
+          <<: *Source
+          page: 226
+      take_decisive_action:
+        name: Take Decisive Action
+        roll_type: progress_roll
+        type: move
+        tracks:
+          category: Combat
+        trigger:
+          text: When you seize an objective in a fight...
+          conditions:
+            - roll_options:
+                - using: progress_track
+        oracles:
+          take_decisive_action:
+            name: Take Decisive Action
+            oracle_type: table_text
+            type: oracle_rollable
+            # content:
+            #   part_of_speech: [sentences]
+            rows:
+              - roll: { min: 1, max: 40 }
+                text: "It's worse than you thought: Make a suffer move (-2)"
+              - roll: { min: 41, max: 52 }
+                text: 'Victory is short-lived: A new hazard or foe appears'
+              - roll: { min: 53, max: 64 }
+                text: 'You face collateral damage: Something of value is lost'
+              - roll: { min: 65, max: 76 }
+                text: 'Others pay the price: Someone else meets with disaster'
+              - roll: { min: 77, max: 88 }
+                text: "Others won't forget: You are marked for vengeance"
+              - roll: { min: 89, max: 100 }
+                text: 'It gets complicated: The nature of a foe or goal is revealed'
+
+        text: |-
+          __When you seize an objective in a fight__, envision how you take decisive action. Then, roll the challenge dice and compare to your progress.
+
+          If you have the upper hand, check the result as normal. If you are in a bad spot, count a strong hit without a match as a weak hit, and a weak hit as a miss.
+
+          On a __strong hit__, you prevail. Take +1 momentum. If any objectives remain and the fight continues, you gain or retain the upper hand.
+
+          On a __weak hit__, you achieve your objective, but not without cost. Roll on the table below or choose one. If the fight continues, you are in a bad spot.
+
+          {{table>move.oracle_rollable:revenant/combat/take_decisive_action.take_decisive_action}}
+
+          On a __miss__, you are defeated or fail your objective. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you prevail. Take +1 momentum. If any objectives remain and the fight continues, you gain or retain the upper hand.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you achieve your objective, but not without cost. Roll on the table below or choose one. If the fight continues, you are in a bad spot.
+
+              {{table>move.oracle_rollable:revenant/combat/take_decisive_action.take_decisive_action}}
+          miss:
+            text: On a __miss__, you are defeated or fail your objective. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 156
+      face_defeat:
+        name: Face Defeat
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you abandon or are deprived of an objective...
+        text: |-
+          __When you abandon or are deprived of an objective__, envision the consequence of this failure, clear the objective, and [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+
+          If the fight continues, you may create a new objective and give it a rank to represent the changing situation. If any objectives remain, the fight continues and you are in a bad spot.
+        _source:
+          <<: *Source
+          page: 158
+  suffer:
+    name: Suffer Moves
+    type: move_category
+    color: '#883529'
+    summary: |-
+      __Suffer moves__ occur when you endure hardship, such as suffering physical harm or facing a demoralising event. It also covers character death and desolation.
+    description: |-
+      These moves are made as a result of a perilous event or bad outcome on other moves. They represent what happens to you, and how you hold up against the trauma.
+
+      Making a __suffer move__ is not, however, the only possible outcome of a failure. You might face story complications or new dangers. You might lose an important item. Your relationship with another character might be tested. When in doubt, [Seek Guidance](datasworn:move:revenant/fate/seek_guidance).
+
+      When you suffer harm at the hands of an NPC in combat, you will use their rank to determine the amount by which your meter will be reduced. See page 218 for more information on NPC ranks.
+    _source:
+      <<: *Source
+      page: 160
+    contents:
+      lose_momentum:
+        name: Lose Momentum
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you are delayed or disadvantaged...
+        text: |-
+          __When you are delayed or disadvantaged__, suffer -1 momentum for a minor setback, -2 for a serious setback, or -3 for a terrible setback.
+
+          When your momentum is at its minimum (-6) and you must suffer -momentum, choose one.
+
+            * Envision how complicated affects you in a different way and make a different suffer move.
+            * Envision how this undermines your progress on a plan, expedition, connection, or combat. Then, clear 1 unit of progress on that track per its rank: troublesome=3 boxes; dangerous=2 boxes; formidable=1 box; extreme=2 ticks; epic=1 tick.
+        _source:
+          <<: *Source
+          page: 163
+      sacrifice_resources:
+        name: Sacrifice Resources
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you lose or consume resources...
+        text: |-
+          __When you lose or consume resources__, suffer -1 supply for a minor loss, -2 for a serious loss, or -3 for a terrible loss. If your supply is reduced to 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining loss.
+
+          If your supply is at 0, mark __unprepared__. When you suffer a loss of resources while unprepared, envision how this causes you hardship and apply the cost to a different suffer move.
+        _source:
+          <<: *Source
+          page: 164
+      endure_stress:
+        name: Endure Stress
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you face mental strain, shock, or despair...
+          conditions:
+            - method: highest
+              roll_options:
+                - using: stat
+                  stat: heart
+                - using: condition_meter
+                  condition_meter: morale
+        oracles:
+          endure_stress:
+            name: Endure Stress
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: 'You are overwhelmed. [Face Desolation](datasworn:move:revenant/suffer/face_desolation).'
+              - roll: { min: 11, max: 25 }
+                text: 'You give up. [Abandon Your Plan](datasworn:move:revenant/plan/abandon_your_plan).'
+              - roll: { min: 26, max: 50 }
+                text: 'You crack under pressure and act uncharacteristically.'
+              - roll: { min: 51, max: 100 }
+                text: 'You persevere.'
+        text: |-
+          __When you face mental strain, shock, or despair__, suffer -1 morale for minor stress, -2 for serious stress, or -3 for terrible stress. If your morale is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining stress.
+
+          Then, if your morale is at 0 or you choose to resist the stress, roll +morale or +heart, whichever is higher.
+
+          On a __strong hit__, choose one.
+
+            * Shake it off: If you are not shaken, take +1 morale
+            * Embrace the darkness: Take +1 momentum
+
+          On a __weak hit__, if you are not shaken, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 morale. Otherwise, press on.
+
+          On a __miss__, it's worse than you thought. Suffer an additional -1 morale or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your morale is 0, you must also mark __shaken__ or __traumatized__, or roll on the table below.
+
+          {{table>move.oracle_rollable:revenant/suffer/endure_stress.endure_stress}}
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one.
+
+                * Shake it off: If you are not shaken, take +1 morale
+                * Embrace the darkness: Take +1 momentum
+          weak_hit:
+            text: On a __weak hit__, if you are not shaken, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 morale. Otherwise, press on.
+          miss:
+            text: |-
+              On a __miss__, it's worse than you thought. Suffer an additional -1 morale or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your morale is 0, you must also mark __shaken__ or __traumatized__, or roll on the table below.
+
+              {{table>move.oracle_rollable:revenant/suffer/endure_stress.endure_stress}}
+        _source:
+          <<: *Source
+          page: 166
+      endure_harm:
+        name: Endure Harm
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you face physical injury, fatigue, or illness...
+          conditions:
+            - method: highest
+              roll_options:
+                - using: stat
+                  stat: iron
+                - using: condition_meter
+                  condition_meter: endurance
+        oracles:
+          endure_harm:
+            name: Endure Harm
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: 'You suffer mortal harm. [Face Death](datasworn:move:revenant/suffer/face_death).'
+              - roll: { min: 11, max: 20 }
+                text: 'You are dying. Within an hour or two, you must [Heal](datasworn:move:revenant/recover/heal) and raise your endurance above 0, or [Face Death](datasworn:move:revenant/suffer/face_death).'
+              - roll: { min: 21, max: 35 }
+                text: 'You are unconscious and out of action. If left alone, you come back to your senses in an hour or two. If you are vulnerable to ongoing harm, [Face Death](datasworn:move:revenant/suffer/face_death).'
+              - roll: { min: 36, max: 50 }
+                text: 'You are reeling. If you engage in any vigorous activity before taking a breather for a few minutes, roll on this table again (before resolving the other move).'
+              - roll: { min: 51, max: 100 }
+                text: 'You are still standing.'
+        text: |-
+          __When you face physical injury, fatigue, or illness__, suffer -1 endurance for minor harm, -2 for serious harm, or -3 for terrible harm. If your endurance is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining harm.
+
+          Then, if your endurance is 0 or you choose to resist the harm, roll +endurance or +iron, whichever is higher.
+
+          On a __strong hit__, choose one.
+
+            * Shake it off: If you are not wounded, take +1 endurance
+            * Embrace the pain: Take +1 momentum
+
+          On a __weak hit__, if you are not wounded, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 endurance. Otherwise, press on.
+
+          On a __miss__, it's worse than you thought. Suffer an additional -1 endurance or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your endurance is 0, you must also mark __wounded __or __permanently__ harmed, or roll on the table below.
+
+          {{table>move.oracle_rollable:revenant/suffer/endure_harm.endure_harm}}
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one.
+
+                * Shake it off: If you are not wounded, take +1 endurance
+                * Embrace the pain: Take +1 momentum
+          weak_hit:
+            text: On a __weak hit__, if you are not wounded, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 endurance. Otherwise, press on.
+          miss:
+            text: |-
+              On a __miss__, it's worse than you thought. Suffer an additional -1 endurance or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your endurance is 0, you must also mark __wounded__ or __permanently__ harmed, or roll on the table below.
+
+              {{table>move.oracle_rollable:revenant/suffer/endure_harm.endure_harm}}
+        _source:
+          <<: *Source
+          page: 200
+      companion_takes_a_hit:
+        name: Companion Takes a Hit
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When your companion faces physical hardship...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: asset_control
+                  assets:
+                    - 'asset:revenant/assets/companion_1'
+                    - 'asset:revenant/assets/companion_2'
+                    - 'asset:revenant/assets/companion_3'
+                    - 'asset:revenant/assets/companion_4'
+                    - 'asset:revenant/assets/companion_5'
+                    - 'asset:revenant/assets/companion_6'
+                  control: endurance
+        text: |-
+          __When your companion faces physical hardship__, they suffer -1 endurance for minor harm, -2 for serious harm, or -3 for terrible harm. If your companion's endurance is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining harm.
+
+          Then, if their endurance is 0 or you choose to test their resilience, roll +your companion's endurance.
+
+          On a __strong hit__, your companion rallies. Give them +1 endurance.
+
+          On a __weak hit__, if your companion's endurance is not 0, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) and give them +1 endurance. Otherwise, they press on.
+
+          On a __miss__, it's worse than you thought. They suffer an additional -1 endurance or you [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1). If your companion's endurance is 0, they are out of action until given aid. If their endurance is 0 and you rolled a miss with a match on this move, they are dead; clear the connection.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, your companion rallies. Give them +1 endurance.
+          weak_hit:
+            text: On a __weak hit__, if your companion's endurance is not 0, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) and give them +1 endurance. Otherwise, they press on.
+          miss:
+            text: |-
+              On a __miss__, it's worse than you thought. They suffer an additional -1 endurance or you [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1). If your companion's endurance is 0, they are out of action until given aid. If their endurance is 0 and you rolled a miss with a match on this move, they are dead; clear the connection.
+        _source:
+          <<: *Source
+          page: 171
+      withstand_damage:
+        name: Withstand Damage
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When your vehicle faces a damaging situation or environment...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: asset_control
+                  assets:
+                    - 'asset:revenant/assets/vehicle_1'
+                    - 'asset:revenant/assets/vehicle_2'
+                    - 'asset:revenant/assets/vehicle_3'
+                    - 'asset:revenant/assets/vehicle_4'
+                  control: integrity
+        oracles:
+          withstand_damage:
+            name: Withstand Damage
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: 'Immediate catastrophic destruction. All aboard must [Endure Harm](datasworn:move:revenant/suffer/endure_harm) or [Face Death](datasworn:move:revenant/suffer/face_death), as appropriate.'
+              - roll: { min: 11, max: 25 }
+                text: 'Destruction is imminent and unavoidable. If you do not have the means or intention to get clear, [Endure Harm](datasworn:move:revenant/suffer/endure_harm) or [Face Death](datasworn:move:revenant/suffer/face_death) as appropriate.'
+              - roll: { min: 26, max: 40 }
+                text: 'Destruction is imminent, but can be averted if you [Repair](datasworn:move:revenant/recover/repair) your vehicle and raise its integrity above 0. If you fail, see 11-25.'
+              - roll: { min: 41, max: 55 }
+                text: 'You cannot [Repair](datasworn:move:revenant/recover/repair) this vehicle until you [Check Your Gear](datasworn:move:revenant/basic/check_your_gear) or [Resupply](datasworn:move:revenant/recover/resupply) and obtain a crucial replacement part. If you roll this result again prior to that, see 11-25.'
+              - roll: { min: 56, max: 70 }
+                text: 'The vehicle is crippled or out of your control. To get it back in action, you must [Repair](datasworn:move:revenant/recover/repair) and raise its integrity above 0.'
+              - roll: { min: 71, max: 85 }
+                text: "It's a rough ride. All aboard must make the [Endure Harm](datasworn:move:revenant/suffer/endure_harm), [Endure Stress](datasworn:move:revenant/suffer/endure_stress), or [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) move, suffering a serious (-2) cost."
+              - roll: { min: 86, max: 95 }
+                text: "You've lost fuel, energy, or cargo. [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-2)."
+              - roll: { min: 96, max: 100 }
+                text: 'Against all odds, the vehicle holds together.'
+        text: |-
+          __When your vehicle faces a damaging situation or environment__, suffer -1 integrity for minor damage, -2 for serious damage, or -3 for terrible damage. If your vehicle integrity is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining damage.
+
+          Then, if your vehicle integrity is 0 or you choose to resist the damage, roll +integrity.
+
+          On a __strong hit__, choose one.
+
+            * Bypass: If your vehicle is not battered, take +1 integrity
+            * Ride it out: Take +1 momentum
+
+          On a __weak hit__, if your vehicle is not battered, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 integrity. Otherwise, press on.
+
+          On a __miss__, it's worse than you thought. Suffer an additional -1 integrity or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your integrity is 0, mark the vehicle as battered or roll on the table below.
+
+          {{table>move.oracle_rollable:revenant/suffer/withstand_damage.withstand_damage}}
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one.
+
+                * Bypass: If your vehicle is not battered, take +1 integrity
+                * Ride it out: Take +1 momentum
+          weak_hit:
+            text: On a __weak hit__, if your vehicle is not battered, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 integrity. Otherwise, press on.
+          miss:
+            text: |-
+              On a __miss__, it's worse than you thought. Suffer an additional -1 integrity or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your integrity is 0, mark the vehicle as battered or roll on the table below.
+
+              {{table>move.oracle_rollable:revenant/suffer/withstand_damage.withstand_damage}}
+        _source:
+          <<: *Source
+          page: 172
+      face_death:
+        name: Face Death
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you are brought to the brink of death with a chance for recovery or redemption...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        text: |-
+          __When you encounter a situation where death is an immediate and unavoidable outcome__, you are dead. __When you are instead brought to the brink of death with a chance for recovery or redemption__, roll +heart.
+
+          On a __strong hit__, you are cast back into the mortal world.
+
+          On a __weak hit__, you die, but not before making a noble sacrifice. Envision your final moments. Then, if you [Continue a Legacy](datasworn:move:revenant/legacy/continue_a_legacy), you may mark four ticks across your legacy tracks as you see fit.
+
+          On a __miss__, you are dead.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are cast back into the mortal world.
+          weak_hit:
+            text: On a __weak hit__, you die, but not before making a noble sacrifice. Envision your final moments. Then, if you [Continue a Legacy](datasworn:move:revenant/legacy/continue_a_legacy), you may mark four ticks across your legacy tracks as you see fit.
+          miss:
+            text: On a __miss__, you are dead.
+        _source:
+          <<: *Source
+          page: 174
+      face_desolation:
+        name: Face Desolation
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you are brought to the brink of desolation...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        text: |-
+          __When you are brought to the brink of desolation__, roll +heart.
+
+          On a __weak hit__, your spirit breaks, but not before making a noble sacrifice. Envision your final moments. Then, if you [Continue a Legacy](datasworn:move:revenant/legacy/continue_a_legacy), you may mark four ticks across your legacy tracks as you see fit.
+
+          On a __miss__, you succumb to despair and are lost.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you resist and press on.
+          weak_hit:
+            text: |-
+              On a __weak hit__, your spirit breaks, but not before making a noble sacrifice. Envision your final moments. Then, if you [Continue a Legacy](datasworn:move:revenant/legacy/continue_a_legacy), you may mark four ticks across your legacy tracks as you see fit.
+          miss:
+            text: On a __miss__, you succumb to despair and are lost.
+        _source:
+          <<: *Source
+          page: 175
+      endure_radiation:
+        name: Endure Radiation
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you are exposed to unsafe levels of radiation...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: condition_meter
+                  condition_meter: radiation
+        text: |-
+          __When you are exposed to unsafe levels of radiation__, suffer -1 radiation for minor contamination, -2 for serious contamination, or -3 for terrible contamination. If your radiation is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining contamination.
+
+          Then, if your radiation is at 0 or you choose to resist the contamination, roll +radiation.
+
+          On a __strong hit__, if you are not irradiated, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2) in exchange for +1 radiation. Otherwise, press on.
+
+          On a __weak hit__, you press on.
+
+          On a __miss__, it's worse than you thought. Suffer an additional -1 radiation or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your radiation is 0, you must also mark the __irradiated__ impact.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, if you are not irradiated, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2) in exchange for +1 radiation. Otherwise, press on.
+          weak_hit:
+            text: On a __weak hit__, you press on.
+          miss:
+            text: On a __miss__, it's worse than you thought. Suffer an additional -1 radiation or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your radiation is 0, you must also mark the __irradiated__ impact.
+        _source:
+          <<: *Source
+          page: 177
+  recover:
+    name: Recover Moves
+    type: move_category
+    color: '#488B44'
+    summary: __Recover moves__ are for resting and recuperating.
+    description: |-
+      When your resources are strained, your endurance and morale are ebbing, and your equipment and vehicles in disrepair, you'll need to find relief from the constant hardships of the world.
+
+      Make these __recover moves__ when you attempt to rest, recover, or restock.
+    _source:
+      <<: *Source
+      page: 180
+    contents:
+      sojourn:
+        name: Sojourn
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you spend time recovering within a community...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        text: |-
+          __When you spend time recovering within a community__, roll +heart.
+
+          On a __strong hit__, this is a safe refuge. You and your allies may each choose two recover moves: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once. If you use the __Radiation__ meter, take +1 radiation additionally.
+
+          On a __weak hit__, as above, but time is short or resources are strained. You and your allies each make one recover move instead of two, with no more than three moves total among the group.
+
+          On a __miss__, choose one.
+
+            * The community needs your help, or makes a costly demand in exchange for your safety. Envision what they ask of you. If you do it, or [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done, resolve this move as a strong hit.
+            * You find no relief, and the situation grows worse. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, this is a safe refuge. You and your allies may each choose two recover moves: [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once. If you use the __Radiation__ meter, take +1 radiation additionally.
+          weak_hit:
+            text: |-
+              On a __weak hit__, this is a safe refuge, but time is short or resources are strained. You and your allies may each make one recover move (with no more than three moves total among the group): [Heal](datasworn:move:revenant/recover/heal), [Hearten](datasworn:move:revenant/recover/hearten), [Repair](datasworn:move:revenant/recover/repair), or [Resupply](datasworn:move:revenant/recover/resupply). Instead of rolling, assume an automatic strong hit for each. An individual move can be taken more than once.
+          miss:
+            text: |-
+              On a __miss__, choose one.
+
+                * The community needs your help, or makes a costly demand in exchange for your safety. Envision what they ask of you. If you do it, or [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done, resolve this move as a strong hit.
+                * You find no relief, and the situation grows worse. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 182
+      heal:
+        name: Heal
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you receive medical care or provide treatment...
+          conditions:
+            - method: player_choice
+              text: Receive treatment from someone (not an ally)
+              roll_options:
+                - using: stat
+                  stat: iron
+            - text: Care for yourself
+              method: lowest
+              roll_options:
+                - using: stat
+                  stat: iron
+                - using: condition_meter
+                  condition_meter: supply
+            - text: Provide care
+              method: lowest
+              roll_options:
+                - using: stat
+                  stat: wits
+                - using: condition_meter
+                  condition_meter: supply
+            - text: Obtain treatment for a companion
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        text: |-
+          __When you receive medical care or provide treatment__, envision the situation and roll. If you...
+
+            * Receive treatment from someone (not an ally): Roll +iron
+            * Care for yourself: Roll +iron or +supply, whichever is lower
+            * Provide care: Roll +wits or +supply, whichever is lower
+            * Obtain treatment for a companion: Roll +heart
+
+          On a __strong hit__, the care is helpful. If you (or the ally under your care) are wounded, clear the impact and take or give +2 endurance. Otherwise, take or give +3 endurance.
+
+          On a __weak hit__, as above, but the recovery expends medicine or medical treatment. [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1).
+
+          On a __miss__, the aid is ineffective and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, the care is helpful. If you (or the ally under your care) are wounded, clear the impact and take or give +2 endurance. Otherwise, take or give +3 endurance.
+          weak_hit:
+            text: |-
+              On a __weak hit__, the care is helpful. If you (or the ally under your care) are wounded, clear the impact and take or give +2 endurance. Otherwise, take or give +3 endurance.
+
+              However, the recovery expends medicine or medical treatment. [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1).
+          miss:
+            text: On a __miss__, the aid is ineffective and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 184
+      hearten:
+        name: Hearten
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you socialize, share intimacy, or find a moment of peace...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        text: |-
+          __When you socialize, share intimacy, or find a moment of peace__, roll +heart. If you do so in the presence of a connection, add +1. If you share a bond, add +2 instead.
+
+          On a __strong hit__, you find companionship or comfort and your spirit is strengthened. If you are shaken, clear the impact and take +1 morale. Otherwise, take +2 morale. If you make this move as you [Sojourn](datasworn:move:revenant/recover/sojourn), take +1 more.
+
+          On a __weak hit__, as above, but this respite is fleeting. Envision an interruption, complication, or inner conflict. Then, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1).
+
+          On a __miss__, you take no comfort and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you find companionship or comfort and your spirit is strengthened. If you are shaken, clear the impact and take +1 morale. Otherwise, take +2 morale. If you make this move as you [Sojourn](datasworn:move:revenant/recover/sojourn), take +1 more.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you find companionship or comfort and your spirit is strengthened. If you are shaken, clear the impact and take +1 morale. Otherwise, take +2 morale. If you make this move as you [Sojourn](datasworn:move:revenant/recover/sojourn), take +1 more.
+
+              However, this respite is fleeting. Envision an interruption, complication, or inner conflict. Then, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1).
+          miss:
+            text: On a __miss__, you take no comfort and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 185
+      resupply:
+        name: Resupply
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you attempt to bolster your readiness...
+          conditions:
+            - method: player_choice
+              text: Barter or make an appeal
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: Scavenge or craft
+              roll_options:
+                - using: stat
+                  stat: wits
+            - method: player_choice
+              text: Threaten or seize
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: Steal or swindle
+              roll_options:
+                - using: stat
+                  stat: dark
+        text: |-
+          __When you attempt to bolster your readiness__, envision the opportunity and your approach. If you...
+
+            * Barter or make an appeal: Roll +heart
+            * Scavenge or craft: Roll +wits
+            * Threaten or seize: Roll +iron
+            * Steal or swindle: Roll +dark
+
+          On a __strong hit__, choose one.
+
+            * If you are unprepared, clear the impact and take +1 supply. Otherwise, take +2 supply.
+            * If you are in need of a specific item or resource that can reasonably be obtained, you acquire it. Take +1 momentum.
+
+          On a __weak hit__, as above, but you must first deal with a cost, complication, or demand. Envision the nature of this obstacle.
+
+          On a __miss__, you encounter an unexpected peril. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one.
+
+                * If you are unprepared, clear the impact and take +1 supply. Otherwise, take +2 supply.
+                * If you are in need of a specific item or resource that can reasonably be obtained, you acquire it. Take +1 momentum.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you must first deal with a cost, complication, or demand. Envision the nature of this obstacle.
+
+              Then choose one.
+
+                * If you are unprepared, clear the impact and take +1 supply. Otherwise, take +2 supply.
+                * If you are in need of a specific item or resource that can reasonably be obtained, you acquire it. Take +1 momentum.
+          miss:
+            text: On a __miss__, you encounter an unexpected peril. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 186
+      repair:
+        name: Repair
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you make repairs to your vehicles or other mechanical devices...
+          conditions:
+            - method: highest
+              text: Make your own repairs, or direct a companion to make repairs
+              roll_options:
+                - using: condition_meter
+                  condition_meter: supply
+                - using: stat
+                  stat: wits
+            - method: player_choice
+              text: Obtain repairs from someone (not an ally)
+              roll_options:
+                - using: condition_meter
+                  condition_meter: supply
+        text: |-
+          __When you make repairs to your vehicles or other mechanical devices__, envision the situation and roll. If you...
+
+            * Make your own repairs, or aid a connection to make repairs: Roll +supply or +wits, whichever is higher.
+            * Obtain repairs from someone (not an ally): Roll +supply
+
+          On a __hit__, you gain repair points as appropriate to the situation, per the table below. Additionally, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and exchange each -1 of your supply for 1 extra repair point (up to 3 points).
+
+          Situation     | Strong Hit | Weak Hit
+          --------------|------------|---------
+          At a facility | 5 points   | 3 points
+          In the field  | 3 points   | 1 points
+          Under fire    | 2 points   | 0 points
+
+          Spend repair points as follows. Unused points are discarded.
+
+            * Clear the battered impact on a vehicle: 2 points
+            * Take +1 integrity on a vehicle: 1 point
+            * Install or repair a vehicle upgrade: 3 points
+            * Repair any other device: 3 points
+            * Repair any other device, but with a complication or malfunction: 2 points
+
+          On a __miss__, the repairs are not made and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, you gain repair points as appropriate to the situation, per the table below.
+
+              Situation     | Strong Hit
+              --------------|-----------
+              At a facility | 5 points
+              In the field  | 3 points
+              Under fire    | 2 points
+
+              Additionally, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and exchange each -1 of your supply for 1 extra repair point (up to 3 points).
+
+              Spend repair points as follows. Unused points are discarded.
+
+                * Clear the battered impact on a vehicle: 2 points
+                * Fix one broken module: 2 points
+                * Take +1 integrity on a vehicle: 1 point
+                * Take +1 endurance for a mechanical companion: 1 point
+                * Repair any other device: 3 points
+                * Repair any other device, but with a complication or malfunction: 2 points
+          weak_hit:
+            text: |-
+              On a __weak hit__, you gain repair points as appropriate to the situation, per the table below.
+
+              Situation     | Weak Hit
+              --------------|---------
+              At a facility | 3 points
+              In the field  | 1 points
+              Under fire    | 0 points
+
+              Additionally, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and exchange each -1 of your supply for 1 extra repair point (up to 3 points).
+
+              Spend repair points as follows. Unused points are discarded.
+
+                * Clear the battered impact on a vehicle: 2 points
+                * Fix one broken module: 2 points
+                * Take +1 integrity on a vehicle: 1 point
+                * Take +1 endurance for a mechanical companion: 1 point
+                * Repair any other device: 3 points
+                * Repair any other device, but with a complication or malfunction: 2 points
+          miss:
+            text: On a __miss__, the repairs are not made and the situation worsens. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 190
+  legacy:
+    name: Legacy Moves
+    type: move_category
+    color: '#4F5A69'
+    _source:
+      <<: *Source
+      page: 194
+    summary: |-
+      __Legacy moves__ are used when improving your character, or when you take up a character's mantle upon their retirement.
+    description:
+      The three legacy tracks—plans, bonds, and discoveries—are a special type of progress track to show the evolution of your character. As you complete plans, build relationships, and explore the world, you'll mark progress on these tracks and gain experience. This experience is then spent on talents or stat increases to represent your character's growing skills.
+
+      Make these __Legacy Moves__ to gain and spend experience, and when you face a final test to learn how your accomplishments and failures will echo through time.
+    contents:
+      earn_experience:
+        name: Earn Experience
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you fill a box (four ticks) on any legacy track...
+        text: |-
+          __When you fill a box (four ticks) on any legacy track__, take 2 experience. This experience may be spent when you [Advance](datasworn:move:revenant/legacy/advance).
+
+          Once you completely fill the tenth box on any legacy track, clear that track. You may start again marking progress on the cleared track, but earn experience at a reduced rate of 1 experience (instead of 2) for each filled progress box. If you make a progress roll against this track, resolve the outcome as if at 10 progress.
+        _source:
+          <<: *Source
+          page: 196
+      advance:
+        name: Advance
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you develop your abilities...
+        text: |-
+          __When you develop your abilities__, you may bolster your personal capabilities as appropriate to your focus and opportunities.
+
+          If you bolster your personal capabilities, spend 3 experience. Then, add a new talent.
+
+          If you have completely filled the tenth box of any legacy track, you may instead spend 6 experience and increase one stat by +1, to a maximum of +4.
+        _source:
+          <<: *Source
+          page: 197
+      continue_a_legacy:
+        name: Continue a Legacy
+        roll_type: special_track
+        type: move
+        trigger:
+          text: When you retire or succumb to death or desolation...
+          conditions:
+            - method: all
+              roll_options:
+                - using: plans_legacy
+                - using: bonds_legacy
+                - using: discoveries_legacy
+        text: |-
+          __When you retire or succumb to death or desolation__, you may create a new character in your established setting or have a connection [Rise to the Challenge](datasworn:move:revenant/connection/rise_to_the_challenge). If you do, roll the challenge dice and compare to each of the former character's legacy tracks: quests, bonds, and discoveries (one roll per track).
+
+          For each __strong hit__, choose one from below, or one from the weak hit or miss options.
+
+            * Follow their path: Gain one talent from the former character (at no cost).
+            * Share a connection: Take one connection from the former character, including any accrued progress or bond benefits.
+            * Take the wheel: Gain one vehicle from the former character.
+
+          For each __weak hit__, choose one from below, or one from the miss options.
+
+            * See it through: Choose one of the former character's unfinished plans that is not a shared plan. Then, [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done and assume an automatic strong hit. You may immediately mark up to half their earned progress (round down) on this plan.
+            * Make an acquaintance: Name one of the former character's connections that is not a shared connection. Envision how time or circumstances have changed them in a dramatic way. When you [Make a Connection](datasworn:move:revenant/connection/make_a_connection) with them, take an automatic strong hit and mark two ticks on your bonds legacy track.
+            * Explore familiar ground: Name a location that was meaningful to the former character. When you first visit that place, envision how it has changed or is endangered. Then, mark two ticks on your discoveries legacy track.
+
+          For each __miss__, choose one.
+
+            * Deal with the aftermath: Envision how one of your former character's foes has gained power or influence and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).
+            * Switch loyalties: Envision how you begin in opposition to your former character's beliefs, goals, or allegiances.
+            * Chaos: Envision how a discovery has unleashed unexpected consequences.
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one:
+
+                * Follow their path: Gain one talent from the former character (at no cost).
+                * Share a connection: Take one connection from the former character, including any accrued progress or bond benefits.
+                * Take the wheel: Gain one vehicle from the former character.
+
+              Alternatively, you may choose a weak hit option:
+
+                * See it through: Choose one of the former character's unfinished plans that is not a shared plan. Then, [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done and assume an automatic strong hit. You may immediately mark up to half their earned progress (round down) on this plan.
+                * Make an acquaintance: Name one of the former character's connections that is not a shared connection. Envision how time or circumstances have changed them in a dramatic way. When you [Make a Connection](datasworn:move:revenant/connection/make_a_connection) with them, take an automatic strong hit and mark two ticks on your bonds legacy track.
+                * Explore familiar ground: Name a location that was meaningful to the former character. When you first visit that place, envision how it has changed or is endangered. Then, mark two ticks on your discoveries legacy track.
+
+              Or a miss option:
+
+                * Deal with the aftermath: Envision how one of your former character's foes has gained power or influence and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).
+                * Switch loyalties: Envision how you begin in opposition to your former character's beliefs, goals, or allegiances.
+                * Chaos: Envision how a discovery has unleashed unexpected consequences.
+          weak_hit:
+            text: |-
+              On a __weak hit__, choose one:
+
+                * See it through: Choose one of the former character's unfinished plans that is not a shared plan. Then, [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done and assume an automatic strong hit. You may immediately mark up to half their earned progress (round down) on this plan.
+                * Make an acquaintance: Name one of the former character's connections that is not a shared connection. Envision how time or circumstances have changed them in a dramatic way. When you [Make a Connection](datasworn:move:revenant/connection/make_a_connection) with them, take an automatic strong hit and mark two ticks on your bonds legacy track.
+                * Explore familiar ground: Name a location that was meaningful to the former character. When you first visit that place, envision how it has changed or is endangered. Then, mark two ticks on your discoveries legacy track.
+
+              Alternatively, you may choose a miss option:
+
+                * Deal with the aftermath: Envision how one of your former character's foes has gained power or influence and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).
+                * Switch loyalties: Envision how you begin in opposition to your former character's beliefs, goals, or allegiances.
+                * Chaos: Envision how a discovery has unleashed unexpected consequences.
+          miss:
+            text: |-
+              On a __miss__, choose one:
+
+                * Deal with the aftermath: Envision how one of your former character's foes has gained power or influence and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).
+                * Switch loyalties: Envision how you begin in opposition to your former character's beliefs, goals, or allegiances.
+                * Chaos: Envision how a discovery has unleashed unexpected consequences.
+        _source:
+          <<: *Source
+          page: 198
+  fate:
+    name: Fate Moves
+    type: move_category
+    color: '#8F477B'
+    summary: |-
+      __Fate moves__ help you decide what happens in solo and co-op play, or support the GM's decisions and brainstorming in guided play
+    description: |-
+      In solo and co-op play, the __fate moves__ mediate the result of other moves or serve as inspirational prompts for your story. When you face the uncertain outcome of a move, want to know what happens next, or have a question about people, places, and events, these moves help reveal the answer.
+    _source:
+      <<: *Source
+      page: 200
+    contents:
+      meet_with_disaster:
+        name: Meet with Disaster
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you suffer the outcome of an action...
+        suggestions:
+          - oracle_rollable:revenant/story/complication
+          - oracle_rollable:*/**/hazard
+        oracles:
+          meet_with_disaster:
+            name: Meet with Disaster
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 2 }
+                text: 'A trusted individual or community acts against you'
+              - roll: { min: 3, max: 4 }
+                text: 'An individual or community close to you is put in danger'
+              - roll: { min: 5, max: 7 }
+                text: 'You encounter signs of a looming threat'
+              - roll: { min: 8, max: 10 }
+                text: 'You create an opportunity for an enemy'
+              - roll: { min: 11, max: 14 }
+                text: 'You face a tough choice'
+              - roll: { min: 15, max: 18 }
+                text: 'You face the consequences of an earlier choice'
+              - roll: { min: 19, max: 22 }
+                text: 'A surprising development complicates your plan'
+              - roll: { min: 23, max: 26 }
+                text: 'You are separated from something or someone'
+              - roll: { min: 27, max: 30 }
+                text: 'A complication with a plan arises'
+              - roll: { min: 31, max: 33 }
+                text: 'You cause collateral damage or an unintended effect'
+              - roll: { min: 34, max: 38 }
+                text: 'Something of value is lost or destroyed'
+              - roll: { min: 39, max: 44 }
+                text: 'The environment or terrain introduces a new hazard'
+              - roll: { min: 45, max: 50 }
+                text: 'A new enemy is revealed'
+              - roll: { min: 51, max: 56 }
+                text: 'A companion or ally is in danger (or you are, if alone)'
+              - roll: { min: 57, max: 62 }
+                text: 'Your equipment or vehicle malfunctions'
+              - roll: { min: 63, max: 68 }
+                text: 'Your vehicle suffers damage'
+              - roll: { min: 69, max: 74 }
+                text: 'You waste resources'
+              - roll: { min: 75, max: 81 }
+                text: 'You are harmed'
+              - roll: { min: 82, max: 88 }
+                text: 'You are stressed'
+              - roll: { min: 89, max: 95 }
+                text: 'You are delayed or put at a disadvantage'
+              - roll: { min: 96, max: 100 }
+                text: 'Roll twice'
+                oracle_rolls:
+                  - number_of_rolls: 2
+                    auto: true
+
+        text: |-
+          __When you suffer the outcome of an action__, choose one.
+
+            * Make the most obvious negative outcome happen.
+            * Make a suffer move. Or, if the failure was more dramatic, [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).
+            * [Seek Guidance](datasworn:move:revenant/fate/seek_guidance) for inspiration. Interpret the answer as a hardship or complication appropriate to the situation.
+            * Roll on the table below. If the result doesn't fit the situation, roll again.
+
+          {{table>move.oracle_rollable:revenant/fate/meet_with_disaster.meet_with_disaster}}
+        _source:
+          <<: *Source
+          page: 202
+      seek_guidance:
+        name: Seek Guidance
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you seek to resolve questions or reveal details...
+        text: |-
+          __When you seek to resolve questions or reveal details__, you may...
+
+            * Draw a conclusion based on the most interesting, dramatic, or obvious result.
+            * Spark an idea and decide the answer through using an Oracle table or other prompt.
+            * Ask a yes/no question. Then, take your challenge dice and roll each die in turn. If the second die is higher than the first, the answer is 'yes'. If the first die is the greater, the answer is 'no'.
+
+              Additionally, you may continue and receive a more nuanced answer. If both the numbers are high (6 or above) add the word 'and'. If the numbers are both low (5 or below), add the word 'but'.
+
+              If you roll a match, make a choice. Either the question has taken something for granted that makes it impossible to answer 'yes' or 'no', or reroll both your dice then envision an extreme result.
+        _source:
+          <<: *Source
+          page: 204
+  scene_challenge:
+    name: Scene Challenges
+    type: move_category
+    color: '#206087'
+    summary: |-
+      __Scene moves__ are for extended non-combat situations.
+    description: |-
+      A __scene challenge__ is a structured approach for resolving an extended non-combat scene against a threat or other characters, particularly when a time limit or looming danger adds extra urgency. Examples of a scene challenge include barricading a warehouse against an oncoming horde of zombies, participating in a debate, or competing in an off-road race.
+    _source:
+      <<: *Source
+      page: 208
+    contents:
+      begin_the_scene:
+        name: Begin the Scene
+        roll_type: no_roll
+        type: move
+        trigger:
+          text: When you face an extended or complex challenge...
+        text: |-
+          __When you face an extended or complex challenge__, name your objective and choose a rank as appropriate to the situation.
+
+            * You have a clear advantage: Troublesome
+            * You are ready to act: Dangerous
+            * You are unprepared or outmatched: Formidable
+
+          Then, activate a tension clock.
+        _source:
+          <<: *Source
+          page: 210
+      overcome_peril:
+        name: Overcome Peril
+        # variant_of: move:revenant/basic/defy_danger
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you attempt something risky or react to an imminent threat within a scene challenge...
+          conditions:
+            - method: player_choice
+              text: With finesse, mobility, or agility
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: With resolve, command, or sociability
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: With strength, endurance, or aggression
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: With deception, stealth, or betrayal
+              roll_options:
+                - using: stat
+                  stat: dark
+            - method: player_choice
+              text: With expertise, focus, or observation
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you attempt something risky or react to an imminent threat within a scene challenge__, envision your action and roll. If you act...
+
+            * With finesse, mobility, or agility: Roll +edge
+            * With resolve, command, or sociability: Roll +heart
+            * With strength, endurance, or aggression: Roll +iron
+            * With deception, stealth, or betrayal: Roll +dark
+            * With expertise, focus, or observation: Roll +wits
+
+          On a __strong hit__, you are successful and mark progress. On a __strong hit with a match__, mark progress twice.
+
+          On a __weak hit__, you are successful and mark progress, but also encounter a complication or setback. Envision what occurs and fill a clock segment.
+
+          On a __miss__, you fail, or a momentary success is undermined by a dramatic turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster) and fill a clock segment. On a __miss with a match__, fill two segments instead.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are successful and mark progress. On a __strong hit with a match__, mark progress twice.
+          weak_hit:
+            text: On a __weak hit__, you are successful and mark progress, but also encounter a complication or setback. Envision what occurs and fill a clock segment.
+          miss:
+            text: On a __miss__, you fail, or a momentary success is undermined by a dramatic turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster) and fill a clock segment. On a __miss with a match__, fill two segments instead.
+        _source:
+          <<: *Source
+          page: 212
+      obtain_an_opportunity:
+        name: Obtain an Opportunity
+        # variant_of: move:revenant/basic/secure_an_advantage
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you assess a situation, make preparations, or attempt to gain leverage within a scene challenge...
+          conditions:
+            - method: player_choice
+              text: With finesse, mobility, or agility
+              roll_options:
+                - using: stat
+                  stat: edge
+            - method: player_choice
+              text: With resolve, command, or sociability
+              roll_options:
+                - using: stat
+                  stat: heart
+            - method: player_choice
+              text: With strength, endurance, or aggression
+              roll_options:
+                - using: stat
+                  stat: iron
+            - method: player_choice
+              text: With deception, stealth, or betrayal
+              roll_options:
+                - using: stat
+                  stat: dark
+            - method: player_choice
+              text: With expertise, focus, or observation
+              roll_options:
+                - using: stat
+                  stat: wits
+        text: |-
+          __When you assess a situation, make preparations, or attempt to gain leverage within a scene challenge__, envision your action and roll. If you act...
+
+            * With finesse, mobility, or agility: Roll +edge
+            * With resolve, command, or sociability: Roll +heart
+            * With strength, endurance, or aggression: Roll +iron
+            * With deception, stealth, or betrayal: Roll +dark
+            * With expertise, focus, or observation: Roll +wits
+
+          On a __hit__, you are successful. On a __strong hit__, take both. On a __strong hit with a match__, take both and mark progress. On a __weak hit__, choose one.
+
+            * Take +2 momentum
+            * Add +1 on your next move (not a progress move)
+
+          On a __miss__, you fail, or a momentary success is undermined by a dramatic turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster) and fill a clock segment. On a __miss with a match__, fill two segments instead.
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, you are successful. Take +2 momentum and add +1 on your next move (not a progress move).
+
+               On a __strong hit with a match__, take both and mark progress.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you are successful. Choose one.
+
+                * Take +2 momentum
+                * Add +1 on your next move (not a progress move)
+          miss:
+            text: |-
+              On a __miss__, you fail, or a momentary success is undermined by a dramatic turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster) and fill a clock segment. On a __miss with a match__, fill two segments instead.
+        _source:
+          <<: *Source
+          page: 213
+      finish_the_scene:
+        name: Finish the Scene
+        roll_type: progress_roll
+        type: move
+        tracks:
+          category: Scene Challenge
+        trigger:
+          text: When the scene challenge tension clock or progress track is filled, or when events lead to the scene's conclusion...
+          conditions:
+            - roll_options:
+                - using: progress_track
+        text: |-
+          __When the scene challenge tension clock or progress track is filled, or when events lead to the scene's conclusion__, roll the challenge dice and compare to your progress.
+
+          On a __strong hit__, you achieve your objective unconditionally.
+
+          On a __weak hit__, you succeed, but not without cost. You must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster) but, you can make this a minor cost relative to the scope of the scene.
+
+          On a __miss__, you fail or are undermined by a dire and costly turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you achieve your objective unconditionally.
+          weak_hit:
+            text: On a __weak hit__, you succeed, but not without cost. You must [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster) but, you can make this a minor cost relative to the scope of the scene.
+          miss:
+            text: On a __miss__, you fail, or are undermined by a dramatic and costly turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        _source:
+          <<: *Source
+          page: 214

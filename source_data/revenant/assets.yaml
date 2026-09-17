@@ -1,0 +1,185 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+assets:
+  assets:
+    type: asset_collection
+    _source:
+      <<: &Source
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
+        authors:
+          - name: Killian Gillespie
+    name: Assets
+    description: ""
+    contents:
+      companion_1:
+        <<: &Companion
+          name: Companion 1
+          type: asset
+          category: Companion
+          shared: true
+          options:
+            name:
+              field_type: text
+              label: name
+          _source:
+            <<: *Source
+            page: 113
+          abilities:
+            - enabled: true
+              text: |-
+                When an NPC accompanies you on your adventures they become a companion.
+  
+                Companions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.
+  
+                When your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead.
+          controls:
+            endurance:
+              label: endurance
+              field_type: condition_meter
+              max: 5
+              value: 5
+              min: 0
+              moves:
+                suffer:
+                  - move:revenant/suffer/companion_takes_a_hit
+                recover:
+                  - move:revenant/recover/heal
+              controls:
+                out_of_action:
+                  label: out of action
+                  field_type: checkbox
+                  disables_asset: true
+      companion_2:
+        <<: *Companion
+        name: Companion 2
+      companion_3:
+        <<: *Companion
+        name: Companion 3
+      companion_4:
+        <<: *Companion
+        name: Companion 4
+      companion_5:
+        <<: *Companion
+        name: Companion 5
+      companion_6:
+        <<: *Companion
+        name: Companion 6
+      vehicle_1:
+        <<: &Vehicle
+          name: Vehicle 1
+          type: asset
+          category: Vehicle
+          shared: true
+          options:
+            name:
+              field_type: text
+              label: name
+          _source:
+            <<: *Source
+            page: 189
+          abilities:
+            - enabled: true
+              text: |-
+                Envision the type of vehicle and assign a maximum integrity as follow:
+                  * Heavy: 5 integrity
+                  * Medium: 4 integrity
+                  * Light: 3 integrity
+  
+                __Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).
+  
+                Vehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.
+  
+                The battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity.
+          controls:
+            integrity:
+              label: integrity
+              field_type: condition_meter
+              max: 5
+              value: 5
+              min: 0
+              moves:
+                suffer:
+                  - move:revenant/suffer/withstand_damage
+                recover:
+                  - move:revenant/recover/repair
+              controls:
+                battered:
+                  label: battered
+                  field_type: checkbox
+                  is_impact: true
+      vehicle_2:
+        <<: *Vehicle
+        name: Vehicle 2
+      vehicle_3:
+        <<: *Vehicle
+        name: Vehicle 3
+      vehicle_4:
+        <<: *Vehicle
+        name: Vehicle 4
+      carriers:
+        name: Carriers
+        type: asset
+        category: Optional Rule
+        _source:
+          <<: *Source
+          page: 258
+        requirement: "Choose one option:"
+        abilities:
+          - name: In darkness they feast
+            text: |-
+              When you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition) or [Journey](datasworn:move:revenant/exploration/journey) and roll a 1 on your action die, start a scene challenge as you try to survive the night.
+            enabled: false
+          - name: Oh Rats
+            text: |-
+              If you [Endure Harm](datasworn:move:revenant/suffer/endure_harm) from a rat, mark the __wounded__ impact.
+            enabled: false
+          - name: Like the plague
+            text: |-
+              Rats are capable of transmitting the Revenant pathogen. You must [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) when fighting rats.
+            enabled: false
+      immunity:
+        name: Immunity
+        type: asset
+        category: Optional Rule
+        _source:
+          <<: *Source
+          page: 230
+        abilities:
+          - text: |-
+              You are immune to the Revenant pathogen. If you need to [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), consider it an automatic strong hit.
+            enabled: true
+          - text: |-
+              You are hunted by a power or authority. When you make a move, you may improve the result to a strong hit. If you do, fill one segment of a four-segment clock to represent hunters closing in. When the clock is filled, a notable foe or force has tracked you down. If you overcome them or escape, reset the clock and mark 1 tick on your plans legacy track.
+            controls:
+              clock:
+                label: notable foe or force tracks you down
+                field_type: clock
+                max: 4
+                value: 0
+                min: 0
+            enabled: true
+      vectors:
+        name: Vectors
+        type: asset
+        category: Optional Rule
+        _source:
+          <<: *Source
+          page: 228
+        requirement: "Choose one option:"
+        abilities:
+          - name: Just a scratch
+            text: |-
+              When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, roll your action die. You only [Face Death](datasworn:move:revenant/suffer/face_death) if the action die is a 1.
+            enabled: false
+          - name: Infectious
+            text: |-
+              When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), count a weak hit as a miss.
+            enabled: false
+          - name: Black Fever
+            text: |-
+              When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, start a scene challenge. This scene challenge will determine how you attempt to overcome the black fever. Only [Face Death](datasworn:move:revenant/suffer/face_death) if you [Finish the Scene](datasworn:move:revenant/scene_challenge/finish_the_scene) and miss.
+            enabled: false
