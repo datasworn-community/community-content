@@ -1,8 +1,92 @@
 {
   "_id": "revenant",
   "assets": {
-    "assets": {
-      "_id": "asset_collection:revenant/assets",
+    "companion": {
+      "_id": "asset_collection:revenant/companion",
+      "_source": {
+        "authors": [
+          {
+            "name": "Killian Gillespie"
+          }
+        ],
+        "date": "2025-06-23",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0",
+        "title": "Revenant",
+        "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
+      },
+      "collections": {},
+      "contents": {
+        "companion": {
+          "_id": "asset:revenant/companion/companion",
+          "_source": {
+            "authors": [
+              {
+                "name": "Killian Gillespie"
+              }
+            ],
+            "date": "2025-06-23",
+            "license": "https://creativecommons.org/licenses/by-sa/4.0",
+            "page": 113,
+            "title": "Revenant",
+            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:revenant/companion/companion.0",
+              "controls": {},
+              "enabled": true,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When an NPC accompanies you on your adventures they become a companion.\n\nCompanions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.\n\nWhen your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead."
+            }
+          ],
+          "category": "Companion",
+          "controls": {
+            "endurance": {
+              "controls": {
+                "out_of_action": {
+                  "disables_asset": true,
+                  "field_type": "checkbox",
+                  "is_impact": false,
+                  "label": "out of action",
+                  "value": false
+                }
+              },
+              "field_type": "condition_meter",
+              "label": "endurance",
+              "max": 5,
+              "min": 0,
+              "moves": {
+                "recover": [
+                  "move:revenant/recover/heal"
+                ],
+                "suffer": [
+                  "move:revenant/suffer/companion_takes_a_hit"
+                ]
+              },
+              "rollable": true,
+              "value": 5
+            }
+          },
+          "count_as_impact": false,
+          "name": "Companion",
+          "options": {
+            "name": {
+              "field_type": "text",
+              "label": "name",
+              "value": null
+            }
+          },
+          "shared": true,
+          "type": "asset"
+        }
+      },
+      "name": "Companion",
+      "type": "asset_collection"
+    },
+    "optional_rules": {
+      "_id": "asset_collection:revenant/optional_rules",
       "_source": {
         "authors": [
           {
@@ -17,7 +101,7 @@
       "collections": {},
       "contents": {
         "carriers": {
-          "_id": "asset:revenant/assets/carriers",
+          "_id": "asset:revenant/optional_rules/carriers",
           "_source": {
             "authors": [
               {
@@ -32,7 +116,7 @@
           },
           "abilities": [
             {
-              "_id": "asset.ability:revenant/assets/carriers.0",
+              "_id": "asset.ability:revenant/optional_rules/carriers.0",
               "controls": {},
               "enabled": false,
               "moves": {},
@@ -42,7 +126,7 @@
               "text": "When you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition) or [Journey](datasworn:move:revenant/exploration/journey) and roll a 1 on your action die, start a scene challenge as you try to survive the night."
             },
             {
-              "_id": "asset.ability:revenant/assets/carriers.1",
+              "_id": "asset.ability:revenant/optional_rules/carriers.1",
               "controls": {},
               "enabled": false,
               "moves": {},
@@ -52,7 +136,7 @@
               "text": "If you [Endure Harm](datasworn:move:revenant/suffer/endure_harm) from a rat, mark the __wounded__ impact."
             },
             {
-              "_id": "asset.ability:revenant/assets/carriers.2",
+              "_id": "asset.ability:revenant/optional_rules/carriers.2",
               "controls": {},
               "enabled": false,
               "moves": {},
@@ -71,398 +155,8 @@
           "shared": false,
           "type": "asset"
         },
-        "companion_1": {
-          "_id": "asset:revenant/assets/companion_1",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 113,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/companion_1.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When an NPC accompanies you on your adventures they become a companion.\n\nCompanions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.\n\nWhen your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead."
-            }
-          ],
-          "category": "Companion",
-          "controls": {
-            "endurance": {
-              "controls": {
-                "out_of_action": {
-                  "disables_asset": true,
-                  "field_type": "checkbox",
-                  "is_impact": false,
-                  "label": "out of action",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "endurance",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/heal"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/companion_takes_a_hit"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Companion 1",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "companion_2": {
-          "_id": "asset:revenant/assets/companion_2",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 113,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/companion_2.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When an NPC accompanies you on your adventures they become a companion.\n\nCompanions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.\n\nWhen your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead."
-            }
-          ],
-          "category": "Companion",
-          "controls": {
-            "endurance": {
-              "controls": {
-                "out_of_action": {
-                  "disables_asset": true,
-                  "field_type": "checkbox",
-                  "is_impact": false,
-                  "label": "out of action",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "endurance",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/heal"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/companion_takes_a_hit"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Companion 2",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "companion_3": {
-          "_id": "asset:revenant/assets/companion_3",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 113,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/companion_3.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When an NPC accompanies you on your adventures they become a companion.\n\nCompanions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.\n\nWhen your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead."
-            }
-          ],
-          "category": "Companion",
-          "controls": {
-            "endurance": {
-              "controls": {
-                "out_of_action": {
-                  "disables_asset": true,
-                  "field_type": "checkbox",
-                  "is_impact": false,
-                  "label": "out of action",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "endurance",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/heal"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/companion_takes_a_hit"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Companion 3",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "companion_4": {
-          "_id": "asset:revenant/assets/companion_4",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 113,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/companion_4.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When an NPC accompanies you on your adventures they become a companion.\n\nCompanions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.\n\nWhen your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead."
-            }
-          ],
-          "category": "Companion",
-          "controls": {
-            "endurance": {
-              "controls": {
-                "out_of_action": {
-                  "disables_asset": true,
-                  "field_type": "checkbox",
-                  "is_impact": false,
-                  "label": "out of action",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "endurance",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/heal"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/companion_takes_a_hit"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Companion 4",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "companion_5": {
-          "_id": "asset:revenant/assets/companion_5",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 113,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/companion_5.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When an NPC accompanies you on your adventures they become a companion.\n\nCompanions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.\n\nWhen your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead."
-            }
-          ],
-          "category": "Companion",
-          "controls": {
-            "endurance": {
-              "controls": {
-                "out_of_action": {
-                  "disables_asset": true,
-                  "field_type": "checkbox",
-                  "is_impact": false,
-                  "label": "out of action",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "endurance",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/heal"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/companion_takes_a_hit"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Companion 5",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "companion_6": {
-          "_id": "asset:revenant/assets/companion_6",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 113,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/companion_6.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "When an NPC accompanies you on your adventures they become a companion.\n\nCompanions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.\n\nWhen your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead."
-            }
-          ],
-          "category": "Companion",
-          "controls": {
-            "endurance": {
-              "controls": {
-                "out_of_action": {
-                  "disables_asset": true,
-                  "field_type": "checkbox",
-                  "is_impact": false,
-                  "label": "out of action",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "endurance",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/heal"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/companion_takes_a_hit"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Companion 6",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
         "immunity": {
-          "_id": "asset:revenant/assets/immunity",
+          "_id": "asset:revenant/optional_rules/immunity",
           "_source": {
             "authors": [
               {
@@ -477,7 +171,7 @@
           },
           "abilities": [
             {
-              "_id": "asset.ability:revenant/assets/immunity.0",
+              "_id": "asset.ability:revenant/optional_rules/immunity.0",
               "controls": {},
               "enabled": true,
               "moves": {},
@@ -486,7 +180,7 @@
               "text": "You are immune to the Revenant pathogen. If you need to [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), consider it an automatic strong hit."
             },
             {
-              "_id": "asset.ability:revenant/assets/immunity.1",
+              "_id": "asset.ability:revenant/optional_rules/immunity.1",
               "controls": {
                 "clock": {
                   "field_type": "clock",
@@ -513,7 +207,7 @@
           "type": "asset"
         },
         "vectors": {
-          "_id": "asset:revenant/assets/vectors",
+          "_id": "asset:revenant/optional_rules/vectors",
           "_source": {
             "authors": [
               {
@@ -528,7 +222,7 @@
           },
           "abilities": [
             {
-              "_id": "asset.ability:revenant/assets/vectors.0",
+              "_id": "asset.ability:revenant/optional_rules/vectors.0",
               "controls": {},
               "enabled": false,
               "moves": {},
@@ -538,7 +232,7 @@
               "text": "When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, roll your action die. You only [Face Death](datasworn:move:revenant/suffer/face_death) if the action die is a 1."
             },
             {
-              "_id": "asset.ability:revenant/assets/vectors.1",
+              "_id": "asset.ability:revenant/optional_rules/vectors.1",
               "controls": {},
               "enabled": false,
               "moves": {},
@@ -548,7 +242,7 @@
               "text": "When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten), count a weak hit as a miss."
             },
             {
-              "_id": "asset.ability:revenant/assets/vectors.2",
+              "_id": "asset.ability:revenant/optional_rules/vectors.2",
               "controls": {},
               "enabled": false,
               "moves": {},
@@ -566,9 +260,28 @@
           "requirement": "Choose one option:",
           "shared": false,
           "type": "asset"
-        },
-        "vehicle_1": {
-          "_id": "asset:revenant/assets/vehicle_1",
+        }
+      },
+      "name": "Companion",
+      "type": "asset_collection"
+    },
+    "vehicle": {
+      "_id": "asset_collection:revenant/vehicle",
+      "_source": {
+        "authors": [
+          {
+            "name": "Killian Gillespie"
+          }
+        ],
+        "date": "2025-06-23",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0",
+        "title": "Revenant",
+        "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
+      },
+      "collections": {},
+      "contents": {
+        "vehicle": {
+          "_id": "asset:revenant/vehicle/vehicle",
           "_source": {
             "authors": [
               {
@@ -583,7 +296,7 @@
           },
           "abilities": [
             {
-              "_id": "asset.ability:revenant/assets/vehicle_1.0",
+              "_id": "asset.ability:revenant/vehicle/vehicle.0",
               "controls": {},
               "enabled": true,
               "moves": {},
@@ -621,202 +334,7 @@
             }
           },
           "count_as_impact": false,
-          "name": "Vehicle 1",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "vehicle_2": {
-          "_id": "asset:revenant/assets/vehicle_2",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 189,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/vehicle_2.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "Envision the type of vehicle and assign a maximum integrity as follow:\n  * Heavy: 5 integrity\n  * Medium: 4 integrity\n  * Light: 3 integrity\n\n__Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).\n\nVehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.\n\nThe battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity."
-            }
-          ],
-          "category": "Vehicle",
-          "controls": {
-            "integrity": {
-              "controls": {
-                "battered": {
-                  "disables_asset": false,
-                  "field_type": "checkbox",
-                  "is_impact": true,
-                  "label": "battered",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "integrity",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/repair"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/withstand_damage"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Vehicle 2",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "vehicle_3": {
-          "_id": "asset:revenant/assets/vehicle_3",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 189,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/vehicle_3.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "Envision the type of vehicle and assign a maximum integrity as follow:\n  * Heavy: 5 integrity\n  * Medium: 4 integrity\n  * Light: 3 integrity\n\n__Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).\n\nVehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.\n\nThe battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity."
-            }
-          ],
-          "category": "Vehicle",
-          "controls": {
-            "integrity": {
-              "controls": {
-                "battered": {
-                  "disables_asset": false,
-                  "field_type": "checkbox",
-                  "is_impact": true,
-                  "label": "battered",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "integrity",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/repair"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/withstand_damage"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Vehicle 3",
-          "options": {
-            "name": {
-              "field_type": "text",
-              "label": "name",
-              "value": null
-            }
-          },
-          "shared": true,
-          "type": "asset"
-        },
-        "vehicle_4": {
-          "_id": "asset:revenant/assets/vehicle_4",
-          "_source": {
-            "authors": [
-              {
-                "name": "Killian Gillespie"
-              }
-            ],
-            "date": "2025-06-23",
-            "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 189,
-            "title": "Revenant",
-            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
-          },
-          "abilities": [
-            {
-              "_id": "asset.ability:revenant/assets/vehicle_4.0",
-              "controls": {},
-              "enabled": true,
-              "moves": {},
-              "options": {},
-              "oracles": {},
-              "text": "Envision the type of vehicle and assign a maximum integrity as follow:\n  * Heavy: 5 integrity\n  * Medium: 4 integrity\n  * Light: 3 integrity\n\n__Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).\n\nVehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.\n\nThe battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity."
-            }
-          ],
-          "category": "Vehicle",
-          "controls": {
-            "integrity": {
-              "controls": {
-                "battered": {
-                  "disables_asset": false,
-                  "field_type": "checkbox",
-                  "is_impact": true,
-                  "label": "battered",
-                  "value": false
-                }
-              },
-              "field_type": "condition_meter",
-              "label": "integrity",
-              "max": 5,
-              "min": 0,
-              "moves": {
-                "recover": [
-                  "move:revenant/recover/repair"
-                ],
-                "suffer": [
-                  "move:revenant/suffer/withstand_damage"
-                ]
-              },
-              "rollable": true,
-              "value": 5
-            }
-          },
-          "count_as_impact": false,
-          "name": "Vehicle 4",
+          "name": "Vehicle",
           "options": {
             "name": {
               "field_type": "text",
@@ -828,8 +346,7 @@
           "type": "asset"
         }
       },
-      "description": "",
-      "name": "Assets",
+      "name": "Vehicle",
       "type": "asset_collection"
     }
   },
@@ -4480,12 +3997,7 @@
                 "roll_options": [
                   {
                     "assets": [
-                      "asset:revenant/assets/companion_1",
-                      "asset:revenant/assets/companion_2",
-                      "asset:revenant/assets/companion_3",
-                      "asset:revenant/assets/companion_4",
-                      "asset:revenant/assets/companion_5",
-                      "asset:revenant/assets/companion_6"
+                      "asset:revenant/companion/companion"
                     ],
                     "control": "endurance",
                     "using": "asset_control"
@@ -5026,10 +4538,7 @@
                 "roll_options": [
                   {
                     "assets": [
-                      "asset:revenant/assets/vehicle_1",
-                      "asset:revenant/assets/vehicle_2",
-                      "asset:revenant/assets/vehicle_3",
-                      "asset:revenant/assets/vehicle_4"
+                      "asset:revenant/vehicle/vehicle"
                     ],
                     "control": "integrity",
                     "using": "asset_control"

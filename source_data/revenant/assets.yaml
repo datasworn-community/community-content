@@ -2,7 +2,8 @@ _id: revenant
 datasworn_version: "0.1.0"
 type: ruleset
 assets:
-  assets:
+  companion:
+    name: Companion
     type: asset_collection
     _source:
       <<: &Source
@@ -12,114 +13,98 @@ assets:
         date: 2025-06-23
         authors:
           - name: Killian Gillespie
-    name: Assets
-    description: ""
     contents:
-      companion_1:
-        <<: &Companion
-          name: Companion 1
-          type: asset
-          category: Companion
-          shared: true
-          options:
-            name:
-              field_type: text
-              label: name
-          _source:
-            <<: *Source
-            page: 113
-          abilities:
-            - enabled: true
-              text: |-
-                When an NPC accompanies you on your adventures they become a companion.
-  
-                Companions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.
-  
-                When your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead.
-          controls:
-            endurance:
-              label: endurance
-              field_type: condition_meter
-              max: 5
-              value: 5
-              min: 0
-              moves:
-                suffer:
-                  - move:revenant/suffer/companion_takes_a_hit
-                recover:
-                  - move:revenant/recover/heal
-              controls:
-                out_of_action:
-                  label: out of action
-                  field_type: checkbox
-                  disables_asset: true
-      companion_2:
-        <<: *Companion
-        name: Companion 2
-      companion_3:
-        <<: *Companion
-        name: Companion 3
-      companion_4:
-        <<: *Companion
-        name: Companion 4
-      companion_5:
-        <<: *Companion
-        name: Companion 5
-      companion_6:
-        <<: *Companion
-        name: Companion 6
-      vehicle_1:
-        <<: &Vehicle
-          name: Vehicle 1
-          type: asset
-          category: Vehicle
-          shared: true
-          options:
-            name:
-              field_type: text
-              label: name
-          _source:
-            <<: *Source
-            page: 189
-          abilities:
-            - enabled: true
-              text: |-
-                Envision the type of vehicle and assign a maximum integrity as follow:
-                  * Heavy: 5 integrity
-                  * Medium: 4 integrity
-                  * Light: 3 integrity
-  
-                __Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).
-  
-                Vehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.
-  
-                The battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity.
-          controls:
-            integrity:
-              label: integrity
-              field_type: condition_meter
-              max: 5
-              value: 5
-              min: 0
-              moves:
-                suffer:
-                  - move:revenant/suffer/withstand_damage
-                recover:
-                  - move:revenant/recover/repair
-              controls:
-                battered:
-                  label: battered
-                  field_type: checkbox
-                  is_impact: true
-      vehicle_2:
-        <<: *Vehicle
-        name: Vehicle 2
-      vehicle_3:
-        <<: *Vehicle
-        name: Vehicle 3
-      vehicle_4:
-        <<: *Vehicle
-        name: Vehicle 4
+      companion:
+        name: Companion
+        type: asset
+        category: Companion
+        shared: true
+        options:
+          name:
+            field_type: text
+            label: name
+        _source:
+          <<: *Source
+          page: 113
+        abilities:
+          - enabled: true
+            text: |-
+              When an NPC accompanies you on your adventures they become a companion.
+
+              Companions have an endurance meter. When your companion takes damage, make the [Companion Takes a Hit](datasworn:move:revenant/suffer/companion_takes_a_hit) to determine the outcome. If your companion's endurance is reduced to 0, or was already at 0 and your Companion takes a hit, you must Lose momentum and apply any remaining -endurance to your momentum meter.
+
+              When your companion's endurance is at 0 and you score a miss, they are out of action. You cannot leverage their support until they gain at least +1 endurance. If you score a miss with a match, they're dead.
+        controls:
+          endurance:
+            label: endurance
+            field_type: condition_meter
+            max: 5
+            value: 5
+            min: 0
+            moves:
+              suffer:
+                - move:revenant/suffer/companion_takes_a_hit
+              recover:
+                - move:revenant/recover/heal
+            controls:
+              out_of_action:
+                label: out of action
+                field_type: checkbox
+                disables_asset: true
+  vehicle:
+    name: Vehicle
+    type: asset_collection
+    _source:
+      <<: *Source
+    contents:
+      vehicle:
+        name: Vehicle
+        type: asset
+        category: Vehicle
+        shared: true
+        options:
+          name:
+            field_type: text
+            label: name
+        _source:
+          <<: *Source
+          page: 189
+        abilities:
+          - enabled: true
+            text: |-
+              Envision the type of vehicle and assign a maximum integrity as follow:
+                * Heavy: 5 integrity
+                * Medium: 4 integrity
+                * Light: 3 integrity
+
+              __Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).
+
+              Vehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.
+
+              The battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity.
+        controls:
+          integrity:
+            label: integrity
+            field_type: condition_meter
+            max: 5
+            value: 5
+            min: 0
+            moves:
+              suffer:
+                - move:revenant/suffer/withstand_damage
+              recover:
+                - move:revenant/recover/repair
+            controls:
+              battered:
+                label: battered
+                field_type: checkbox
+                is_impact: true
+  optional_rules:
+    name: Companion
+    type: asset_collection
+    _source:
+      <<: *Source
+    contents:
       carriers:
         name: Carriers
         type: asset

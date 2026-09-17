@@ -1717,12 +1717,7 @@ moves:
               roll_options:
                 - using: asset_control
                   assets:
-                    - 'asset:revenant/assets/companion_1'
-                    - 'asset:revenant/assets/companion_2'
-                    - 'asset:revenant/assets/companion_3'
-                    - 'asset:revenant/assets/companion_4'
-                    - 'asset:revenant/assets/companion_5'
-                    - 'asset:revenant/assets/companion_6'
+                    - 'asset:revenant/companion/companion'
                   control: endurance
         text: |-
           __When your companion faces physical hardship__, they suffer -1 endurance for minor harm, -2 for serious harm, or -3 for terrible harm. If your companion's endurance is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining harm.
@@ -1756,10 +1751,7 @@ moves:
               roll_options:
                 - using: asset_control
                   assets:
-                    - 'asset:revenant/assets/vehicle_1'
-                    - 'asset:revenant/assets/vehicle_2'
-                    - 'asset:revenant/assets/vehicle_3'
-                    - 'asset:revenant/assets/vehicle_4'
+                    - 'asset:revenant/vehicle/vehicle'
                   control: integrity
         oracles:
           withstand_damage:
