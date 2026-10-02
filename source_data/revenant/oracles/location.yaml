@@ -1,0 +1,2901 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  location:
+    name: Location Oracles
+    canonical_name: Locations
+    oracle_type: tables
+    type: oracle_collection
+    _source:
+      <<: &Source
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
+        authors:
+          - name: Killian Gillespie
+      page: 300
+    summary: |-
+      Locations are places. The world around you, whatever state it's in. To create a location you will envision the area. You will determine the landscape, the hazards or the opportunities the location provides, and other features of the area.
+
+      Each location on the following pages includes a set of oracles.
+        * __Feature__: Use this oracle to reveal a new aspect of the location.
+        * __Hazard__: Use this to oracle to help envision a complication or hazard.
+        * __Opportunity__: Use this oracle to help envision a beneficial encounter or event, or when you roll a strong hit with a match.
+
+      The location oracles are divided into territories and themes. A territory is an oracle to help you envision a biome or district. Themes help you envision the motif or atmosphere of a location.
+    contents:
+      territory:
+        name: Territory
+        summary: |-
+          Use this oracle when you travel to a new biome or district, or to answer a question about where someone or something can be found.
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 301
+        rows:
+          - roll: { min: 1, max: 6 }
+            text: '[Badlands](datasworn:oracle_collection:revenant/location/territories/badlands)'
+          - roll: { min: 7, max: 12 }
+            text: '[Coastal](datasworn:oracle_collection:revenant/location/territories/coastal)'
+          - roll: { min: 13, max: 19 }
+            text: '[Commercial](datasworn:oracle_collection:revenant/location/territories/commercial)'
+          - roll: { min: 20, max: 26 }
+            text: '[Farmland](datasworn:oracle_collection:revenant/location/territories/farmland)'
+          - roll: { min: 27, max: 32 }
+            text: '[Industrial](datasworn:oracle_collection:revenant/location/territories/industrial)'
+          - roll: { min: 33, max: 39 }
+            text: '[Leisure](datasworn:oracle_collection:revenant/location/territories/leisure)'
+          - roll: { min: 40, max: 46 }
+            text: '[Medical](datasworn:oracle_collection:revenant/location/territories/medical)'
+          - roll: { min: 47, max: 53 }
+            text: '[Rainforest](datasworn:oracle_collection:revenant/location/territories/rainforest)'
+          - roll: { min: 54, max: 60 }
+            text: '[Residential](datasworn:oracle_collection:revenant/location/territories/residential)'
+          - roll: { min: 61, max: 67 }
+            text: '[Retail](datasworn:oracle_collection:revenant/location/territories/retail)'
+          - roll: { min: 68, max: 73 }
+            text: '[Sierra](datasworn:oracle_collection:revenant/location/territories/sierra)'
+          - roll: { min: 74, max: 79 }
+            text: '[Steppe](datasworn:oracle_collection:revenant/location/territories/steppe)'
+          - roll: { min: 80, max: 85 }
+            text: '[Swamp](datasworn:oracle_collection:revenant/location/territories/swamp)'
+          - roll: { min: 86, max: 92 }
+            text: '[Transport](datasworn:oracle_collection:revenant/location/territories/transport)'
+          - roll: { min: 93, max: 100 }
+            text: '[Woods](datasworn:oracle_collection:revenant/location/territories/woods)'
+      theme:
+        name: Theme
+        summary: |-
+          Use this oracle when you want a random theme. Otherwise, choose a theme from below.
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 301
+        rows:
+          - roll: { min: 1, max: 12 }
+            text: '[Flooded](datasworn:oracle_collection:revenant/location/themes/flooded)'
+          - roll: { min: 13, max: 24 }
+            text: '[Frozen](datasworn:oracle_collection:revenant/location/themes/frozen)'
+          - roll: { min: 25, max: 38 }
+            text: '[Inhabited](datasworn:oracle_collection:revenant/location/themes/inhabited)'
+          - roll: { min: 39, max: 50 }
+            text: '[Protected](datasworn:oracle_collection:revenant/location/themes/protected)'
+          - roll: { min: 51, max: 62 }
+            text: '[Ruined](datasworn:oracle_collection:revenant/location/themes/ruined)'
+          - roll: { min: 63, max: 74 }
+            text: '[War Zone](datasworn:oracle_collection:revenant/location/themes/war_zone)'
+          - roll: { min: 75, max: 86 }
+            text: '[Wild](datasworn:oracle_collection:revenant/location/themes/wild)'
+          - roll: { min: 87, max: 100 }
+            text: '[Zombie Infested](datasworn:oracle_collection:revenant/location/themes/zombie_infested)'
+    collections:
+      territories:
+        name: Territories
+        oracle_type: tables
+        type: oracle_collection
+        _source:
+          <<: *Source
+          page: 302
+        collections:
+          badlands:
+            name: Badlands
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Traversing the badlands takes grit and determination, but most importantly, water. Many a traveller has had their wits dulled by dehydration, making them a prime target for those denizens adapted to the harsh environment. The extreme heat is followed by the extreme cold of the night with scarce moderation between the two.
+            _source:
+              <<: *Source
+              page: 304
+            contents:
+              feature:
+                <<: &Feature
+                  name: Feature
+                  summary: Use this oracle to reveal a new aspect of the location.
+                  oracle_type: table_text
+                  type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 304
+                rows:
+                - roll: { min: 1, max: 5 }
+                  text: Distorting heat waves
+                - roll: { min: 6, max: 10 }
+                  text: Natural bridge or arch
+                - roll: { min: 11, max: 15 }
+                  text: Passages through canyons
+                - roll: { min: 16, max: 20 }
+                  text: Rocks sculpted by the wind
+                - roll: { min: 21, max: 25 }
+                  text: Unending stretch of ground
+                - roll: { min: 26, max: 30 }
+                  text: Dried wadi awaiting rain
+                - roll: { min: 31, max: 35 }
+                  text: Cracked dry earth
+                - roll: { min: 36, max: 40 }
+                  text: Cliff, canyon, or plateau
+                - roll: { min: 41, max: 45 }
+                  text: Dry scrub-like plants
+                - roll: { min: 46, max: 50 }
+                  text: Dried out salt flats
+                - roll: { min: 51, max: 55 }
+                  text: Freezing cold at night
+                - roll: { min: 56, max: 60 }
+                  text: Sun-baked ground
+                - roll: { min: 61, max: 65 }
+                  text: Bleached skeletal remains
+                - roll: { min: 66, max: 70 }
+                  text: Cluster of small boulders
+                - roll: { min: 71, max: 75 }
+                  text: Lizard basking in the sun
+                - roll: { min: 76, max: 80 }
+                  text: Tranquil oasis or refuge
+                - roll: { min: 81, max: 85 }
+                  text: Large water-filled plants
+                - roll: { min: 86, max: 90 }
+                  text: Boulders or rock formations
+                - roll: { min: 91, max: 95 }
+                  <<: &DescriptorFocus
+                    text: '[Action](datasworn:oracle_rollable:revenant/core/descriptor) + [Theme](datasworn:oracle_rollable:revenant/core/focus)'
+                    oracle_rolls:
+                      - oracle: oracle_rollable:revenant/core/descriptor
+                        auto: true
+                      - oracle: oracle_rollable:revenant/core/focus
+                        auto: true
+                - roll: { min: 96, max: 100 }
+                  <<: &RollTwice
+                    text: Roll twice
+                    oracle_rolls:
+                      - number_of_rolls: 2
+                        auto: true
+              hazard:
+                <<: &Hazard
+                  name: Hazard
+                  summary: Use this oracle to help envision a complication or hazard.
+                  oracle_type: table_text
+                  type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 305
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Extreme temperature shifts between day and night
+                  - roll: { min: 9, max: 16 }
+                    text: Hidden threat reveals itself
+                  - roll: { min: 17, max: 24 }
+                    text: Grit-filled equipment fails you
+                  - roll: { min: 25, max: 32 }
+                    text: Sudden sandstorm chokes the air
+                  - roll: { min: 33, max: 40 }
+                    text: No shelter from the blistering heat
+                  - roll: { min: 41, max: 48 }
+                    text: No landmarks to guide your way
+                  - roll: { min: 49, max: 56 }
+                    text: Rain storm brings flash floods
+                  - roll: { min: 57, max: 64 }
+                    text: Heat mirage or false visions betray you
+                  - roll: { min: 65, max: 72 }
+                    text: Labyrinth of canyons
+                  - roll: { min: 73, max: 80 }
+                    text: Denizen uses sand for cover
+                  - roll: { min: 81, max: 88 }
+                    text: Denizen hunts
+                  - roll: { min: 89, max: 96 }
+                    <<: &ActionTheme
+                      text: '[Action](datasworn:oracle_rollable:revenant/core/action) + [Theme](datasworn:oracle_rollable:revenant/core/theme)'
+                      oracle_rolls:
+                        - oracle: oracle_rollable:revenant/core/action
+                          auto: true
+                        - oracle: oracle_rollable:revenant/core/theme
+                          auto: true
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: &Opportunity
+                  name: Opportunity
+                  summary: Use this oracle to help envision a beneficial encounter or event, or when you roll a strong hit with a match.
+                  oracle_type: table_text
+                  type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 305
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Sand reveals a resource
+                  - roll: { min: 9, max: 16 }
+                    text: Cave entrance gives some shelter
+                  - roll: { min: 17, max: 24 }
+                    text: Evidence of previous travellers
+                  - roll: { min: 25, max: 32 }
+                    text: Oasis offers respite
+                  - roll: { min: 33, max: 40 }
+                    text: Detour from hard terrain
+                  - roll: { min: 41, max: 48 }
+                    text: Motel or trailer park
+                  - roll: { min: 49, max: 56 }
+                    text: Abandoned vehicle
+                  - roll: { min: 57, max: 64 }
+                    text: Luggage fallen from a car
+                  - roll: { min: 65, max: 72 }
+                    text: Signs of civilisation
+                  - roll: { min: 73, max: 80 }
+                    text: Nomads willing to barter
+                  - roll: { min: 81, max: 88 }
+                    text: Petrol station or mechanic
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          coastal:
+            name: Coastal
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Coasts are dynamic, constantly changing, important ecosystems. They provide unique homes for marine plants, animals and insects. Coasts are also an important aspect of tourism and they have always held a strong relationship with transportation. As such you'll often find small towns and holiday destinations.
+            _source:
+              <<: *Source
+              page: 306
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 306
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: The sound of crashing waves
+                  - roll: { min: 6, max: 10 }
+                    text: Ship set adrift
+                  - roll: { min: 11, max: 15 }
+                    text: Rocks jutting from the water
+                  - roll: { min: 16, max: 20 }
+                    text: Pipes or sewerage
+                  - roll: { min: 21, max: 25 }
+                    text: Sandy footprints
+                  - roll: { min: 26, max: 30 }
+                    text: Dock or jetty
+                  - roll: { min: 31, max: 35 }
+                    text: Yacht or container ship
+                  - roll: { min: 36, max: 40 }
+                    text: Distant islands
+                  - roll: { min: 41, max: 45 }
+                    text: Small bay, cove or beach
+                  - roll: { min: 46, max: 50 }
+                    text: Rocky and jagged coastline
+                  - roll: { min: 51, max: 55 }
+                    text: Tranquil blue waters
+                  - roll: { min: 56, max: 60 }
+                    text: Coral reef or sandbar
+                  - roll: { min: 61, max: 65 }
+                    text: Pod of aquatic animals
+                  - roll: { min: 66, max: 70 }
+                    text: The smell of sea salt
+                  - roll: { min: 71, max: 75 }
+                    text: Vast open seas
+                  - roll: { min: 76, max: 80 }
+                    text: Ship anchored at sea
+                  - roll: { min: 81, max: 85 }
+                    text: Seaside accommodation
+                  - roll: { min: 86, max: 90 }
+                    text: Cliff or tall platform
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 307
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Raging storm and violent seas
+                  - roll: { min: 9, max: 16 }
+                    text: Jagged rocks
+                  - roll: { min: 17, max: 24 }
+                    text: Impassible cliffs
+                  - roll: { min: 25, max: 32 }
+                    text: Rip current
+                  - roll: { min: 33, max: 40 }
+                    text: The dead walk from the surf
+                  - roll: { min: 41, max: 48 }
+                    text: Chemical spill or accident
+                  - roll: { min: 49, max: 56 }
+                    text: Wet sand creates a mire
+                  - roll: { min: 57, max: 64 }
+                    text: Denizen patrols the area
+                  - roll: { min: 65, max: 72 }
+                    text: Denizen stalks or hunts
+                  - roll: { min: 73, max: 80 }
+                    text: Denizen leverages terrain
+                  - roll: { min: 81, max: 88 }
+                    text: Denizen makes lair here
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 307
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Beautiful vista inspires you
+                  - roll: { min: 9, max: 16 }
+                    text: Supplies washed ashore
+                  - roll: { min: 17, max: 24 }
+                    text: Tall cliffs skirt around danger
+                  - roll: { min: 25, max: 32 }
+                    text: Distant view offers insight
+                  - roll: { min: 33, max: 40 }
+                    text: Remote accommodation provides respite
+                  - roll: { min: 41, max: 48 }
+                    text: Terrain offers a way to escape a pursuit
+                  - roll: { min: 49, max: 56 }
+                    text: Calm area of water
+                  - roll: { min: 57, max: 64 }
+                    text: Bridge or other architecture offers passage
+                  - roll: { min: 65, max: 72 }
+                    text: Traveller offers aid
+                  - roll: { min: 73, max: 80 }
+                    text: Camp or outpost
+                  - roll: { min: 81, max: 88 }
+                    text: Dock or jetty provides access
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          commercial:
+            name: Commercial
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              This is a section of a city, town, or community that is primarily designated for business and economic activities. It's characterised by the presence of retail shops, offices, and restaurants and cafes, and other businesses. Commercial areas differ to retail areas because they encompass a broad range of businesses, whereas retail focuses on selling directly to the consumer.
+            _source:
+              <<: *Source
+              page: 308
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 308
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: High-rise office building
+                  - roll: { min: 6, max: 10 }
+                    text: Abandoned cubicles
+                  - roll: { min: 11, max: 15 }
+                    text: Vending machines or cafe
+                  - roll: { min: 16, max: 20 }
+                    text: Torn canvas stalls
+                  - roll: { min: 21, max: 25 }
+                    text: Long line of taxis
+                  - roll: { min: 26, max: 30 }
+                    text: Pedestrian-only street
+                  - roll: { min: 31, max: 35 }
+                    text: Abandoned shopping carts
+                  - roll: { min: 36, max: 40 }
+                    text: Storefronts with broken glass
+                  - roll: { min: 41, max: 45 }
+                    text: Vines climbing tall buildings
+                  - roll: { min: 46, max: 50 }
+                    text: Remnants of the past
+                  - roll: { min: 51, max: 55 }
+                    text: Sun-bleached advertising
+                  - roll: { min: 56, max: 60 }
+                    text: Empty parking lot
+                  - roll: { min: 61, max: 65 }
+                    text: Fallen lamp post
+                  - roll: { min: 66, max: 70 }
+                    text: Bullet holes or casings
+                  - roll: { min: 71, max: 75 }
+                    text: Vintage memorabilia
+                  - roll: { min: 76, max: 80 }
+                    text: Hand-crafted goods
+                  - roll: { min: 81, max: 85 }
+                    text: Scattered office supplies
+                  - roll: { min: 86, max: 90 }
+                    text: Computers or electronics
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 309
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Narrow streets limit escape routes
+                  - roll: { min: 9, max: 16 }
+                    text: Densely packed office traps the undead
+                  - roll: { min: 17, max: 24 }
+                    text: Barricaded structures
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen hides among the debris
+                  - roll: { min: 33, max: 40 }
+                    text: Abandoned vehicle protects a denizen
+                  - roll: { min: 41, max: 48 }
+                    text: Lack of natural light inside buildings
+                  - roll: { min: 49, max: 56 }
+                    text: Faulty security locks an electrical door
+                  - roll: { min: 57, max: 64 }
+                    text: Tall buildings limit visibility
+                  - roll: { min: 65, max: 72 }
+                    text: Glass falls from a great height
+                  - roll: { min: 73, max: 80 }
+                    text: Memories of once-bustling commerce evoke emotions
+                  - roll: { min: 81, max: 88 }
+                    text: Looted stores offer no supplies
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 309
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: First aid supplies
+                  - roll: { min: 9, max: 16 }
+                    text: Fire doors aid in safety
+                  - roll: { min: 17, max: 24 }
+                    text: Bus stop provides shelter
+                  - roll: { min: 25, max: 32 }
+                    text: "Street vendor's cart holds canned food"
+                  - roll: { min: 33, max: 40 }
+                    text: Rooftop garden provides sustenance
+                  - roll: { min: 41, max: 48 }
+                    text: Staff room holds sugar, tea, and coffee
+                  - roll: { min: 49, max: 56 }
+                    text: Office sick bay offers respite
+                  - roll: { min: 57, max: 64 }
+                    text: Emergency power source
+                  - roll: { min: 65, max: 72 }
+                    text: Elevated position provides defensible location
+                  - roll: { min: 73, max: 80 }
+                    text: Parking lot holds transportation options
+                  - roll: { min: 81, max: 88 }
+                    text: Cleaning supplies left untouched
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          farmland:
+            name: Farmland
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Farmlands can provide a range of valuable options for people due to their agricultural resources and potential. However, they are not without their own challenges. Farms can take a lot of effort to work and require tools, skills, and constant maintenance.
+            _source:
+              <<: *Source
+              page: 310
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 310
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Tall fields of corn or wheat
+                  - roll: { min: 6, max: 10 }
+                    text: Fenced pastures
+                  - roll: { min: 11, max: 15 }
+                    text: Stables or pens
+                  - roll: { min: 16, max: 20 }
+                    text: Grain stores
+                  - roll: { min: 21, max: 25 }
+                    text: Wide open fields
+                  - roll: { min: 26, max: 30 }
+                    text: Farmhouse or lodgings
+                  - roll: { min: 31, max: 35 }
+                    text: Arable land
+                  - roll: { min: 36, max: 40 }
+                    text: Farm equipment
+                  - roll: { min: 41, max: 45 }
+                    text: Large animal or herd
+                  - roll: { min: 46, max: 50 }
+                    text: Well or fresh water source
+                  - roll: { min: 51, max: 55 }
+                    text: Overgrown crops
+                  - roll: { min: 56, max: 60 }
+                    text: Dirt road or track
+                  - roll: { min: 61, max: 65 }
+                    text: Old vehicles and tyres
+                  - roll: { min: 66, max: 70 }
+                    text: Rope swing on a tree
+                  - roll: { min: 71, max: 75 }
+                    text: Trees bearing fruit or nuts
+                  - roll: { min: 76, max: 80 }
+                    text: Signs of recent travellers
+                  - roll: { min: 81, max: 85 }
+                    text: Bullet casings or shells
+                  - roll: { min: 86, max: 90 }
+                    text: Beautiful cloud formations
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 311
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Swarm of rats
+                  - roll: { min: 9, max: 16 }
+                    text: Tornado starts to form
+                  - roll: { min: 17, max: 24 }
+                    text: Barricade holding back the dead fails
+                  - roll: { min: 25, max: 32 }
+                    text: Drought has decimated crops
+                  - roll: { min: 33, max: 40 }
+                    text: Local wildlife cause havoc
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen protects their claim
+                  - roll: { min: 49, max: 56 }
+                    text: Denizen strikes from a vantage point
+                  - roll: { min: 57, max: 64 }
+                    text: Tall grass conceals a threat
+                  - roll: { min: 65, max: 72 }
+                    text: Foul water causes sickness
+                  - roll: { min: 73, max: 80 }
+                    text: Isolation brings its own challenge
+                  - roll: { min: 81, max: 88 }
+                    text: Lack of fortification
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 311
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: High vantage point offers distant views
+                  - roll: { min: 9, max: 16 }
+                    text: Fuel storage
+                  - roll: { min: 17, max: 24 }
+                    text: Well-equipped toolshed
+                  - roll: { min: 25, max: 32 }
+                    text: Sealed packages of seeds
+                  - roll: { min: 33, max: 40 }
+                    text: Untended crops grow wild
+                  - roll: { min: 41, max: 48 }
+                    text: Small orchard provides nourishment
+                  - roll: { min: 49, max: 56 }
+                    text: Hunting weapon or trap
+                  - roll: { min: 57, max: 64 }
+                    text: Fishing hole
+                  - roll: { min: 65, max: 72 }
+                    text: Medicinal plants grow unhindered
+                  - roll: { min: 73, max: 80 }
+                    text: Freshwater well offers consistent supply
+                  - roll: { min: 81, max: 88 }
+                    text: Books useful for homesteading
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          industrial:
+            name: Industrial
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Industrial areas range from construction sites and junk yards to high end technical facilities. The purpose of industrial areas is to create a focused and organised environment for manufacturing, processing, and other operations. These areas are set aside to concentrate industrial facilities and activities in a specific location, separate from residential, commercial, or recreational areas.
+            _source:
+              <<: *Source
+              page: 312
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 312
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Complex machinery
+                  - roll: { min: 6, max: 10 }
+                    text: Oily residue on water
+                  - roll: { min: 11, max: 15 }
+                    text: Barrels, boxes, or crates
+                  - roll: { min: 16, max: 20 }
+                    text: Pipes with valves
+                  - roll: { min: 21, max: 25 }
+                    text: Loading docks
+                  - roll: { min: 26, max: 30 }
+                    text: Tall roller doors
+                  - roll: { min: 31, max: 35 }
+                    text: Security cameras or gates
+                  - roll: { min: 36, max: 40 }
+                    text: Coffee or vending machine
+                  - roll: { min: 41, max: 45 }
+                    text: Chain-link fence
+                  - roll: { min: 46, max: 50 }
+                    text: Trucks or freight containers
+                  - roll: { min: 51, max: 55 }
+                    text: Tyres or replacement parts
+                  - roll: { min: 56, max: 60 }
+                    text: Office or management area
+                  - roll: { min: 61, max: 65 }
+                    text: Staff room or cafeteria
+                  - roll: { min: 66, max: 70 }
+                    text: Lockers or changing room
+                  - roll: { min: 71, max: 75 }
+                    text: Uniforms or protective gear
+                  - roll: { min: 76, max: 80 }
+                    text: Bleak concrete construction
+                  - roll: { min: 81, max: 85 }
+                    text: Corrugated iron and pallets
+                  - roll: { min: 86, max: 90 }
+                    text: Trailer or method of hauling
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 313
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Hazardous waste or materials
+                  - roll: { min: 9, max: 16 }
+                    text: Guard dog defends his turf
+                  - roll: { min: 17, max: 24 }
+                    text: Machinery starts to move
+                  - roll: { min: 25, max: 32 }
+                    text: The way becomes blocked
+                  - roll: { min: 33, max: 40 }
+                    text: Loud noises draw unwanted attention
+                  - roll: { min: 41, max: 48 }
+                    text: The undead crawl from below
+                  - roll: { min: 49, max: 56 }
+                    text: Denizen stalks or hunts
+                  - roll: { min: 57, max: 64 }
+                    text: Denizen blends in with the terrain
+                  - roll: { min: 65, max: 72 }
+                    text: Gas leak threatens suffocation or explosion
+                  - roll: { min: 73, max: 80 }
+                    text: Tall equipment shifts and falls
+                  - roll: { min: 81, max: 88 }
+                    text: Essential exit requires power
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 313
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Fuel storage
+                  - roll: { min: 9, max: 16 }
+                    text: Specialty tools or equipment
+                  - roll: { min: 17, max: 24 }
+                    text: Vehicle parts in good condition
+                  - roll: { min: 25, max: 32 }
+                    text: Weapon laying on the ground
+                  - roll: { min: 33, max: 40 }
+                    text: Barrier provides safety
+                  - roll: { min: 41, max: 48 }
+                    text: Scrap material hides a welcome surprise
+                  - roll: { min: 49, max: 56 }
+                    text: Emergency power generator
+                  - roll: { min: 57, max: 64 }
+                    text: Fire escape provides egress
+                  - roll: { min: 65, max: 72 }
+                    text: Signs of life
+                  - roll: { min: 73, max: 80 }
+                    text: Instruction manuals
+                  - roll: { min: 81, max: 88 }
+                    text: Safety gear or supplies
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          leisure:
+            name: Leisure
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Leisure areas in a city are designed for recreation, entertainment, and outdoor activities. Areas such as these contribute to the overall well-being and quality of life for the residents and visitors.
+            _source:
+              <<: *Source
+              page: 314
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 314
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Garden, park, or walkway
+                  - roll: { min: 6, max: 10 }
+                    text: Sports arena or stadium
+                  - roll: { min: 11, max: 15 }
+                    text: Hotel, motel, or casino
+                  - roll: { min: 16, max: 20 }
+                    text: Bar or music venue
+                  - roll: { min: 21, max: 25 }
+                    text: Movie theatre
+                  - roll: { min: 26, max: 30 }
+                    text: Gym or swimming pool
+                  - roll: { min: 31, max: 35 }
+                    text: Posters, notices, or ads
+                  - roll: { min: 36, max: 40 }
+                    text: Museum or library
+                  - roll: { min: 41, max: 45 }
+                    text: Community food garden
+                  - roll: { min: 46, max: 50 }
+                    text: Dirt coated windows
+                  - roll: { min: 51, max: 55 }
+                    text: Wall of vending machines
+                  - roll: { min: 56, max: 60 }
+                    text: Overgrown paths
+                  - roll: { min: 61, max: 65 }
+                    text: Cleaning chemicals or tests
+                  - roll: { min: 66, max: 70 }
+                    text: Large fence
+                  - roll: { min: 71, max: 75 }
+                    text: Children's play area
+                  - roll: { min: 76, max: 80 }
+                    text: Dumpster or rubbish bins
+                  - roll: { min: 81, max: 85 }
+                    text: Art gallery or music studio
+                  - roll: { min: 86, max: 90 }
+                    text: Electronics store
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 315
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Barricade gives way
+                  - roll: { min: 9, max: 16 }
+                    text: Open-air amphitheater resonates noise
+                  - roll: { min: 17, max: 24 }
+                    text: Overgrown foliage hides a threat
+                  - roll: { min: 25, max: 32 }
+                    text: Wide open areas provide no cover
+                  - roll: { min: 33, max: 40 }
+                    text: Hidden object becomes a hazard
+                  - roll: { min: 41, max: 48 }
+                    text: Wildlife has claimed this territory
+                  - roll: { min: 49, max: 56 }
+                    text: Darkness and shadow
+                  - roll: { min: 57, max: 64 }
+                    text: Evacuation point clogged with the undead
+                  - roll: { min: 65, max: 72 }
+                    text: Signs of a recent violent act
+                  - roll: { min: 73, max: 80 }
+                    text: Gunshots or distant vehicles
+                  - roll: { min: 81, max: 88 }
+                    text: Hunting trap or snare
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 315
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: An untouched store room
+                  - roll: { min: 9, max: 16 }
+                    text: Electronic equipment
+                  - roll: { min: 17, max: 24 }
+                    text: Riverside dock holds canoes
+                  - roll: { min: 25, max: 32 }
+                    text: Fenced area restrains the undead
+                  - roll: { min: 33, max: 40 }
+                    text: Edible plants and herbs grow unchecked
+                  - roll: { min: 41, max: 48 }
+                    text: Tents still stand from an evacuation area
+                  - roll: { min: 49, max: 56 }
+                    text: Emergency vehicle
+                  - roll: { min: 57, max: 64 }
+                    text: Small game or birds
+                  - roll: { min: 65, max: 72 }
+                    text: Overturned vending machine
+                  - roll: { min: 73, max: 80 }
+                    text: Doors or barrier provides safety
+                  - roll: { min: 81, max: 88 }
+                    text: Signs of life
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          medical:
+            name: Medical
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              A medical facility is anywhere that can be used to treat injury or disease. Rural areas or small towns may have a small local clinic, but rely on transporting patients for immediate care to larger hospitals. In larger cities, there may be a handful of pharmacies in each of the suburbs and general practitioner's that refer their patients to the hospitals for issues that cannot be dealt with on site.
+            _source:
+              <<: *Source
+              page: 316
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 316
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Sports clinic
+                  - roll: { min: 6, max: 10 }
+                    text: "General Practitioner's office"
+                  - roll: { min: 11, max: 15 }
+                    text: Veterinarian
+                  - roll: { min: 16, max: 20 }
+                    text: Pharmacy
+                  - roll: { min: 21, max: 25 }
+                    text: Syringes and scalpels
+                  - roll: { min: 26, max: 30 }
+                    text: Medical testing kits
+                  - roll: { min: 31, max: 35 }
+                    text: Makeshift surgery
+                  - roll: { min: 36, max: 40 }
+                    text: Laboratory
+                  - roll: { min: 41, max: 45 }
+                    text: Examination rooms
+                  - roll: { min: 46, max: 50 }
+                    text: Radio communications
+                  - roll: { min: 51, max: 55 }
+                    text: Rehabilitation centre
+                  - roll: { min: 56, max: 60 }
+                    text: Emergency services vehicle
+                  - roll: { min: 61, max: 65 }
+                    text: Hospital
+                  - roll: { min: 66, max: 70 }
+                    text: Scattered medical items
+                  - roll: { min: 71, max: 75 }
+                    text: Quarantine
+                  - roll: { min: 76, max: 80 }
+                    text: Boxes of pills and gloves
+                  - roll: { min: 81, max: 85 }
+                    text: Taped off area
+                  - roll: { min: 86, max: 90 }
+                    text: Lollipops
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 317
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Barricaded hallway
+                  - roll: { min: 9, max: 16 }
+                    text: Restrained undead break free
+                  - roll: { min: 17, max: 24 }
+                    text: Waiting area crowded with the undead
+                  - roll: { min: 25, max: 32 }
+                    text: Slick floor causes poor footing
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen leverages the environment
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen strikes unexpectedly
+                  - roll: { min: 49, max: 56 }
+                    text: Darkness or dim lighting
+                  - roll: { min: 57, max: 64 }
+                    text: Noise echoes down a hallway
+                  - roll: { min: 65, max: 72 }
+                    text: Cafeteria overrun
+                  - roll: { min: 73, max: 80 }
+                    text: Perilous passage or height
+                  - roll: { min: 81, max: 88 }
+                    text: Hazardous materials or disease
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 317
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Sign warns of dead behind a barricade
+                  - roll: { min: 9, max: 16 }
+                    text: Medicines and first aid equipment
+                  - roll: { min: 17, max: 24 }
+                    text: Sedatives or restraints
+                  - roll: { min: 25, max: 32 }
+                    text: Easily marked paths
+                  - roll: { min: 33, max: 40 }
+                    text: Reception area provides cover
+                  - roll: { min: 41, max: 48 }
+                    text: Personal belongings left behind
+                  - roll: { min: 49, max: 56 }
+                    text: Loading dock or vehicle bay
+                  - roll: { min: 57, max: 64 }
+                    text: Emergency services vehicle
+                  - roll: { min: 65, max: 72 }
+                    text: Cleaning supplies
+                  - roll: { min: 73, max: 80 }
+                    text: Water filtration system
+                  - roll: { min: 81, max: 88 }
+                    text: Communications equipment
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          rainforest:
+            name: Rainforest
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Vibrant jungles full of exotic dangers hide ancient remains of civilisations and territorial clans of primates deliver a cacophony of howls. Travelling this land means constantly watching over your shoulder to make sure you haven't attracted unwanted attention. Between the razor-like teeth and claws the size of daggers, the denizens here are not to be crossed lightly.
+            _source:
+              <<: *Source
+              page: 318
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 318
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Thick canopy blocks all light
+                  - roll: { min: 6, max: 10 }
+                    text: Open sky
+                  - roll: { min: 11, max: 15 }
+                    text: Soft marsh ground
+                  - roll: { min: 16, max: 20 }
+                    text: Meandering waterway
+                  - roll: { min: 21, max: 25 }
+                    text: Dense undergrowth
+                  - roll: { min: 26, max: 30 }
+                    text: Tranquil clearing
+                  - roll: { min: 31, max: 35 }
+                    text: Cacophony of bird song
+                  - roll: { min: 36, max: 40 }
+                    text: Carcass picked clean
+                  - roll: { min: 41, max: 45 }
+                    text: Brightly coloured flowers
+                  - roll: { min: 46, max: 50 }
+                    text: Torrential downpour
+                  - roll: { min: 51, max: 55 }
+                    text: Watering hole
+                  - roll: { min: 56, max: 60 }
+                    text: Well-traveled game trail
+                  - roll: { min: 61, max: 65 }
+                    text: Humid heat
+                  - roll: { min: 66, max: 70 }
+                    text: Waterfall or cenote
+                  - roll: { min: 71, max: 75 }
+                    text: Swarms of insects
+                  - roll: { min: 76, max: 80 }
+                    text: Howling of monkeys
+                  - roll: { min: 81, max: 85 }
+                    text: Distant views
+                  - roll: { min: 86, max: 90 }
+                    text: Vine-strewn trees
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 319
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Thundering rapids
+                  - roll: { min: 9, max: 16 }
+                    text: Eyes in the dark
+                  - roll: { min: 17, max: 24 }
+                    text: Signs of an apex predator
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen lairs here
+                  - roll: { min: 33, max: 40 }
+                    text: Aggressive denizen
+                  - roll: { min: 41, max: 48 }
+                    text: Stalked by a denizen
+                  - roll: { min: 49, max: 56 }
+                    text: Pack of swift denizens
+                  - roll: { min: 57, max: 64 }
+                    text: Poisonous insect hides away
+                  - roll: { min: 65, max: 72 }
+                    text: Thick mud or quicksand
+                  - roll: { min: 73, max: 80 }
+                    text: Entangling roots or vines
+                  - roll: { min: 81, max: 88 }
+                    text: Steep drop or sudden waterfall
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 319
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Healing herbs
+                  - roll: { min: 9, max: 16 }
+                    text: Fresh water
+                  - roll: { min: 17, max: 24 }
+                    text: Large leaves provide shelter
+                  - roll: { min: 25, max: 32 }
+                    text: Friendly animals
+                  - roll: { min: 33, max: 40 }
+                    text: Path or trail
+                  - roll: { min: 41, max: 48 }
+                    text: Inhabitants offer aid
+                  - roll: { min: 49, max: 56 }
+                    text: Tall trees provide safety
+                  - roll: { min: 57, max: 64 }
+                    text: Ferns and plants give cover
+                  - roll: { min: 65, max: 72 }
+                    text: "Explorer's pack left unattended"
+                  - roll: { min: 73, max: 80 }
+                    text: Vista provides distant views
+                  - roll: { min: 81, max: 88 }
+                    text: Riparian waterway eases travel
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          residential:
+            name: Residential
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Housing can be a variety of things, from large blocks of apartments, university student accommodation or project housing to suburban homes or elderly care facilities. Housing can be found in every town or city and rural locale in the form of motels, trailer parks, camp grounds, and even quarantine camps.
+            _source:
+              <<: *Source
+              page: 320
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 320
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Beds, sheets, and towels
+                  - roll: { min: 6, max: 10 }
+                    text: Kitchen utensils or crockery
+                  - roll: { min: 11, max: 15 }
+                    text: Stained or soiled floors
+                  - roll: { min: 16, max: 20 }
+                    text: Curtains blowing in the wind
+                  - roll: { min: 21, max: 25 }
+                    text: Heaped belongings
+                  - roll: { min: 26, max: 30 }
+                    text: Electronics or kitchen items
+                  - roll: { min: 31, max: 35 }
+                    text: Signs of life
+                  - roll: { min: 36, max: 40 }
+                    text: Once well-tended garden
+                  - roll: { min: 41, max: 45 }
+                    text: Fence or obstruction
+                  - roll: { min: 46, max: 50 }
+                    text: Elevator or stairs
+                  - roll: { min: 51, max: 55 }
+                    text: Toys or comfort food
+                  - roll: { min: 56, max: 60 }
+                    text: Shelter from the elements
+                  - roll: { min: 61, max: 65 }
+                    text: Decorations for an event
+                  - roll: { min: 66, max: 70 }
+                    text: Small shed or workshop
+                  - roll: { min: 71, max: 75 }
+                    text: Garaged vehicle
+                  - roll: { min: 76, max: 80 }
+                    text: Books and stationery
+                  - roll: { min: 81, max: 85 }
+                    text: Backpack or luggage
+                  - roll: { min: 86, max: 90 }
+                    text: Small office or storage
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 321
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Reanimated elderly left behind
+                  - roll: { min: 9, max: 16 }
+                    text: Barricades holding back the dead
+                  - roll: { min: 17, max: 24 }
+                    text: Stray dogs or wild animals
+                  - roll: { min: 25, max: 32 }
+                    text: Trap or snare
+                  - roll: { min: 33, max: 40 }
+                    text: New resident defends their claim
+                  - roll: { min: 41, max: 48 }
+                    text: No way to escape a threat
+                  - roll: { min: 49, max: 56 }
+                    text: Denizen lairs here
+                  - roll: { min: 57, max: 64 }
+                    text: Falling architecture or debris
+                  - roll: { min: 65, max: 72 }
+                    text: Loud noise brings unwanted attention
+                  - roll: { min: 73, max: 80 }
+                    text: The way in becomes blocked
+                  - roll: { min: 81, max: 88 }
+                    text: The weight of lost lives brings melancholy
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 321
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Containers of spices, salt or sugar
+                  - roll: { min: 9, max: 16 }
+                    text: Hiking or sports gear
+                  - roll: { min: 17, max: 24 }
+                    text: Warm clothing
+                  - roll: { min: 25, max: 32 }
+                    text: Medicines or basic first aid
+                  - roll: { min: 33, max: 40 }
+                    text: Aiding a resident promises reward
+                  - roll: { min: 41, max: 48 }
+                    text: Resident offers a trade
+                  - roll: { min: 49, max: 56 }
+                    text: Well-preserved area
+                  - roll: { min: 57, max: 64 }
+                    text: Message from a previous resident
+                  - roll: { min: 65, max: 72 }
+                    text: Symbol of hope
+                  - roll: { min: 73, max: 80 }
+                    text: Hazard detected early
+                  - roll: { min: 81, max: 88 }
+                    text: A moment of respite
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          retail:
+            name: Retail
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Retail areas are places that are designed to sell goods and services directly to consumers. Retail stores can take many forms, including shopping centres, retail outlets or small convenience stores. Retail areas are often characterised by a vibrant mixture of businesses, creating a dynamic atmosphere that encourages foot traffic.
+            _source:
+              <<: *Source
+              page: 322
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 322
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Packets or cans of food
+                  - roll: { min: 6, max: 10 }
+                    text: Shattered window glass
+                  - roll: { min: 11, max: 15 }
+                    text: Signs of a struggle
+                  - roll: { min: 16, max: 20 }
+                    text: Jewellery or luxury goods
+                  - roll: { min: 21, max: 25 }
+                    text: Containers and bottles
+                  - roll: { min: 26, max: 30 }
+                    text: Overturned inventory
+                  - roll: { min: 31, max: 35 }
+                    text: Staff room or security
+                  - roll: { min: 36, max: 40 }
+                    text: Scattered money or paper
+                  - roll: { min: 41, max: 45 }
+                    text: Ravages of time and nature
+                  - roll: { min: 46, max: 50 }
+                    text: Maintenance supplies
+                  - roll: { min: 51, max: 55 }
+                    text: Convenience store
+                  - roll: { min: 56, max: 60 }
+                    text: Petrol station or mechanic
+                  - roll: { min: 61, max: 65 }
+                    text: Mall complex or hub
+                  - roll: { min: 66, max: 70 }
+                    text: Grocery store
+                  - roll: { min: 71, max: 75 }
+                    text: Sporting or hunting goods
+                  - roll: { min: 76, max: 80 }
+                    text: Clothing or fashion store
+                  - roll: { min: 81, max: 85 }
+                    text: Automotive sales
+                  - roll: { min: 86, max: 90 }
+                    text: Supermarket
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 323
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Barricade gives way
+                  - roll: { min: 9, max: 16 }
+                    text: Sudden darkness
+                  - roll: { min: 17, max: 24 }
+                    text: Spoiled food attracts vermin
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen leverages the terrain
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen uses stealth to an advantage
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen moves swiftly
+                  - roll: { min: 49, max: 56 }
+                    text: Densely packed merchandise constrains you
+                  - roll: { min: 57, max: 64 }
+                    text: Mannequins disguise danger
+                  - roll: { min: 65, max: 72 }
+                    text: Shifting boxes cause a sudden hazard
+                  - roll: { min: 73, max: 80 }
+                    text: Locked door blocks your passage
+                  - roll: { min: 81, max: 88 }
+                    text: Sharp object tears your clothing or pack
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 323
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Roller door provides safety
+                  - roll: { min: 9, max: 16 }
+                    text: Warm hand-knitted clothing
+                  - roll: { min: 17, max: 24 }
+                    text: Hunting, hunting or fishing gear
+                  - roll: { min: 25, max: 32 }
+                    text: Well preserved snack foods
+                  - roll: { min: 33, max: 40 }
+                    text: Tools or trade equipment
+                  - roll: { min: 41, max: 48 }
+                    text: Toys or children's games
+                  - roll: { min: 49, max: 56 }
+                    text: Tea, coffee, and sugar
+                  - roll: { min: 57, max: 64 }
+                    text: A scavenger offers a trade
+                  - roll: { min: 65, max: 72 }
+                    text: A quiet place to think
+                  - roll: { min: 73, max: 80 }
+                    text: Garage or parking lot
+                  - roll: { min: 81, max: 88 }
+                    text: Map or directions
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          sierra:
+            name: Sierra
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Treacherous paths over high mountains are often the only way to get to where you need to be. Sierras often showcase diverse ecosystems, including forests, alpine meadows, and wildlife habitats. These geographic features are important for ecological balance, water resources, and used to be popular destinations for hiking and camping.
+            _source:
+              <<: *Source
+              page: 324
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 324
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Rocky paths or steep trail
+                  - roll: { min: 6, max: 10 }
+                    text: Snow-capped peak
+                  - roll: { min: 11, max: 15 }
+                    text: Highland lake
+                  - roll: { min: 16, max: 20 }
+                    text: Bridge or overlook
+                  - roll: { min: 21, max: 25 }
+                    text: Glacier or snowfield
+                  - roll: { min: 26, max: 30 }
+                    text: Verdant evergreen trees
+                  - roll: { min: 31, max: 35 }
+                    text: Winding mountain path
+                  - roll: { min: 36, max: 40 }
+                    text: Rocks ready to tumble
+                  - roll: { min: 41, max: 45 }
+                    text: Weather station or beacon
+                  - roll: { min: 46, max: 50 }
+                    text: Rock-climbing pitons or rope
+                  - roll: { min: 51, max: 55 }
+                    text: Cliffs or tall bluffs
+                  - roll: { min: 56, max: 60 }
+                    text: Deep gorge
+                  - roll: { min: 61, max: 65 }
+                    text: Forested mountainside
+                  - roll: { min: 66, max: 70 }
+                    text: Cave entrance or shelter
+                  - roll: { min: 71, max: 75 }
+                    text: Giant rocky spires
+                  - roll: { min: 76, max: 80 }
+                    text: River or waterfall
+                  - roll: { min: 81, max: 85 }
+                    text: Small cavern or nest
+                  - roll: { min: 86, max: 90 }
+                    text: Forgotten cairn
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 325
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Rushing wind and driving rain
+                  - roll: { min: 9, max: 16 }
+                    text: Dizzying heights
+                  - roll: { min: 17, max: 24 }
+                    text: Unstable footing
+                  - roll: { min: 25, max: 32 }
+                    text: Pathway or handhold crumbles
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen guards the area
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen lairs here
+                  - roll: { min: 49, max: 56 }
+                    text: Denizen hunts
+                  - roll: { min: 57, max: 64 }
+                    text: Perilous climb or descent
+                  - roll: { min: 65, max: 72 }
+                    text: Avalanche or rock-slide
+                  - roll: { min: 73, max: 80 }
+                    text: Foul weather
+                  - roll: { min: 81, max: 88 }
+                    text: Sudden drop or chasm
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 325
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Distant view provides insight
+                  - roll: { min: 9, max: 16 }
+                    text: Shelter from the elements
+                  - roll: { min: 17, max: 24 }
+                    text: Discarded tramping pack
+                  - roll: { min: 25, max: 32 }
+                    text: Beacon or transmitting station
+                  - roll: { min: 33, max: 40 }
+                    text: Campsite or tramping hut
+                  - roll: { min: 41, max: 48 }
+                    text: Cave entrance
+                  - roll: { min: 49, max: 56 }
+                    text: Evidence of previous travellers
+                  - roll: { min: 57, max: 64 }
+                    text: Opportunity to hunt or forage
+                  - roll: { min: 65, max: 72 }
+                    text: Signs of civilisation
+                  - roll: { min: 73, max: 80 }
+                    text: Resident provides aid at a cost
+                  - roll: { min: 81, max: 88 }
+                    text: Temporary respite from wind
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          steppe:
+            name: Steppe
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              A steppe is a vast, flat or gently rolling grassland. Steppe regions are characterized by wide expanses of grasses, herbaceous plants, and a lack of dense vegetation such as forests. These windswept areas have been important for nomadic pastoralism, where people rely on herding animals like horses, cattle, and sheep.
+            _source:
+              <<: *Source
+              page: 326
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 326
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Ancient riverbed
+                  - roll: { min: 6, max: 10 }
+                    text: Open tundra
+                  - roll: { min: 11, max: 15 }
+                    text: Low hills or glacial wall
+                  - roll: { min: 16, max: 20 }
+                    text: Remains of an animal
+                  - roll: { min: 21, max: 25 }
+                    text: Dunes cool to the touch
+                  - roll: { min: 26, max: 30 }
+                    text: Beautiful sunrise or sunset
+                  - roll: { min: 31, max: 35 }
+                    text: Cold wind whips around
+                  - roll: { min: 36, max: 40 }
+                    text: Small patches of snow
+                  - roll: { min: 41, max: 45 }
+                    text: Rocky outcropping
+                  - roll: { min: 46, max: 50 }
+                    text: Wild horses
+                  - roll: { min: 51, max: 55 }
+                    text: Small scrub plants
+                  - roll: { min: 56, max: 60 }
+                    text: Nomad camp
+                  - roll: { min: 61, max: 65 }
+                    text: Braided rivers
+                  - roll: { min: 66, max: 70 }
+                    text: Wind-carved rocks
+                  - roll: { min: 71, max: 75 }
+                    text: Sodden ground
+                  - roll: { min: 76, max: 80 }
+                    text: Grass blows in the wind
+                  - roll: { min: 81, max: 85 }
+                    text: Tiny pools of ice
+                  - roll: { min: 86, max: 90 }
+                    text: Herd of animals
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 327
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Deep crevasse
+                  - roll: { min: 9, max: 16 }
+                    text: Gale force winds
+                  - roll: { min: 17, max: 24 }
+                    text: Howling rain
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen on the hunt
+                  - roll: { min: 33, max: 40 }
+                    text: Denizens lair
+                  - roll: { min: 41, max: 48 }
+                    text: Nowhere to hide
+                  - roll: { min: 49, max: 56 }
+                    text: Stampede of animals
+                  - roll: { min: 57, max: 64 }
+                    text: Tar pit
+                  - roll: { min: 65, max: 72 }
+                    text: Vehicle appears
+                  - roll: { min: 73, max: 80 }
+                    text: Soft ground stops travel
+                  - roll: { min: 81, max: 88 }
+                    text: Track not visible in this season
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 327
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Distant view provides insight
+                  - roll: { min: 9, max: 16 }
+                    text: Herd of animals
+                  - roll: { min: 17, max: 24 }
+                    text: Camp or outpost
+                  - roll: { min: 25, max: 32 }
+                    text: Opportunity to forage
+                  - roll: { min: 33, max: 40 }
+                    text: Evidence of previous travellers
+                  - roll: { min: 41, max: 48 }
+                    text: Fresh water stream or run off
+                  - roll: { min: 49, max: 56 }
+                    text: Travellers offer aid at a cost
+                  - roll: { min: 57, max: 64 }
+                    text: Tracks or trail
+                  - roll: { min: 65, max: 72 }
+                    text: Overgrown structure
+                  - roll: { min: 73, max: 80 }
+                    text: Abandoned vehicle
+                  - roll: { min: 81, max: 88 }
+                    text: Nomads gift information
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          swamp:
+            name: Swamp
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Slow-moving streams cloaked in fog and mist create hard to navigate quagmires and disease filled fetid lands of bubbling muck and mire. These flooded lands are fed by inland springs or brackish tides where tall trees with long and hardy roots stand exposed in areas that can only be traversed by boat.
+            _source:
+              <<: *Source
+              page: 328
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 328
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Riparian waterway
+                  - roll: { min: 6, max: 10 }
+                    text: Everglades or wetland
+                  - roll: { min: 11, max: 15 }
+                    text: Tall reeds
+                  - roll: { min: 16, max: 20 }
+                    text: Preserved corpses
+                  - roll: { min: 21, max: 25 }
+                    text: Swarms of insects
+                  - roll: { min: 26, max: 30 }
+                    text: Thick mud or bog
+                  - roll: { min: 31, max: 35 }
+                    text: Horrid stench
+                  - roll: { min: 36, max: 40 }
+                    text: Small pools and lakes
+                  - roll: { min: 41, max: 45 }
+                    text: Birdsong and animal calls
+                  - roll: { min: 46, max: 50 }
+                    text: Wildflowers and herbs
+                  - roll: { min: 51, max: 55 }
+                    text: Divergent waterways
+                  - roll: { min: 56, max: 60 }
+                    text: Narrow path into a fetid bog
+                  - roll: { min: 61, max: 65 }
+                    text: Stagnant waterway
+                  - roll: { min: 66, max: 70 }
+                    text: Island of dry land
+                  - roll: { min: 71, max: 75 }
+                    text: Forested area
+                  - roll: { min: 76, max: 80 }
+                    text: Meadow or peatland
+                  - roll: { min: 81, max: 85 }
+                    text: Mist and fog-shrouded water
+                  - roll: { min: 86, max: 90 }
+                    text: Flooded thicket
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 329
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Contagion or disease
+                  - roll: { min: 9, max: 16 }
+                    text: Waist-deep water everywhere
+                  - roll: { min: 17, max: 24 }
+                    text: Signs of something lurking
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen lairs here
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen hunts
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen strikes from underwater
+                  - roll: { min: 49, max: 56 }
+                    text: Deep water blocks the path
+                  - roll: { min: 57, max: 64 }
+                    text: Toxic environment
+                  - roll: { min: 65, max: 72 }
+                    text: Concealing or disorienting mist
+                  - roll: { min: 73, max: 80 }
+                    text: Hidden quagmire
+                  - roll: { min: 81, max: 88 }
+                    text: Eerie feeling of being watched
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 329
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Evidence of recent travellers
+                  - roll: { min: 9, max: 16 }
+                    text: Partially submerged discovery
+                  - roll: { min: 17, max: 24 }
+                    text: Camp or outpost
+                  - roll: { min: 25, max: 32 }
+                    text: Overgrown structure
+                  - roll: { min: 33, max: 40 }
+                    text: Path or trail
+                  - roll: { min: 41, max: 48 }
+                    text: Opportunity to hunt or forage
+                  - roll: { min: 49, max: 56 }
+                    text: Resident offers respite
+                  - roll: { min: 57, max: 64 }
+                    text: Signs of civilisation
+                  - roll: { min: 65, max: 72 }
+                    text: Fast flowing water speeds travel
+                  - roll: { min: 73, max: 80 }
+                    text: A moment of peace and quiet
+                  - roll: { min: 81, max: 88 }
+                    text: An opening provides insight
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          transport:
+            name: Transport
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              This location was used as the transportation hub such as an airport, train station or a dock. These areas are generally teeming with the undead. Most of the larger or more important hubs will have signs of military or paramilitary presence as the people fled their homes, either coming in or going out.
+            _source:
+              <<: *Source
+              page: 330
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 330
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Scattered equipment
+                  - roll: { min: 6, max: 10 }
+                    text: Failed barricade
+                  - roll: { min: 11, max: 15 }
+                    text: Half-eaten food
+                  - roll: { min: 16, max: 20 }
+                    text: Map of the site
+                  - roll: { min: 21, max: 25 }
+                    text: Crane or lift
+                  - roll: { min: 26, max: 30 }
+                    text: Terminals or passenger area
+                  - roll: { min: 31, max: 35 }
+                    text: Wide-open space or hangar
+                  - roll: { min: 36, max: 40 }
+                    text: Fuel or hazardous material
+                  - roll: { min: 41, max: 45 }
+                    text: Security or conference room
+                  - roll: { min: 46, max: 50 }
+                    text: Control room
+                  - roll: { min: 51, max: 55 }
+                    text: Containers or storage area
+                  - roll: { min: 56, max: 60 }
+                    text: Cafe or staff room
+                  - roll: { min: 61, max: 65 }
+                    text: Weather damage
+                  - roll: { min: 66, max: 70 }
+                    text: Scuttling vermin
+                  - roll: { min: 71, max: 75 }
+                    text: Messages from loved ones
+                  - roll: { min: 76, max: 80 }
+                    text: Ransacked belongings
+                  - roll: { min: 81, max: 85 }
+                    text: Signs of missing people
+                  - roll: { min: 86, max: 90 }
+                    text: Workshop or vehicle bay
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 331
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Barricade slows or stops you
+                  - roll: { min: 9, max: 16 }
+                    text: Dangerous fuel leakage
+                  - roll: { min: 17, max: 24 }
+                    text: Harsh weather reduces visibility
+                  - roll: { min: 25, max: 32 }
+                    text: Damaged building causes hazard
+                  - roll: { min: 33, max: 40 }
+                    text: Transported wildlife is loose
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen leverages the terrain
+                  - roll: { min: 49, max: 56 }
+                    text: Denizen hunts
+                  - roll: { min: 57, max: 64 }
+                    text: Denizen strikes suddenly
+                  - roll: { min: 65, max: 72 }
+                    text: Quarantine area filled with the undead
+                  - roll: { min: 73, max: 80 }
+                    text: Hazardous materials
+                  - roll: { min: 81, max: 88 }
+                    text: Machinery creates an obstruction
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 331
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Navigational aids
+                  - roll: { min: 9, max: 16 }
+                    text: Scattered cargo
+                  - roll: { min: 17, max: 24 }
+                    text: Seasonal clothing
+                  - roll: { min: 25, max: 32 }
+                    text: Safety gear
+                  - roll: { min: 33, max: 40 }
+                    text: Fuel storage
+                  - roll: { min: 41, max: 48 }
+                    text: Platform holds back the undead
+                  - roll: { min: 49, max: 56 }
+                    text: Large vehicle or equipment
+                  - roll: { min: 57, max: 64 }
+                    text: Emergency services vehicle
+                  - roll: { min: 65, max: 72 }
+                    text: Resident offers assistance
+                  - roll: { min: 73, max: 80 }
+                    text: Cafeteria provides provisions
+                  - roll: { min: 81, max: 88 }
+                    text: Communications equipment
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          woods:
+            name: Woods
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Without deforestation from people, forests would quickly begin to regrow and become havens for wildlife. However, most of the people living in Post-Ash times have left the cities to the dead and have also started new lives in the wild. Forests have always been important to settlers because they provide the wood required for tools, housing, and fire.
+            _source:
+              <<: *Source
+              page: 332
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 332
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: River or stream
+                  - roll: { min: 6, max: 10 }
+                    text: Trees swaying in the wind
+                  - roll: { min: 11, max: 15 }
+                    text: Clearing or meadow
+                  - roll: { min: 16, max: 20 }
+                    text: Brambles or dense thicket
+                  - roll: { min: 21, max: 25 }
+                    text: Overgrown path
+                  - roll: { min: 26, max: 30 }
+                    text: Burned trees or shrubs
+                  - roll: { min: 31, max: 35 }
+                    text: Tall pines block the light
+                  - roll: { min: 36, max: 40 }
+                    text: Lush patch of flowers
+                  - roll: { min: 41, max: 45 }
+                    text: Verdant greenery
+                  - roll: { min: 46, max: 50 }
+                    text: Mossy rocks and trees
+                  - roll: { min: 51, max: 55 }
+                    text: Signs of the season
+                  - roll: { min: 56, max: 60 }
+                    text: Well-travelled game trail
+                  - roll: { min: 61, max: 65 }
+                    text: Camp or outpost
+                  - roll: { min: 66, max: 70 }
+                    text: Freshwater stream
+                  - roll: { min: 71, max: 75 }
+                    text: Rocky outcrop
+                  - roll: { min: 76, max: 80 }
+                    text: Mushrooms or herbs
+                  - roll: { min: 81, max: 85 }
+                    text: Dense fog or mist
+                  - roll: { min: 86, max: 90 }
+                    text: Recent footprints
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 333
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Torn packs and clothes
+                  - roll: { min: 9, max: 16 }
+                    text: White-water rapids
+                  - roll: { min: 17, max: 24 }
+                    text: Perilous climb or descent
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen hunts
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen lairs here
+                  - roll: { min: 41, max: 48 }
+                    text: Stalked by a denizen
+                  - roll: { min: 49, max: 56 }
+                    text: Trap or snare
+                  - roll: { min: 57, max: 64 }
+                    text: Path leads you astray
+                  - roll: { min: 65, max: 72 }
+                    text: Overzealous hunter
+                  - roll: { min: 73, max: 80 }
+                    text: Thick fog or smoke
+                  - roll: { min: 81, max: 88 }
+                    text: Sudden drop or precipice
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 333
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Herd of animals
+                  - roll: { min: 9, max: 16 }
+                    text: Aiding a lost traveller provides a boon
+                  - roll: { min: 17, max: 24 }
+                    text: Clearing provides a distant view
+                  - roll: { min: 25, max: 32 }
+                    text: Dense foliage offers protection
+                  - roll: { min: 33, max: 40 }
+                    text: Edible mushrooms or vegetation
+                  - roll: { min: 41, max: 48 }
+                    text: Abandoned camp
+                  - roll: { min: 49, max: 56 }
+                    text: Cabin or hiking hut
+                  - roll: { min: 57, max: 64 }
+                    text: Fresh water
+                  - roll: { min: 65, max: 72 }
+                    text: River or fishing hole
+                  - roll: { min: 73, max: 80 }
+                    text: Four-wheel drive or ATV
+                  - roll: { min: 81, max: 88 }
+                    text: Animal offers company
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+      themes:
+        name: Themes
+        oracle_type: tables
+        type: oracle_collection
+        _source:
+          <<: *Source
+          page: 334
+        collections:
+          flooded:
+            name: Flooded
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Flooding rivers, torrential rain, or even a tsunami flowing inland create swirling pools of flotsam and debris. While much of the water recedes, some of the land was too low to allow all of it to drain away. Now murky waters have overtaken this place and when the water drove out the original inhabitants, a new ecosystem sprung up in their place.
+            _source:
+              <<: *Source
+              page: 334
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 334
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Deep water
+                  - roll: { min: 6, max: 10 }
+                    text: Patch of dry land
+                  - roll: { min: 11, max: 15 }
+                    text: Impressive aquatic plants
+                  - roll: { min: 16, max: 20 }
+                    text: Signs of what once was
+                  - roll: { min: 21, max: 25 }
+                    text: Bloated remains
+                  - roll: { min: 26, max: 30 }
+                    text: Leaking barriers
+                  - roll: { min: 31, max: 35 }
+                    text: Unusual floating item
+                  - roll: { min: 36, max: 40 }
+                    text: Waves on murky water
+                  - roll: { min: 41, max: 45 }
+                    text: Swarm of insects
+                  - roll: { min: 46, max: 50 }
+                    text: Submerged debris
+                  - roll: { min: 51, max: 55 }
+                    text: Flotsam or jetsam
+                  - roll: { min: 56, max: 60 }
+                    text: Strong currents
+                  - roll: { min: 61, max: 65 }
+                    text: Underwater tunnels
+                  - roll: { min: 66, max: 70 }
+                    text: Mold, slime, or fungus
+                  - roll: { min: 71, max: 75 }
+                    text: Pockets of air
+                  - roll: { min: 76, max: 80 }
+                    text: Sunlight reflected on water
+                  - roll: { min: 81, max: 85 }
+                    text: Waterlogged vehicle
+                  - roll: { min: 86, max: 90 }
+                    text: Floating paper or litter
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 335
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Swift undertow
+                  - roll: { min: 9, max: 16 }
+                    text: Icy waters
+                  - roll: { min: 17, max: 24 }
+                    text: Eroding path
+                  - roll: { min: 25, max: 32 }
+                    text: Rising water level
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen hunting
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen strikes from below
+                  - roll: { min: 49, max: 56 }
+                    text: Tangles of aquatic plants
+                  - roll: { min: 57, max: 64 }
+                    text: Thundering rapids
+                  - roll: { min: 65, max: 72 }
+                    text: Waterfall into darkness
+                  - roll: { min: 73, max: 80 }
+                    text: Large, fast moving debris
+                  - roll: { min: 81, max: 88 }
+                    text: Pitch darkness
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 335
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Light in the darkness
+                  - roll: { min: 9, max: 16 }
+                    text: Safe place to rest
+                  - roll: { min: 17, max: 24 }
+                    text: Boat or floating vehicle
+                  - roll: { min: 25, max: 32 }
+                    text: Sealed containers
+                  - roll: { min: 33, max: 40 }
+                    text: Fresh water
+                  - roll: { min: 41, max: 48 }
+                    text: Air pocket or opening
+                  - roll: { min: 49, max: 56 }
+                    text: Drifting supplies
+                  - roll: { min: 57, max: 64 }
+                    text: Exit or low water area
+                  - roll: { min: 65, max: 72 }
+                    text: Torrent takes you to safety
+                  - roll: { min: 73, max: 80 }
+                    text: Unspoiled area
+                  - roll: { min: 81, max: 88 }
+                    text: Peaceful water
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          frozen:
+            name: Frozen
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Frigid landscapes formed of ice and snow abound in the high places in the world or in the reaches far to the poles. Ice clings to every surface and the temperature is low enough to grasp at the heart of travellers wearing even the best extreme rated cold weather gear for protection. The ice and snow is constant in this place and forging through continuously exposes you to the harsh elements.
+            _source:
+              <<: *Source
+              page: 336
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 336
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Huge snow drifts
+                  - roll: { min: 6, max: 10 }
+                    text: Large icicles
+                  - roll: { min: 11, max: 15 }
+                    text: Ice floes
+                  - roll: { min: 16, max: 20 }
+                    text: Zombies frozen solid
+                  - roll: { min: 21, max: 25 }
+                    text: Sounds of ice cracking
+                  - roll: { min: 26, max: 30 }
+                    text: Tiny stream of melt water
+                  - roll: { min: 31, max: 35 }
+                    text: Ill-equipped travellers
+                  - roll: { min: 36, max: 40 }
+                    text: Signs of life
+                  - roll: { min: 41, max: 45 }
+                    text: Unexpected heat
+                  - roll: { min: 46, max: 50 }
+                    text: Deafening hail
+                  - roll: { min: 51, max: 55 }
+                    text: Frigid waterway
+                  - roll: { min: 56, max: 60 }
+                    text: Eerie quiet
+                  - roll: { min: 61, max: 65 }
+                    text: Frozen corpses
+                  - roll: { min: 66, max: 70 }
+                    text: Freezing rain
+                  - roll: { min: 71, max: 75 }
+                    text: Impressive aurora
+                  - roll: { min: 76, max: 80 }
+                    text: Tracks or marks in the snow
+                  - roll: { min: 81, max: 85 }
+                    text: Glare or reflection
+                  - roll: { min: 86, max: 90 }
+                    text: Numbing wind
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 337
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: White-out blizzard
+                  - roll: { min: 9, max: 16 }
+                    text: Frozen or broken equipment
+                  - roll: { min: 17, max: 24 }
+                    text: Path blocked by ice
+                  - roll: { min: 25, max: 32 }
+                    text: Sub-zero temperature
+                  - roll: { min: 33, max: 40 }
+                    text: Deceptively deep snow
+                  - roll: { min: 41, max: 48 }
+                    text: Crevasse
+                  - roll: { min: 49, max: 56 }
+                    text: Fracturing ice
+                  - roll: { min: 57, max: 64 }
+                    text: Denizen on the hunt
+                  - roll: { min: 65, max: 72 }
+                    text: Perilous climb or descent
+                  - roll: { min: 73, max: 80 }
+                    text: Avalanche
+                  - roll: { min: 81, max: 88 }
+                    text: Water supplies freeze
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 337
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Discovery locked in the ice
+                  - roll: { min: 9, max: 16 }
+                    text: Well-preserved supplies
+                  - roll: { min: 17, max: 24 }
+                    text: Warmth or shelter
+                  - roll: { min: 25, max: 32 }
+                    text: Signs of life
+                  - roll: { min: 33, max: 40 }
+                    text: Thin ice provides a shortcut
+                  - roll: { min: 41, max: 48 }
+                    text: A moment of relative warmth
+                  - roll: { min: 49, max: 56 }
+                    text: Harsh wind drives animals into the open
+                  - roll: { min: 57, max: 64 }
+                    text: Bridge or other passage
+                  - roll: { min: 65, max: 72 }
+                    text: Abandoned vehicle is drivable
+                  - roll: { min: 73, max: 80 }
+                    text: Zombies freeze completely
+                  - roll: { min: 81, max: 88 }
+                    text: Falling snow hides you from sight
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          inhabited:
+            name: Inhabited
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              People gather in the warm places of the world for many reasons, and the motivations behind coming together in groups is deeply rooted in human nature and societal dynamics. People need social interaction, community and belonging, culture, economic exchange, education, entertainment, and security. Overall, the reasons people gather together are as complex and diverse as the people themselves.
+            _source:
+              <<: *Source
+              page: 338
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 338
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Monument honours heroes
+                  - roll: { min: 6, max: 10 }
+                    text: Family homes
+                  - roll: { min: 11, max: 15 }
+                    text: Meeting place
+                  - roll: { min: 16, max: 20 }
+                    text: Fight breaks out
+                  - roll: { min: 21, max: 25 }
+                    text: Smells of livestock
+                  - roll: { min: 26, max: 30 }
+                    text: Unrepaired damage
+                  - roll: { min: 31, max: 35 }
+                    text: Smithy working a forge
+                  - roll: { min: 36, max: 40 }
+                    text: Notice or announcement
+                  - roll: { min: 41, max: 45 }
+                    text: Alarm is raised
+                  - roll: { min: 46, max: 50 }
+                    text: Friendly greetings
+                  - roll: { min: 51, max: 55 }
+                    text: Family or children gathering
+                  - roll: { min: 56, max: 60 }
+                    text: Crews at work
+                  - roll: { min: 61, max: 65 }
+                    text: Conspicuous patrols
+                  - roll: { min: 66, max: 70 }
+                    text: Festival or celebration
+                  - roll: { min: 71, max: 75 }
+                    text: Merchant selling wares
+                  - roll: { min: 76, max: 80 }
+                    text: People responding to a crisis
+                  - roll: { min: 81, max: 85 }
+                    text: Notable figure stands out
+                  - roll: { min: 86, max: 90 }
+                    text: Small shrine or offerings
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 339
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Unwelcome news
+                  - roll: { min: 9, max: 16 }
+                    text: Presence of a foe or rival
+                  - roll: { min: 17, max: 24 }
+                    text: Security cuts off access
+                  - roll: { min: 25, max: 32 }
+                    text: Lured into danger
+                  - roll: { min: 33, max: 40 }
+                    text: Signs of disease or sickness
+                  - roll: { min: 41, max: 48 }
+                    text: Unwanted attention
+                  - roll: { min: 49, max: 56 }
+                    text: Being watched or followed
+                  - roll: { min: 57, max: 64 }
+                    text: Unrest or rebellion
+                  - roll: { min: 65, max: 72 }
+                    text: Evidence of exploitation
+                  - roll: { min: 73, max: 80 }
+                    text: Caught up in a dispute
+                  - roll: { min: 81, max: 88 }
+                    text: Lies or deception
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 339
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Offer from an unexpected source
+                  - roll: { min: 9, max: 16 }
+                    text: Chance to socialise
+                  - roll: { min: 17, max: 24 }
+                    text: News or gossip is helpful
+                  - roll: { min: 25, max: 32 }
+                    text: An item or buyer is available
+                  - roll: { min: 33, max: 40 }
+                    text: Old friend resurfaces
+                  - roll: { min: 41, max: 48 }
+                    text: Access to rest or welfare
+                  - roll: { min: 49, max: 56 }
+                    text: Mechanic or access to tools
+                  - roll: { min: 57, max: 64 }
+                    text: Insight into the area
+                  - roll: { min: 65, max: 72 }
+                    text: Offering aid provides an alliance
+                  - roll: { min: 73, max: 80 }
+                    text: Vehicle or transport is offered
+                  - roll: { min: 81, max: 88 }
+                    text: Help to finish a project
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          protected:
+            name: Protected
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              We have always built structures to keep our people safe and allow us to defend against intruders. Since the fall of civilisation, these fortifications now take many forms. Enclaves erect palisade walls from scrap and bastions from cargo containers. Travelling scavengers barricade themselves into buildings, rigging grenades to trip wires around entrances when their numbers are too few to defend.
+            _source:
+              <<: *Source
+              page: 340
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 340
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Narrow passageway
+                  - roll: { min: 6, max: 10 }
+                    text: Camouflage netting
+                  - roll: { min: 11, max: 15 }
+                    text: Radio tower
+                  - roll: { min: 16, max: 20 }
+                    text: Armoured vehicle
+                  - roll: { min: 21, max: 25 }
+                    text: Makeshift defense
+                  - roll: { min: 26, max: 30 }
+                    text: Camp or quarters
+                  - roll: { min: 31, max: 35 }
+                    text: Storage or repository
+                  - roll: { min: 36, max: 40 }
+                    text: Command or leadership
+                  - roll: { min: 41, max: 45 }
+                    text: Tactical advantage
+                  - roll: { min: 46, max: 50 }
+                    text: Civilian issue equipment
+                  - roll: { min: 51, max: 55 }
+                    text: Bright lights
+                  - roll: { min: 56, max: 60 }
+                    text: Security post
+                  - roll: { min: 61, max: 65 }
+                    text: Armoury
+                  - roll: { min: 66, max: 70 }
+                    text: Gated or fenced area
+                  - roll: { min: 71, max: 75 }
+                    text: Guarded location
+                  - roll: { min: 76, max: 80 }
+                    text: Sandbag wall
+                  - roll: { min: 81, max: 85 }
+                    text: Explosives or ammunition
+                  - roll: { min: 86, max: 90 }
+                    text: Work or training area
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 341
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Denizen patrols the area
+                  - roll: { min: 9, max: 16 }
+                    text: Denizen on guard
+                  - roll: { min: 17, max: 24 }
+                    text: Denizen ready to act
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen sets an ambush
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen lures you into a trap
+                  - roll: { min: 41, max: 48 }
+                    text: Denizens suddenly converge
+                  - roll: { min: 49, max: 56 }
+                    text: Pets or underlings
+                  - roll: { min: 57, max: 64 }
+                    text: Unexpected alliance revealed
+                  - roll: { min: 65, max: 72 }
+                    text: Unexpected leader revealed
+                  - roll: { min: 73, max: 80 }
+                    text: Nefarious plans revealed
+                  - roll: { min: 81, max: 88 }
+                    text: Trap or alarm triggers
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 341
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Opportunity to scavenge
+                  - roll: { min: 9, max: 16 }
+                    text: Communications gear
+                  - roll: { min: 17, max: 24 }
+                    text: Access to a safe passage
+                  - roll: { min: 25, max: 32 }
+                    text: Control panel
+                  - roll: { min: 33, max: 40 }
+                    text: Insight into enemy plans
+                  - roll: { min: 41, max: 48 }
+                    text: Opening to escape an enemy
+                  - roll: { min: 49, max: 56 }
+                    text: Access to useful equipment
+                  - roll: { min: 57, max: 64 }
+                    text: Potential alliance is revealed
+                  - roll: { min: 65, max: 72 }
+                    text: Enemy methods are useless
+                  - roll: { min: 73, max: 80 }
+                    text: Vehicle provides a benefit
+                  - roll: { min: 81, max: 88 }
+                    text: Fuel or food storage
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          ruined:
+            name: Ruined
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              The crumbling legacy of a dead civilisation is all around. Tall buildings get shorter each year as the concrete fails and neatly shortened grass grows ever taller. As days go by the neatly manicured and painted world becomes more wild and stripped of any man-made influence. In these places, a scavenger can find gear and equipment to keep an enclave maintained until the cities are consumed by nature.
+            _source:
+              <<: *Source
+              page: 342
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 342
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Sounds of instability
+                  - roll: { min: 6, max: 10 }
+                    text: Leaking water or gas
+                  - roll: { min: 11, max: 15 }
+                    text: Sunken ceiling
+                  - roll: { min: 16, max: 20 }
+                    text: Dusty home wares
+                  - roll: { min: 21, max: 25 }
+                    text: Sudden open area
+                  - roll: { min: 26, max: 30 }
+                    text: Light piercing the darkness
+                  - roll: { min: 31, max: 35 }
+                    text: Moss, mold, or fungus
+                  - roll: { min: 36, max: 40 }
+                    text: Grisly discovery
+                  - roll: { min: 41, max: 45 }
+                    text: Something unusual
+                  - roll: { min: 46, max: 50 }
+                    text: Motor or mechanical item
+                  - roll: { min: 51, max: 55 }
+                    text: Message from the past
+                  - roll: { min: 56, max: 60 }
+                    text: Survivors alive in the ruins
+                  - roll: { min: 61, max: 65 }
+                    text: Signs of looting
+                  - roll: { min: 66, max: 70 }
+                    text: Sad memento of a lost life
+                  - roll: { min: 71, max: 75 }
+                    text: Collapsed or broken terrain
+                  - roll: { min: 76, max: 80 }
+                    text: Crumbling corridors or walls
+                  - roll: { min: 81, max: 85 }
+                    text: Rubble-choked hall
+                  - roll: { min: 86, max: 90 }
+                    text: Stairwell or elevator
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 343
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Blocked passage
+                  - roll: { min: 9, max: 16 }
+                    text: Unstable floor or footing
+                  - roll: { min: 17, max: 24 }
+                    text: Loss of life weighs upon you
+                  - roll: { min: 25, max: 32 }
+                    text: Hazardous environment
+                  - roll: { min: 33, max: 40 }
+                    text: Imminent collapse
+                  - roll: { min: 41, max: 48 }
+                    text: Unearthed secrets
+                  - roll: { min: 49, max: 56 }
+                    text: Wilderness has claimed the area
+                  - roll: { min: 57, max: 64 }
+                    text: Evidence of a horrible fate
+                  - roll: { min: 65, max: 72 }
+                    text: Denizen lairs here
+                  - roll: { min: 73, max: 80 }
+                    text: Denizen strikes from hiding
+                  - roll: { min: 81, max: 88 }
+                    text: Denizen lures you into a trap
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 343
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Helpful device
+                  - roll: { min: 9, max: 16 }
+                    text: Salvageable resource
+                  - roll: { min: 17, max: 24 }
+                    text: Message provides insight
+                  - roll: { min: 25, max: 32 }
+                    text: Area untouched by destruction
+                  - roll: { min: 33, max: 40 }
+                    text: Shortcut through the rubble
+                  - roll: { min: 41, max: 48 }
+                    text: Glimpses of the past
+                  - roll: { min: 49, max: 56 }
+                    text: "Damage isn't as bad as it looks"
+                  - roll: { min: 57, max: 64 }
+                    text: Height provides distant view
+                  - roll: { min: 65, max: 72 }
+                    text: Evidence of survivors
+                  - roll: { min: 73, max: 80 }
+                    text: Friendly animal or denizen
+                  - roll: { min: 81, max: 88 }
+                    text: Sudden jolt loosens stuck door
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          war_zone:
+            name: War Zone
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              This site is the center of an active battle between forces. Bullets fly and shrapnel is blasted across the battlefield. Traversing this terrain unnoticed and unscathed will be nigh impossible as in the heat of battle, it's hard to tell which side each combatant is even on.
+            _source:
+              <<: *Source
+              page: 344
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 344
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Fallen combatants
+                  - roll: { min: 6, max: 10 }
+                    text: Command area
+                  - roll: { min: 11, max: 15 }
+                    text: Supply area
+                  - roll: { min: 16, max: 20 }
+                    text: Screams of the dying
+                  - roll: { min: 21, max: 25 }
+                    text: Gunfire or explosions
+                  - roll: { min: 26, max: 30 }
+                    text: Signs of incoming danger
+                  - roll: { min: 31, max: 35 }
+                    text: Burned out vehicle
+                  - roll: { min: 36, max: 40 }
+                    text: Shattered glass
+                  - roll: { min: 41, max: 45 }
+                    text: Blood stains or gore
+                  - roll: { min: 46, max: 50 }
+                    text: Smoking crater
+                  - roll: { min: 51, max: 55 }
+                    text: Smoke or gas
+                  - roll: { min: 56, max: 60 }
+                    text: Noise from tyres or tracks
+                  - roll: { min: 61, max: 65 }
+                    text: Open area without cover
+                  - roll: { min: 66, max: 70 }
+                    text: Passage choked with debris
+                  - roll: { min: 71, max: 75 }
+                    text: Sudden light or darkness
+                  - roll: { min: 76, max: 80 }
+                    text: Dense foliage or river
+                  - roll: { min: 81, max: 85 }
+                    text: Signs of violence
+                  - roll: { min: 86, max: 90 }
+                    text: Undead responding to noise
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 345
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Foes embroiled in battle
+                  - roll: { min: 9, max: 16 }
+                    text: Reinforcements arrive
+                  - roll: { min: 17, max: 24 }
+                    text: Munitions cache catches fire
+                  - roll: { min: 25, max: 32 }
+                    text: Looting denizens
+                  - roll: { min: 33, max: 40 }
+                    text: Caught in the crossfire
+                  - roll: { min: 41, max: 48 }
+                    text: Retreating group of denizens
+                  - roll: { min: 49, max: 56 }
+                    text: Raging fires and thick smoke
+                  - roll: { min: 57, max: 64 }
+                    text: Denizens in desperate need
+                  - roll: { min: 65, max: 72 }
+                    text: Loss of an item or equipment
+                  - roll: { min: 73, max: 80 }
+                    text: Ambushed by denizen
+                  - roll: { min: 81, max: 88 }
+                    text: Mistaken for the enemy
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 345
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: An opening appears
+                  - roll: { min: 9, max: 16 }
+                    text: One side overwhelms the other
+                  - roll: { min: 17, max: 24 }
+                    text: Equipment left unattended
+                  - roll: { min: 25, max: 32 }
+                    text: A place of relative safety
+                  - roll: { min: 33, max: 40 }
+                    text: Denizens offer help
+                  - roll: { min: 41, max: 48 }
+                    text: Denizens cease fire
+                  - roll: { min: 49, max: 56 }
+                    text: The battle moves elsewhere
+                  - roll: { min: 57, max: 64 }
+                    text: Voices can be overheard
+                  - roll: { min: 65, max: 72 }
+                    text: Denizen caught off guard
+                  - roll: { min: 73, max: 80 }
+                    text: Threatening forces pass by
+                  - roll: { min: 81, max: 88 }
+                    text: A distraction provides access
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          wild:
+            name: Wild
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              The wild, with its untamed landscapes and unpredictable beauty, embodies nature's raw and unbridled spirit, where every rustle of leaves and distant howl speaks to the untamed essence of the wilderness.
+
+              Nature thrives in this place.
+            _source:
+              <<: *Source
+              page: 346
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 346
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Evidence of a hunting party
+                  - roll: { min: 6, max: 10 }
+                    text: Animal shows its presence
+                  - roll: { min: 11, max: 15 }
+                    text: Road covered in grass
+                  - roll: { min: 16, max: 20 }
+                    text: Site of an attack or skirmish
+                  - roll: { min: 21, max: 25 }
+                    text: Once well-tended area
+                  - roll: { min: 26, max: 30 }
+                    text: Mighty trees or river
+                  - roll: { min: 31, max: 35 }
+                    text: A cold wind whistles in
+                  - roll: { min: 36, max: 40 }
+                    text: Remains or carrion
+                  - roll: { min: 41, max: 45 }
+                    text: Hiking hut or summer camp
+                  - roll: { min: 46, max: 50 }
+                    text: Awe-inspiring vista
+                  - roll: { min: 51, max: 55 }
+                    text: Overgrown signs of humanity
+                  - roll: { min: 56, max: 60 }
+                    text: Camp or outpost
+                  - roll: { min: 61, max: 65 }
+                    text: Well-travelled game trail
+                  - roll: { min: 66, max: 70 }
+                    text: Trees swaying in the wind
+                  - roll: { min: 71, max: 75 }
+                    text: Meteor crosses the sky
+                  - roll: { min: 76, max: 80 }
+                    text: Territorial markings
+                  - roll: { min: 81, max: 85 }
+                    text: Vehicle embedded in dirt
+                  - roll: { min: 86, max: 90 }
+                    text: Soft rain begins to fall
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 347
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Torrential rain
+                  - roll: { min: 9, max: 16 }
+                    text: Sudden drop
+                  - roll: { min: 17, max: 24 }
+                    text: Pit fall
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen hunts
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen strikes without warning
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen uses the environment
+                  - roll: { min: 49, max: 56 }
+                    text: Denizen protects something
+                  - roll: { min: 57, max: 64 }
+                    text: Ill-fated victim in danger
+                  - roll: { min: 65, max: 72 }
+                    text: Benign aspect becomes a threat
+                  - roll: { min: 73, max: 80 }
+                    text: Overzealous hunter
+                  - roll: { min: 81, max: 88 }
+                    text: Danger hidden by foliage
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 347
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: "Evidence of a victim's fate"
+                  - roll: { min: 9, max: 16 }
+                    text: Access to untouched area
+                  - roll: { min: 17, max: 24 }
+                    text: Find equipment or stash
+                  - roll: { min: 25, max: 32 }
+                    text: Opening to avoid conflict
+                  - roll: { min: 33, max: 40 }
+                    text: Track or trail comes into sight
+                  - roll: { min: 41, max: 48 }
+                    text: Clearing provides area to camp
+                  - roll: { min: 49, max: 56 }
+                    text: Tall trees offer a view above
+                  - roll: { min: 57, max: 64 }
+                    text: Abandoned heavy equipment
+                  - roll: { min: 65, max: 72 }
+                    text: Opportunity to hunt
+                  - roll: { min: 73, max: 80 }
+                    text: Wild herbs provide healing
+                  - roll: { min: 81, max: 88 }
+                    text: Wind carries a familiar scent
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+          zombie_infested:
+            name: Zombie Infested
+            oracle_type: tables
+            type: oracle_collection
+            summary: |-
+              Everyone who lived through the Uprising saw how places can become overrun with zombies. Wherever people gather, the risk increases. People may hide their bites, or a zombie with a chest-wound and unable to make a sound could ambush the unwary. Then soon enough, the undead rise and seek to gorge themselves on the living.
+            _source:
+              <<: *Source
+              page: 348
+            contents:
+              feature:
+                <<: *Feature
+                _source:
+                  <<: *Source
+                  page: 348
+                rows:
+                  - roll: { min: 1, max: 5 }
+                    text: Roaming zombies
+                  - roll: { min: 6, max: 10 }
+                    text: The fetid stench of decay
+                  - roll: { min: 11, max: 15 }
+                    text: Ravaged architecture
+                  - roll: { min: 16, max: 20 }
+                    text: Shuffling figures in darkness
+                  - roll: { min: 21, max: 25 }
+                    text: Barricades or barred doors
+                  - roll: { min: 26, max: 30 }
+                    text: Lone zombie straggler
+                  - roll: { min: 31, max: 35 }
+                    text: Darkness or limited vision
+                  - roll: { min: 36, max: 40 }
+                    text: Solid walls or terrain
+                  - roll: { min: 41, max: 45 }
+                    text: A bottleneck exit or entry
+                  - roll: { min: 46, max: 50 }
+                    text: Signs of death or violence
+                  - roll: { min: 51, max: 55 }
+                    text: Remains or carrion
+                  - roll: { min: 56, max: 60 }
+                    text: Maggots crawling in meat
+                  - roll: { min: 61, max: 65 }
+                    text: Ill-fated victims
+                  - roll: { min: 66, max: 70 }
+                    text: Guttural or sickening noises
+                  - roll: { min: 71, max: 75 }
+                    text: Detritus, grime and muck
+                  - roll: { min: 76, max: 80 }
+                    text: Slick brown blood and gore
+                  - roll: { min: 81, max: 85 }
+                    text: Discarded heavy gear
+                  - roll: { min: 86, max: 90 }
+                    text: Screams or cries for help
+                  - roll: { min: 91, max: 95 }
+                    <<: *DescriptorFocus
+                  - roll: { min: 96, max: 100 }
+                    <<: *RollTwice
+              hazard:
+                <<: *Hazard
+                _source:
+                  <<: *Source
+                  page: 349
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Toxic or sickening environment
+                  - roll: { min: 9, max: 16 }
+                    text: Blocked path or passage
+                  - roll: { min: 17, max: 24 }
+                    text: Denizens form a horde
+                  - roll: { min: 25, max: 32 }
+                    text: Denizen traps you
+                  - roll: { min: 33, max: 40 }
+                    text: Denizen blocks the path
+                  - roll: { min: 41, max: 48 }
+                    text: Denizen lays in wait
+                  - roll: { min: 49, max: 56 }
+                    text: Denizen reveals an ability
+                  - roll: { min: 57, max: 64 }
+                    text: Denizen causes a collapse
+                  - roll: { min: 65, max: 72 }
+                    text: Screams or calls for help
+                  - roll: { min: 73, max: 80 }
+                    text: "Victim's horrible fate is revealed"
+                  - roll: { min: 81, max: 88 }
+                    text: You leave something behind
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice
+              opportunity:
+                <<: *Opportunity
+                _source:
+                  <<: *Source
+                  page: 349
+                rows:
+                  - roll: { min: 1, max: 8 }
+                    text: Backpack holds valuable supplies
+                  - roll: { min: 9, max: 16 }
+                    text: Method to contain the dead
+                  - roll: { min: 17, max: 24 }
+                    text: An opening or shortcut
+                  - roll: { min: 25, max: 32 }
+                    text: Window provides a welcome view
+                  - roll: { min: 33, max: 40 }
+                    text: Unexpected exit or safe way out
+                  - roll: { min: 41, max: 48 }
+                    text: Aiding a survivor forms an alliance
+                  - roll: { min: 49, max: 56 }
+                    text: Special equipment just within reach
+                  - roll: { min: 57, max: 64 }
+                    text: You find a resource or item
+                  - roll: { min: 65, max: 72 }
+                    text: Signs of life
+                  - roll: { min: 73, max: 80 }
+                    text: A place of relative safety
+                  - roll: { min: 81, max: 88 }
+                    text: An opening appears
+                  - roll: { min: 89, max: 96 }
+                    <<: *ActionTheme
+                  - roll: { min: 97, max: 100 }
+                    <<: *RollTwice

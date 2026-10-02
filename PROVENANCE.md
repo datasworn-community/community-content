@@ -30,6 +30,11 @@ source YAML and generated package metadata.
 | Ironsmith | Eric Bright | https://www.drivethrurpg.com/product/351813/Ironsmith | CC-BY-4.0 |
 | Ancient Wonders | Ludic Pen | https://www.drivethrurpg.com/en/product/505365/ancient-wonders | CC-BY-NC-SA-4.0 |
 
+## Added Packages
+| Package | Author | Source URL | License |
+|---|---|---|---|
+| Revenant | Killian Gillespie | https://www.drivethrurpg.com/en/product/457762/revenant | CC-BY-SA-4.0 |
+
 ## Notes
 
 Before stable publication, confirm that each package's source license and

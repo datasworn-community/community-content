@@ -1,0 +1,800 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+npcs:
+  the_undead:
+    type: npc_collection
+    name: The Undead
+    _source:
+      <<: &Source
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
+        authors:
+          - name: Killian Gillespie
+      page: 222
+    contents:
+      zombie:
+        type: npc
+        name: Zombie
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 225
+        rank: 1
+        features:
+          - Milky white eyes
+          - Tight pallid skin
+          - Brown viscous blood
+          - Broken yellow teeth
+        drives:
+          - Seek out the living
+          - Feed on oxygenated flesh
+        tactics:
+          - Grasp and grapple
+          - Bite at all costs
+          - Call out to other zombies
+          - Follow without ever stopping
+        variants:
+          handful_of_zombies:
+            name: Handful of Zombies
+            nature: Undead
+            rank: 2
+            description: |-
+              A small number of 3-5 Zombies are roaming together.
+          pack_of_zombies:
+            name: Pack of Zombies
+            nature: Undead
+            rank: 3
+            description: |-
+              A larger number of 6-10 Zombies are roaming together in a pack.
+          horde_of_zombies:
+            name: Horde of Zombies
+            nature: Undead
+            rank: 5
+            description: |-
+              A full horde of hundreds of Zombies.
+        description: |-
+          The features, drives, and tactics from the Zombie NPC can be applied to anything suffering from reanimation caused by the Revenant pathogen. You should apply it to any mutations that you choose to include as well as their own unique features, drives, and tactics.
+
+          You may also apply these features like a template to any of the NPC's listed under the 'Animal Kingdom' section if you want the Revenant pathogen to be capable of reanimating creatures other than humans.
+      runner:
+        type: npc
+        name: Runner
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 229
+        rank: 2
+        features:
+          - Visibly enraged
+          - Agitated
+        drives:
+          - Chase the living
+        tactics:
+          - Break through a door
+          - Run faster and jump higher
+        variants:
+          handful_of_runners:
+            name: Handful of Runners
+            nature: Undead
+            rank: 3
+            description: |-
+              A small number of 3-5 Runners are roaming together.
+          pack_of_runners:
+            name: Pack of Runners
+            nature: Undead
+            rank: 4
+            description: |-
+              A larger number of 6-10 Runners are roaming together in a pack.
+        description: |-
+          The runner isn't technically a zombie, yet. They're a human that's been infected with the Revenant pathogen and are presently affected by the first stage. You can't reason with them. You can't hope against all odds that the person they once were will shine through. Hell, you can barely even outrun them. A runner will expend its total energy without reserve. It won't wait patiently for someone to cross their path. They run. And run. And run.
+
+          Runners are why the Revenant pathogen spread so quickly. These vectors would run full tilt until they encountered their prey. Then, once they catch up to them, they'll try to tear them limb from limb. The pathogen enters the victims' blood and soon they'll also go through Stage 1 and join the hunt.
+      hulk:
+        type: npc
+        name: Hulk
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 231
+        rank: 3
+        features:
+          - Towering stature
+          - Tough flesh
+        drives:
+          - Clear a path
+          - Subdue all foes
+        tactics:
+          - Destroy something physical
+          - Tear off a limb
+        description: |-
+          The Hulk is a zombie that has been supersized. The Revenant pathogen is known to regenerate tissue. Not perfectly, but it keeps the dead walking. Muscle regrowth is achieved through hypertrophy. This happens when muscles sustain damage or injury and the body repairs them by fusing them. This creates larger and stronger muscles. In a Hulk, the pathogen has focused on rebuilding muscle tissue too well.
+      screamer:
+        type: npc
+        name: Screamer
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 233
+        rank: 2
+        features:
+          - Large armoured chest
+          - Wide-open maw
+        drives:
+          - Gather the undead
+        tactics:
+          - Unleash an ear-splitting shriek
+          - Call the horde
+        variants:
+          handful_of_screamers:
+            name: Handful of Screamers
+            nature: Undead
+            rank: 3
+            description: |-
+              A small number of 3-5 Screamers are roaming together.
+          pack_of_screamers:
+            name: Pack of Screamers
+            nature: Undead
+            rank: 4
+            description: |-
+              A larger number of 6-10 Screamers are roaming together in a pack.
+        description: |-
+          Screamers have mutated to form massive packs of the undead. A normal zombie moan can call their kin from only a short distance. Even so, when one moans and another hears it, they moan and so on and so forth.
+
+          The screamers can call other zombies from kilometers away. Their chest cavities are massive and reinforced with enough sinew and cartilage that they have been known to stop low-powered ammunition.
+
+          When you see a screamer, you better hope you see it before it sees you or you're in for a lot of trouble.
+      spitter:
+        type: npc
+        name: Spitter
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 233
+        rank: 2
+        features:
+          - Distended stomach
+          - Acid pocked flesh
+          - Bile soaked clothes
+        drives:
+          - Get within spitting range
+        tactics:
+          - Spray with toxic bile
+          - Bite at exposed flesh
+        variants:
+          handful_of_spitters:
+            name: Handful of Spitters
+            nature: Undead
+            rank: 3
+            description: |-
+              A small number of 3-5 Spitters are roaming together.
+          pack_of_spitters:
+            name: Pack of Spitters
+            nature: Undead
+            rank: 4
+            description: |-
+              A larger number of 6-10 Spitters are roaming together in a pack.
+        description: |-
+          The contents of a zombie's stomach is a cesspool of bacteria and disease. Touching a zombie's skin alone would be enough to require a range of medications. A spitter zombie is one that has mutated the ability to regurgitate the contents of their stomach with such force that it sprays up to two meters. It then uses the distraction as an advantage to gorge itself upon its victim and refill the now empty stomach.
+      sable:
+        type: npc
+        name: Sable
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 234
+        rank: 3
+        features:
+          - Amorphous blob of black blood
+          - Chunks of brain floating in it
+        drives:
+          - Enter a host
+          - Stay away from fire
+        tactics:
+          - Squeeze into a tight place
+          - Drop down from a height
+          - Enter the body through an orifice
+        description: |-
+          A sable is the result of a mutation in a zombie brain. When it's ready, or when circumstances force it, the sable will form by pushing the zombies black blood into the cranium. This will cause it to explode and any large chunks of brain matter is then drawn into the blood.
+
+          Sables then search out a new host and, when it enters them, begins to change their anatomy. The Revenant pathogen starts by taking control of the central nervous system and, once it has finished, goes to work on rebuilding the host's sinew and collagen.
+      sable_host:
+        type: npc
+        name: Sable-host
+        nature: Undead
+        _source:
+          <<: *Source
+          page: 235
+        rank: 4
+        features:
+          - Indistinguishable from its hosts form
+          - Near immunity to cold environments
+        drives:
+          - Remain undetected
+          - Feed on flesh and blood
+        tactics:
+          - Hide until in control of the host
+          - Resume the hosts life
+          - Commit bloody and brutal murder
+        description: |-
+          Initially the host of a sable may try to verbally communicate with others and warn them away. This is because the pathogen has taken control of the body, but not completely. The host will try to flee to isolation and safety. Once it has undergone the last of its changes it will rejoin its previous companions.
+
+          Eventually, a sable-host is stronger and smarter than they were before and, is capable of totally replicating the host's mannerisms and remembering their memories. Due to their increased intelligence, a sable-host will wait for an opportune moment to feed and try to remain undetected.
+  humanity:
+    name: Humanity
+    type: npc_collection
+    _source:
+      <<: *Source
+      page: 236
+    contents:
+      cannibal:
+        type: npc
+        name: Cannibal
+        nature: Human
+        _source:
+          <<: *Source
+          page: 237
+        rank: 1
+        features:
+          - Personality changes and insomnia
+          - Impaired thinking and trouble swallowing
+          - Sudden jerky movements
+        drives:
+          - Consume human flesh
+        tactics:
+          - Lure with kindness
+          - Find a weakness and exploit it
+        variants:
+          group_of_cannibals:
+            name: Group of Cannibals
+            nature: Human
+            rank: 2
+            description: |-
+              A small number of 3-5 Cannibals together in a group.
+          clan_of_cannibals:
+            name: Clan of Cannibals
+            nature: Human
+            rank: 3
+            description: |-
+              A larger number of 6-10 Cannibals together as a clan.
+        description: |-
+          Without food, people can be driven to desperate acts. Cannibals prey on other humans for food. However, the skeletal flesh of a human contains only a meagre 32,000 calories. Assuming the minimum daily requirement of 2,400 calories per adult, one person would barely provide a days calorie needs for dozen cannibals. In post-apocalyptic times when daily exertion is greater and calorie needs higher, a single human body would stretch for much less.
+
+          It is because of this that cannibals are only found on their own or in very small groups, such as; an elderly couple in a run-down diner who drug some of their visitors to keep meat in the pies; an extended family of degenerate savages who eat whatever or whoever they can catch; or, a small town that seems wholesome enough until you learn the punishment for breaking their strict laws is forfeiting your choice of limb.
+      hunter:
+        type: npc
+        name: Hunter
+        nature: Human
+        _source:
+          <<: *Source
+          page: 238
+        rank: 2
+        features:
+          - Grizzled and at home in the wild
+          - Equipped with survival gear
+        drives:
+          - Provide for the community
+          - Eradicate predatory animals
+          - Live to fight another day
+        tactics:
+          - Stay hidden and take aim
+          - One shot one kill
+        variants:
+          group_of_hunters:
+            name: Group of Hunters
+            nature: Human
+            rank: 3
+            description: |-
+              A small number of 3-5 Hunters together in a group.
+          clan_of_hunters:
+            name: Clan of Hunters
+            nature: Human
+            rank: 4
+            description: |-
+              A larger number of 6-10 Hunters together as a clan.
+        description: |-
+          When the looting started in the cities people with firearms were able to retain the most of their possessions. Anywhere that sold firearms was overrun with people trying to take whatever they could to make it on their own. People that were shot and killed in the riots who had been hiding bites reanimated shortly afterwards as zombies and made those places hotspots for infestations.
+
+          During the first few months of the Fall, inexperienced hunters found a temporary solution within the confines of abandoned farms. These forsaken agricultural havens became a reliable source of sustenance, harboring domesticated animals that had been left to fend for themselves in the wake of societal collapse.
+
+          Among the livestock, most of the cattle were dairy cows rather than their beef counterparts. The significance lay in the nature of dairy cows: if not milked regularly, typically within a week, they faced the risk of falling ill. With the absence of human caretakers, these once-productive creatures became vulnerable to both the unforgiving reality of the post-apocalyptic world and the imminent threat of disease. As a result, a considerable number of these dairy cows were culled. The beef cattle and other sizable domesticated animals faced an insurmountable challenge during the Ash. The ability to feed these larger animals became impossible, and regrettably, many were also culled as a harsh but pragmatic measure.
+
+          As the remnants of abandoned farms were gradually exhausted of their domesticated inhabitants, the focus of the hunters shifted toward the untamed wilderness. Now, the hunted prey primarily consisted of wild animals, as survivors adapted their strategies to the unpredictable challenges of hunting in the open, post-apocalyptic landscape. The shift from contained, domesticated animals to elusive and unpredictable wild game marked a transition in the survival tactics of the remaining human population, reflecting the evolving dynamics of their struggle for sustenance in a world forever altered by catastrophe.
+      lmoe:
+        type: npc
+        name: L.M.O.E
+        nature: Human
+        _source:
+          <<: *Source
+          page: 239
+        rank: 3
+        features:
+          - Look of madness
+          - Martial proficiency
+          - Lone warrior
+        drives:
+          - Defend what they have claimed
+          - Hone skills
+        tactics:
+          - Set off a trap
+          - Overwhelming force
+          - Up close and personal
+        description: |-
+          The Last Man On Earth, often abbreviated to L.M.O.E or called an Elmo, is a type of wasteland warrior that doesn't want to rejoin society. They've carved out a decent piece of the world for themselves and they'll be damned if anyone is coming to take it from them. Most of them have a decent arsenal of salvaged gear and the skills to use it.
+      outcast:
+        type: npc
+        name: Outcast
+        nature: Human
+        _source:
+          <<: *Source
+          page: 240
+        rank: 2
+        features:
+          - Persona non grata
+          - Predatory nature
+          - Looted armaments
+        drives:
+          - Loot
+          - Pillage
+        tactics:
+          - Hit and run
+          - Raze to the ground
+          - Hold a hostage
+        variants:
+          group_of_outcasts:
+            name: Group of Outcasts
+            nature: Human
+            rank: 3
+            description: |-
+              A small number of 3-5 Outcasts together in a group.
+          clan_of_outcasts:
+            name: Clan of Outcasts
+            nature: Human
+            rank: 4
+            description: |-
+              A larger number of 6-10 Outcasts together as a clan.
+        description: |-
+          People who have committed serious crimes against their community are cast out into the wastelands. These outcasts start their own groups and often can only survive by seizing what they need from others. Sometimes these people merely become highwaymen or bandits that do what they must to get by on their own. Others, however, relish the freedom to do what they want upon the helpless inhabitants of the wastelands.
+
+          The larger groups generally unite under the most extreme or ferocious warriors among them. These warlords hold great power and attract other militant zealots and power hungry followers. They have such a control over their domain that a warlord's presence is known through their diehard followers before they themselves are seen.
+      ranger:
+        type: npc
+        name: Ranger
+        nature: Human
+        _source:
+          <<: *Source
+          page: 240
+        rank: 3
+        features:
+          - Disciplined fighters
+          - High quality armaments
+          - Some semblance of uniforms
+        drives:
+          - Follow orders
+          - Defend the community
+        tactics:
+          - Gain a tactical advantage
+          - Fortify position
+          - Engage at range
+        variants:
+          garrison_of_rangers:
+            name: Garrison of Rangers
+            nature: Human
+            rank: 5
+            description: |-
+              A group of rangers (6-10) standing together in unity.
+        description: |-
+          After the people who fled the cities had pillaged the farmlands and the supplies they had taken with them were spent, they needed to return to the cities. The undead had formed hordes that congested the streets and others had become trapped in cars or buildings. Scavenging was a dangerous but essential task. In the safe areas, enclaves were established and fortified. They became centres for trade and havens for travellers but they also became targets for the raiders.
+
+          Anywhere the raiders settled would disrupt trade and, because the economy was directed at only the most basic subsistence, the enclaves that relied purely on trade would fail. Soon enclaves started forming bands of warriors called Rangers who would defend the regions.
+
+          Enclaves that had set up in the wilderness were thriving. They had left the concreted earth and found arable land. They produced their own food, clothing, and shelter. However, some of them had been responsible for enabling raids on other enclaves by providing the outcasts with food and supplies in return for protection.
+
+          The Rangers endeavoured to establish a standing army to defend the enclaves that uphold some semblance of law and order.
+
+          Those enclaves lucky enough to have a garrison of Rangers were fast growing and soon became economic hubs of their region. These hubs attracted a variety of people and, without reliable identification processes, any number of people cast out of their own enclaves also found a place to hide out in plain sight.
+      scavenger:
+        type: npc
+        name: Scavenger
+        nature: Human
+        _source:
+          <<: *Source
+          page: 243
+        rank: 2
+        features:
+          - Scavenged gear
+          - Diverse looks
+          - Well equipped
+        drives:
+          - Find new gear
+          - Map the wasteland
+        tactics:
+          - Band together
+          - Hide or barricade
+          - Exploit an advantage
+        variants:
+          group_of_scavengers:
+            name: Group of Scavengers
+            nature: Human
+            rank: 3
+            description: |-
+              A small number of 3-5 Scavengers together in a group.
+          clan_of_scavengers:
+            name: Clan of Scavengers
+            nature: Human
+            rank: 4
+            description: |-
+              A larger number of 6-10 Scavengers together as a clan.
+        description: |-
+          People brave or desperate enough to risk venturing into the cities and other resource-rich areas claim the title of Scavenger with pride. They have an uncanny luck of finding the best gear in the best condition and can access the most hidden places. They are capable of remaining undetected and often have enough provisions to hide out for days if not weeks. Scavengers are often willing to help or trade supplies for the right price.
+      technician:
+        type: npc
+        name: Technician
+        nature: Human
+        _source:
+          <<: *Source
+          page: 243
+        rank: 1
+        features:
+          - Well-trained specialists
+          - High quality tools and technology
+        drives:
+          - Maintain essential services
+          - Protect what is important
+        tactics:
+          - Reveal an unwelcome truth
+          - Demand to respect their authority
+          - Wait for back up
+        variants:
+          group_of_technicians:
+            name: Group of Technicians
+            nature: Human
+            rank: 2
+            description: |-
+              A small number of 3-5 Technicians together in a group.
+          clan_of_technicians:
+            name: Clan of Technicians
+            nature: Human
+            rank: 3
+            description: |-
+              A larger number of 6-10 Technicians together as a clan.
+        description: |-
+          During the Uprising many people with science qualifications were selected under the mandates to form into teams. These specialists were given basic combat and survival training in the field. Many of these teams held, and now maintain, strategic positions to ensure disasters are avoided or essential services are kept operational for local enclaves. The role of Technician in the Post-Ash is a role revered by many and even the most violent warlord will not only allow but will ensure safe passage through their claimed territory.
+      veteran:
+        type: npc
+        name: Veteran
+        nature: Human
+        _source:
+          <<: *Source
+          page: 244
+        rank: 4
+        features:
+          - Battle-scarred
+          - Peak performance
+          - Well equipped
+        drives:
+          - Take action
+          - Complete the mission
+        tactics:
+          - Intimidate into submission
+          - Take down quietly
+          - Shock and awe
+        description: |-
+          A veteran is a person who has long experience in a particular field, usually combat. Veterans are often found leading hunting parties, protecting enclaves or escorting Technicians through the perilous wilds. They have valuable knowledge of the wastelands that is hard-earned and well protected.
+      warden:
+        type: npc
+        name: Warden
+        nature: Human
+        _source:
+          <<: *Source
+          page: 244
+        rank: 3
+        features:
+          - World weary
+          - Suspicious of strangers
+        drives:
+          - Do what needs to be done
+          - Protect the community
+        tactics:
+          - Use caution and diplomacy
+          - Rally the community
+        description: |-
+          A Warden is more than just a leader to their people. They understand the resources and maintenance requirements of their enclave and how the decisions they make affect the region. They are responsible for the security of their enclave and enforcing any regulations. In the face of danger, they are skilled negotiators but they also know when deadly force is required.
+  animal_kingdom:
+    name: Animal Kingdom
+    type: npc_collection
+    _source:
+      <<: *Source
+      page: 246
+    contents:
+      anaconda:
+        type: npc
+        name: Anaconda
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 248
+        rank: 3
+        features:
+          - Emerald scaled skin
+          - Vibrant yellow eyes
+          - Forked tongue
+        drives:
+          - Kill and feed
+          - Lie in waiting
+        tactics:
+          - Grapple and drown
+          - Constrict and crush
+        description: |-
+          The name anaconda applies to a group of snakes, but it is often used to refer to only one species, the green anaconda. The green anaconda is also known as the giant emerald anaconda, common anaconda or common water boa, and is the largest and heaviest snake in the world. There are reports of anacondas reaching over 5 meters in length and a typical adult weighs between 30 and 80 kilograms.
+
+          While the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but stealthy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannas. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.
+      brown_bear:
+        type: npc
+        name: Brown Bear
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 248
+        rank: 4
+        features:
+          - Thick brown fur
+          - Heavy dark claws
+          - Strong bite
+        drives:
+          - Protect the cubs
+          - Eat enough to hibernate
+        tactics:
+          - Deep guttural roar
+          - Pin down their prey
+          - Maul with savage fury
+        description: |-
+          Brown bears are found across Eurasia and North America and are recognised as a national and state animal in several European countries. They commonly weigh up to 600 kilograms and, when standing fully upright on their hindlegs, can be over 3 meters tall. The brown bears strength has been estimated at 2.5 to 5 times that of a human.
+
+          They are one of the most omnivorous animals in the world and consume the greatest variety of foods of any bear. They are regularly curious about the potential of eating virtually anything they encounter. Their jaw structure has evolved to fit this dietary habit.
+
+          Brown bears love to eat carrion and, as long as the Revenant pathogen is unable to infect them, they would quickly learn that zombies make for good eating. Brown bears are not afraid of humans and have long, sharp claws designed for rolling over logs. They are more than capable of tearing zombies limb from limb before they pose any threat to the bear.
+      cougar:
+        type: npc
+        name: Cougar
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 250
+        rank: 2
+        features:
+          - Slender and agile
+          - Tawny coat
+          - Large paws and long tail
+        drives:
+          - Defend territory
+          - Hunt
+        tactics:
+          - Terrifying scream
+          - Circle around their prey
+          - Ambush
+        description: |-
+          Cougars, often called the puma, panther, or mountain lion, are large cats native to north and south America. They are solitary by nature and stand almost 1 meter tall and generally weigh up to 70 kilograms. Cougars get smaller the closer to the poles.
+
+          Unlike other big cat man-eaters, cougars do not kill humans as a result of old age, but in defense of territory. Most attacks are in late spring and summer when juvenile cougars leave their mothers and search for new territory. Such behaviours has been documented in hunts, where a cougar is flushed out by dogs—which it is capable of outrunning. Then, the cougar circles around and mauls the hunter in an ambush attack.
+      crocodile:
+        type: npc
+        name: Crocodile
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 250
+        rank: 3
+        features:
+          - Solid scaly body
+          - Rows of large teeth
+          - Strong bite
+        drives:
+          - Feed
+          - Lurk in murky water
+        tactics:
+          - Stealthy approach
+          - Bite and thrash
+          - Death roll
+        description: |-
+          Zombies are very capable grapplers and are able to latch on to prey. However, they lack the strength and fine motor skills for swimming and crossing fast running water. A zombie's limited movement means they have difficulty getting themselves out of mud or deep water. Any animals in the region that are capable of being infected by the Revenant pathogen may not even need to be bitten.
+
+          Whether the creatures in the aquatic environment can become zombies or not, the decay from the great number of undead in the waters would have a detrimental effect on the ecosystem. In these cases crocodiles would prey upon living humans more aggressively than they do presently if they are unable to source other food. However, crocodiles are also not beyond consuming carrion and would easily digest zombie flesh.
+      buck:
+        type: npc
+        name: Buck
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 252
+        rank: 2
+        features:
+          - Ruddy brown fur
+          - Long powerful legs
+          - Keen night vision
+        drives:
+          - Graze and mate
+          - Mark and defend territory
+          - Stay hidden
+        tactics:
+          - Flee to safety
+          - Protect the herd
+          - Head butt with antlers
+          - Kick with hooves
+        description: |-
+          Most deer populations require constant hunting or culling and are known to cause crop damage and stop forestry regeneration. The deer population in an area only typically limits itself naturally through disease and starvation.
+
+          Historically, people have hunted animals and found new and inventive ways of using every part of the animal with little to no waste. Deer make excellent animals to hunt because, apart from the meat, their hides are useful for making clothing and carrying bags. Their antlers can be used for making tool and knife handles. Their bones can be used to create tools that work as well as their metal counterparts such as needles, fish hooks or arrowheads. The fat of the deer can also be used to create soap and candles.
+      lion:
+        type: npc
+        name: Lion
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 254
+        rank: 3
+        features:
+          - Feline grace
+          - Tawny coat
+        drives:
+          - Hunt
+          - Lie hidden in tall grass
+        tactics:
+          - Stalk prey
+          - Leap and bite
+          - Intimidating roar
+        description: |-
+          While the lion is only native to Africa and India there are numerous zoos across the world that hold these animals as specimens. In the early days of an apocalypse, lions could be set free by their keepers who do not wish to see them starve in captivity. However, in the later days of the apocalypse their numbers will be limited where they are not native due to having a limited or non-existent breeding pool.
+
+          Lions generally sleep for 20 hours a day and are continuously trying to keep cool. If there is a cataclysm that causes a global temperature drop, lions would actually become more active as long as they can find food. In a region that has a deer population, this would be very easy.
+
+          While a human wouldn't typically be a lions first choice of prey, they are fiercely territorial and would kill to defend themselves or their cubs. They would also attack humans if they were starving.
+      piranha:
+        type: npc
+        name: Piranha
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 255
+        rank: 1
+        features:
+          - Red belly
+          - Shiny black scales
+          - Razor sharp teeth
+        drives:
+          - Find warm water
+          - Feed
+        tactics:
+          - Swim as a pack
+          - Take small strong bites
+          - Nibble and flee
+        description: |-
+          Piranha are a tropical freshwater fish native to South America but they can survive in waters as low as 10 degrees Celsius for brief periods. When in colder water they feed less and are unable to digest their food. However, when the water begins to warm up even slightly they become more aggressive as they will be ravenous.
+
+          Contrary to popular belief, piranhas are not capable of stripping a human to the bone in seconds and prefer smaller food or carrion. It is for this reason that people may release a large number of these fish into waterways that could become blocked with the undead. However, if the piranha decimated the other aquatic population, they would attack anything that wander into the water.
+
+          Piranha have one of the strongest bites and, relative to body mass, the black piranha produces one of the most forceful bites measured among invertebrates. Although piranhas often attack as individuals, piranha only swim in large numbers to avoid other predators.
+      rats:
+        type: npc
+        name: Rats
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 256
+        rank: 1
+        features:
+          - Beady eyes
+          - Long tail
+        drives:
+          - Feed
+          - Breed
+        tactics:
+          - Swarm and bite
+          - Gnaw through
+        description: |-
+          Rats will do everything in their power to escape a creature larger than them. But, if there is no way to escape, a cornered rat would not hesitate to attack a human. The last-ditch response of a rat to any threat it can't run away from is to go absolutely berserk, shrieking and snapping its teeth audibly while leaping up to 70cm into the air.
+
+          While a lone rat may not normally pose any challenge in combat, the stakes are high if it is capable of transmitting the Revenant pathogen.
+
+          Rats are notorious for eating anything and having an incredible immune system. The fleas on rats were responsible for the black plague of the 14th century. It was discovered that fleas that had contracted the Yersinia pestis bacterium—that caused the bubonic plague—would have an obstruction in their midgut. The obstruction would be purged through overfeeding and regurgitation. This resulted in thousands of the Y. Pestis to flush into the feeding site, infecting the host.
+
+          The bubonic plague was so impactful due to the mechanism upon which it was dependant. Rats were immune to the disease, allowing for them to become hosts and spread the disease throughout Europe. Humans lacked that resistance to the disease. When the infected humans died, the fleas would move onto a new host, thus creating a human epidemic.
+
+          In a zombie apocalypse it's entirely possible that rats could even feed upon the reanimated dead and contract the Revenant pathogen. When you fight an enemy that has been infected, you will need to [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) (see p. 226).
+      wild_dogs:
+        type: npc
+        name: Wild Dogs
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 258
+        rank: 2
+        features:
+          - Different sizes and breeds
+          - Vicious
+        drives:
+          - Protect territory
+          - Defend the pack
+          - Find food
+        tactics:
+          - Charge and attack
+          - Circle and attack again
+          - Use prior training to an advantage
+        variants:
+          pack_of_wild_dogs:
+            name: Pack of Wild Dogs
+            nature: Animal
+            rank: 3
+            description: |-
+              A pack of Wild Dogs roaming together.
+        description: |-
+          In an apocalypse there would be many dogs left behind in cities as their owners are evacuated or killed. These dogs would quickly break free and form packs. While some of the smaller dog species would fall prey to the other dogs, the more resourceful of them would find their way into small spaces to escape danger and be able to access food that the larger dogs would have trouble reaching. This would ingratiate them into existing packs and secure their safety.
+
+          Some of these dogs will have no fear of humans as other animals do and would eagerly run down a lone human or a few vulnerable travellers. However, dogs are bred throughout history to be domesticated and could become so again. A person willing to take the time and the risk with domesticating a dog could be rewarded with a loyal companion.
+      wolf:
+        type: npc
+        name: Wolf
+        nature: Animal
+        _source:
+          <<: *Source
+          page: 259
+        rank: 3
+        features:
+          - Keen senses
+          - Dark grey fur
+        drives:
+          - Fight rivals
+          - Mark territory
+          - Stay as a pack
+        tactics:
+          - Stalk
+          - Blend in with the terrain
+          - Drag to the ground
+        variants:
+          pack_of_wolves:
+            name: Pack of Wolves
+            nature: Animal
+            rank: 4
+            description: |-
+              A pack of Wolves roaming together.
+        description: |-
+          Animals typically work on instincts developed over hundreds of thousands of years of evolution. Zombies do not match any of these pre-programmed responses designed to determine the proper reaction to any situation relevant to the animal's natural habitat. In the event there is no proper response, the final instinct kicks in - run! However, animals are highly capable of learning routines and survival tactics. In an apocalypse, the zombies would relentlessly follow fleeing wolves. The wolf's only tactic would be to go on the offensive and attack.
+
+          Adult wolves stand almost 1 meter tall and weigh upwards of 40 kilograms with wolves growing larger the further north they live. They would have no trouble facing off against a few of the undead and their thick fur would protect them from even the most savage of human bites. Although wolves usually only kill when they are hungry, wolves have been known to kill when prey are vulnerable and easy to catch. When this happens they may return later to feed on the carcass, or they may leave it to scavengers. It is entirely possible that wolves could learn to cache food for the roaming undead to ensure they are not followed to their dens.
+  other_foes:
+    name: Other Foes
+    type: npc_collection
+    _source:
+      <<: *Source
+      page: 260
+    contents:
+      dragon:
+        type: npc
+        name: Dragon
+        nature: Other
+        _source:
+          <<: *Source
+          page: 261
+        rank: 5
+        features:
+          - Huge leathery wings
+          - Tough scaled hide
+          - Steel-piercing teeth
+        drives:
+          - Hunt and devour
+          - Take to the skies
+        tactics:
+          - Swoop down from above
+          - Slash with tooth and claw
+          - Rend flesh
+          - Breathe poison or fire
+        description: |-
+          Instead of facing the slow and lumbering hordes of the walking dead you may want a foe that has fewer numbers and facing even one foe poses the likelihood of defeat.
+
+          No other mythological creature has received as much attention as the dragon. Tales of dragons are known in many cultures and were believed to be real for centuries. It's not clear where these tales originated but, huge flying serpents with venomous breath have been described in texts as early as the ancient Greeks and Sumerians. The belief in dragons was not just founded in legend but also in physical evidence. The knowledge of dinosaurs would not come for millennia and people would attribute the huge fossilised bones to those of dragons.
+
+          Tales of dragons ranged from being watchful protectors to malicious hunters. When Christianity spread dragons took on a solely sinister interpretation and came to represent Satan. The mouth of a dragon was at this time first depicted to breathe fire and was a symbol of the entrance to hell itself. The church even created their own legends of righteous saints battling and vanquishing Satan in the form of dragons. Dragons are, in fact, one of the only monsters whose purpose is that of a fearsome opponent to be slain.
+
+          As such, dragons make a superb foe to bring about the end of the world.

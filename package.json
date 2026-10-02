@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "datasworn-build --config datasworn.config.yaml",
-    "validate": "test -f dist/packages/starsmith/package.json && test -f dist/packages/starsmith/json/starsmith.json && test -f dist/packages/fe_runners/package.json && test -f dist/packages/fe_runners/json/fe_runners.json && test -f dist/packages/ironsmith/package.json && test -f dist/packages/ironsmith/json/ironsmith.json && test -f dist/packages/ancient_wonders/package.json && test -f dist/packages/ancient_wonders/json/ancient_wonders.json && test -f generated-datasworn/manifest.json && test -f generated-datasworn/starsmith.json && test -f generated-datasworn/fe_runners.json && test -f generated-datasworn/ironsmith.json && test -f generated-datasworn/ancient_wonders.json"
+    "validate": "test -f dist/packages/starsmith/package.json && test -f dist/packages/starsmith/json/starsmith.json && test -f dist/packages/fe_runners/package.json && test -f dist/packages/fe_runners/json/fe_runners.json && test -f dist/packages/ironsmith/package.json && test -f dist/packages/ironsmith/json/ironsmith.json && test -f dist/packages/ancient_wonders/package.json && test -f dist/packages/ancient_wonders/json/ancient_wonders.json && test -f dist/packages/revenant/package.json && test -f dist/packages/revenant/json/revenant.json && test -f generated-datasworn/manifest.json && test -f generated-datasworn/starsmith.json && test -f generated-datasworn/fe_runners.json && test -f generated-datasworn/ironsmith.json && test -f generated-datasworn/ancient_wonders.json && test -f generated-datasworn/revenant.json"
   },
   "engines": {
     "bun": ">=1.3"

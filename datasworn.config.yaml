@@ -64,3 +64,11 @@ packages:
       - id: starforged
         packageName: "@datasworn-community/starforged"
         schemaLine: "0.3"
+
+  - id: revenant
+    type: ruleset
+    source: source_data/revenant
+    packageName: "@datasworn-community/revenant"
+    schemaLine: "0.3"
+    description: "Datasworn JSON data for Revenant, a post-apocalyptic ruleset by Killian Gillespie, based on Starforged."
+    license: "CC-BY-SA-4.0"
