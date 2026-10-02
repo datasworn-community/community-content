@@ -22,7 +22,7 @@ oracles:
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 269
+          page: 270
         suggestions:
             - oracle_rollable:revenant/core/theme
         summary: |-
@@ -336,11 +336,11 @@ oracles:
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 297
+          page: 271
         suggestions:
             - oracle_rollable:revenant/core/action
         summary: |-
-          As with the [Action](datasworn:oracle_rollable:revenant/core/action) oracle, this is an interpretative table which you can use to answer questions or generate new situations. Combined, the Action and Theme tables provide creative prompts suitable for most
+          As with the [Action](datasworn:oracle_rollable:revenant/core/action) oracle, this is an interpretative table which you can use to answer questions or generate new situations. Combined, the Action and Theme tables provide creative prompts suitable for most situations and questions.
         rows:
           - _i18n: &CommonNoun
               text:
@@ -652,7 +652,7 @@ oracles:
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 298
+          page: 272
         suggestions:
             - oracle_rollable:revenant/core/focus
         summary: |-
@@ -967,7 +967,7 @@ oracles:
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 299
+          page: 273
         suggestions:
             - oracle_rollable:revenant/core/descriptor
         summary: |-

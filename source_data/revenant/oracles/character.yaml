@@ -2334,7 +2334,7 @@ oracles:
         type: oracle_rollable
         _source:
           <<: *Source
-          page: 283
+          page: 284
         summary: |-
           Use this oracle to define the part a character plays or to generate a random encounter with a new NPC.
         rows:
@@ -2500,7 +2500,7 @@ oracles:
           <<: *Source
           page: 285
         summary: |-
-          Use this oracle to find out about what motivates a character. It can also be used when you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) for a person goal.
+          Use this oracle to find out about what motivates a character. It can also be used when you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) for a personal goal.
         rows:
           - roll: { min: 1, max: 2 }
             text: Avenge a wrong
@@ -2639,7 +2639,7 @@ oracles:
           - roll: { min: 64, max: 66 }
             text: Overrun a position
           - roll: { min: 67, max: 69 }
-            text: Preform a feint or trick
+            text: Perform a feint or trick
           - roll: { min: 70, max: 72 }
             text: Prepare for an attack
           - roll: { min: 73, max: 75 }
@@ -2668,7 +2668,7 @@ oracles:
           <<: *Source
           page: 287
         summary: |-
-          Use this table to answer questions about the actions of of a foe or enemy force. You can use these oracles instead of, or in addition to, the [Combat Action](datasworn:oracle_rollable:revenant/character/combat_action) oracle. Roll once each on the [Method](datasworn:oracle_rollable:revenant/character/combat_method) and Target oracles. Then, interpret the response as appropriate to the current situation and the nature of your foe.
+          Use this table to answer questions about the actions of a foe or enemy force. You can use these oracles instead of, or in addition to, the [Combat Action](datasworn:oracle_rollable:revenant/character/combat_action) oracle. Roll once each on the [Method](datasworn:oracle_rollable:revenant/character/combat_method) and Target oracles. Then, interpret the response as appropriate to the current situation and the nature of your foe.
         rows:
           - _i18n: &Verb
               text:
@@ -2779,7 +2779,7 @@ oracles:
           <<: *Source
           page: 287
         summary: |-
-          Use this table in conjunction with the [Combat Method](datasworn:oracle_rollable:revenant/character/combat_method) table to create an abstract action a foe could take in combat
+          Use this table in conjunction with the [Combat Method](datasworn:oracle_rollable:revenant/character/combat_method) table to create an abstract action a foe could take in combat.
         rows:
           - _i18n: *CommonNoun
             roll: { min: 1, max: 3 }

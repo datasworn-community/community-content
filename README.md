@@ -3,12 +3,15 @@
 This repository builds org-supported Datasworn community content into separate
 npm package artifacts with `@datasworn-community/build-tools`.
 
-The repo starts with migrated source data for:
+The repo started with migrated source data for:
 
 - Starsmith
 - Fe-Runners
 - Ironsmith
 - Ancient Wonders
+
+It has since been extended with additional source data for:
+
 - Revenant
 
 Packages are configured for public publication under the

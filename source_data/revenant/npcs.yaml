@@ -42,13 +42,13 @@ npcs:
             nature: Undead
             rank: 2
             description: |-
-              A small amount of 3-5 Zombies are roaming together.
+              A small number of 3-5 Zombies are roaming together.
           pack_of_zombies:
             name: Pack of Zombies
             nature: Undead
             rank: 3
             description: |-
-              A larger amount of 6-10 Zombies are roaming together in a pack.
+              A larger number of 6-10 Zombies are roaming together in a pack.
           horde_of_zombies:
             name: Horde of Zombies
             nature: Undead
@@ -81,13 +81,13 @@ npcs:
             nature: Undead
             rank: 3
             description: |-
-              A small amount of 3-5 Runners are roaming together.
+              A small number of 3-5 Runners are roaming together.
           pack_of_runners:
             name: Pack of Runners
             nature: Undead
             rank: 4
             description: |-
-              A larger amount of 6-10 Runners are roaming together in a pack.
+              A larger number of 6-10 Runners are roaming together in a pack.
         description: |-
           The runner isn't technically a zombie, yet. They're a human that's been infected with the Revenant pathogen and are presently affected by the first stage. You can't reason with them. You can't hope against all odds that the person they once were will shine through. Hell, you can barely even outrun them. A runner will expend its total energy without reserve. It won't wait patiently for someone to cross their path. They run. And run. And run.
 
@@ -133,17 +133,17 @@ npcs:
             nature: Undead
             rank: 3
             description: |-
-              A small amount of 3-5 Screamers are roaming together.
+              A small number of 3-5 Screamers are roaming together.
           pack_of_screamers:
             name: Pack of Screamers
             nature: Undead
             rank: 4
             description: |-
-              A larger amount of 6-10 Screamers are roaming together in a pack.
+              A larger number of 6-10 Screamers are roaming together in a pack.
         description: |-
-          Screamers have mutated to form massive packs of the undead. A normal zombie moan can call their kin from only a short distance. Even so, when one moans and another hear it, they moan and so on and so forth.
+          Screamers have mutated to form massive packs of the undead. A normal zombie moan can call their kin from only a short distance. Even so, when one moans and another hears it, they moan and so on and so forth.
 
-          The screamers can call other zombies from kilometers away. Their chest cavities are massive and reinforced with enough sinew and cartilage that they have been know to stop low-powered ammunition.
+          The screamers can call other zombies from kilometers away. Their chest cavities are massive and reinforced with enough sinew and cartilage that they have been known to stop low-powered ammunition.
 
           When you see a screamer, you better hope you see it before it sees you or you're in for a lot of trouble.
       spitter:
@@ -169,13 +169,13 @@ npcs:
             nature: Undead
             rank: 3
             description: |-
-              A small amount of 3-5 Spitters are roaming together.
+              A small number of 3-5 Spitters are roaming together.
           pack_of_spitters:
             name: Pack of Spitters
             nature: Undead
             rank: 4
             description: |-
-              A larger amount of 6-10 Spitters are roaming together in a pack.
+              A larger number of 6-10 Spitters are roaming together in a pack.
         description: |-
           The contents of a zombie's stomach is a cesspool of bacteria and disease. Touching a zombie's skin alone would be enough to require a range of medications. A spitter zombie is one that has mutated the ability to regurgitate the contents of their stomach with such force that it sprays up to two meters. It then uses the distraction as an advantage to gorge itself upon its victim and refill the now empty stomach.
       sable:
@@ -197,7 +197,7 @@ npcs:
           - Drop down from a height
           - Enter the body through an orifice
         description: |-
-          A sable is the result of a mutation in a zombie brain. When it's ready, or when circumstances force it, the sable will form by pushing the zombies black blood into the cranium. This will cause it to explode and any large chunks of brain matter is then drawn into the blood. 
+          A sable is the result of a mutation in a zombie brain. When it's ready, or when circumstances force it, the sable will form by pushing the zombies black blood into the cranium. This will cause it to explode and any large chunks of brain matter is then drawn into the blood.
 
           Sables then search out a new host and, when it enters them, begins to change their anatomy. The Revenant pathogen starts by taking control of the central nervous system and, once it has finished, goes to work on rebuilding the host's sinew and collagen.
       sable_host:
@@ -219,7 +219,7 @@ npcs:
           - Resume the hosts life
           - Commit bloody and brutal murder
         description: |-
-          Initially a the host of a sable may try to verbally communicate with others and warn them away. This is because the pathogen has taken control of the body, but not completely. The host will try to flee to isolation and safety. Once it has undergone the last of its changes it will rejoin its previous companions.
+          Initially the host of a sable may try to verbally communicate with others and warn them away. This is because the pathogen has taken control of the body, but not completely. The host will try to flee to isolation and safety. Once it has undergone the last of its changes it will rejoin its previous companions.
 
           Eventually, a sable-host is stronger and smarter than they were before and, is capable of totally replicating the host's mannerisms and remembering their memories. Due to their increased intelligence, a sable-host will wait for an opportune moment to feed and try to remain undetected.
   humanity:
@@ -252,17 +252,17 @@ npcs:
             nature: Human
             rank: 2
             description: |-
-              A small amount of 3-5 Cannibals together in a group.
+              A small number of 3-5 Cannibals together in a group.
           clan_of_cannibals:
             name: Clan of Cannibals
             nature: Human
             rank: 3
             description: |-
-              A larger amount of 6-10 Cannibals together as a clan.
+              A larger number of 6-10 Cannibals together as a clan.
         description: |-
           Without food, people can be driven to desperate acts. Cannibals prey on other humans for food. However, the skeletal flesh of a human contains only a meagre 32,000 calories. Assuming the minimum daily requirement of 2,400 calories per adult, one person would barely provide a days calorie needs for dozen cannibals. In post-apocalyptic times when daily exertion is greater and calorie needs higher, a single human body would stretch for much less.
 
-          It is because of this that cannibals are only found on their own or in very small groups, such as; an elderly couple in a run-down diner who drug some of their visitors to keep meat in the pies; an extended family of degenerate savages who eat whatever or whoever they can catch; or, a small town that seems wholesome enough until you learn the punishment for breaking their strict laws is forfeitting your choice of limb.
+          It is because of this that cannibals are only found on their own or in very small groups, such as; an elderly couple in a run-down diner who drug some of their visitors to keep meat in the pies; an extended family of degenerate savages who eat whatever or whoever they can catch; or, a small town that seems wholesome enough until you learn the punishment for breaking their strict laws is forfeiting your choice of limb.
       hunter:
         type: npc
         name: Hunter
@@ -287,19 +287,19 @@ npcs:
             nature: Human
             rank: 3
             description: |-
-              A small amount of 3-5 Hunters together in a group.
+              A small number of 3-5 Hunters together in a group.
           clan_of_hunters:
             name: Clan of Hunters
             nature: Human
             rank: 4
             description: |-
-              A larger amount of 6-10 Hunters together as a clan.
+              A larger number of 6-10 Hunters together as a clan.
         description: |-
           When the looting started in the cities people with firearms were able to retain the most of their possessions. Anywhere that sold firearms was overrun with people trying to take whatever they could to make it on their own. People that were shot and killed in the riots who had been hiding bites reanimated shortly afterwards as zombies and made those places hotspots for infestations.
 
           During the first few months of the Fall, inexperienced hunters found a temporary solution within the confines of abandoned farms. These forsaken agricultural havens became a reliable source of sustenance, harboring domesticated animals that had been left to fend for themselves in the wake of societal collapse.
 
-          Among the livestock, most of the cattle were dairy cows rather than their beef counterparts. The significance lay in the nature of dairy cows: if not milked regularly, typically within a week, they faced the risk of falling ill. With the absence of human caretakers, these once- productive creatures became vulnerable to both the unforgiving reality of the post-apocalyptic world and the imminent threat of disease. As a result, a considerable number of these dairy cows were culled. The beef cattle and other sizable domesticated animals faced an insurmountable challenge during the Ash. The ability to feed these larger animals became impossible, and regrettably, many were also culled as a harsh but pragmatic measure.
+          Among the livestock, most of the cattle were dairy cows rather than their beef counterparts. The significance lay in the nature of dairy cows: if not milked regularly, typically within a week, they faced the risk of falling ill. With the absence of human caretakers, these once-productive creatures became vulnerable to both the unforgiving reality of the post-apocalyptic world and the imminent threat of disease. As a result, a considerable number of these dairy cows were culled. The beef cattle and other sizable domesticated animals faced an insurmountable challenge during the Ash. The ability to feed these larger animals became impossible, and regrettably, many were also culled as a harsh but pragmatic measure.
 
           As the remnants of abandoned farms were gradually exhausted of their domesticated inhabitants, the focus of the hunters shifted toward the untamed wilderness. Now, the hunted prey primarily consisted of wild animals, as survivors adapted their strategies to the unpredictable challenges of hunting in the open, post-apocalyptic landscape. The shift from contained, domesticated animals to elusive and unpredictable wild game marked a transition in the survival tactics of the remaining human population, reflecting the evolving dynamics of their struggle for sustenance in a world forever altered by catastrophe.
       lmoe:
@@ -308,7 +308,7 @@ npcs:
         nature: Human
         _source:
           <<: *Source
-          page: 270
+          page: 239
         rank: 3
         features:
           - Look of madness
@@ -348,15 +348,15 @@ npcs:
             nature: Human
             rank: 3
             description: |-
-              A small amount of 3-5 Outcasts together in a group.
+              A small number of 3-5 Outcasts together in a group.
           clan_of_outcasts:
             name: Clan of Outcasts
             nature: Human
             rank: 4
             description: |-
-              A larger amount of 6-10 Outcasts together as a clan.
+              A larger number of 6-10 Outcasts together as a clan.
         description: |-
-          People who have commited serious crimes against their community are cast out into the wastelands. These outcasts start their own groups and often can only survive by seizing what they need from others. Sometimes these people merely become highwaymen or bandits that do what they must to get by on their own. Others, however, relish the freedom to do what they want upon the helpless inhabitants of the wastelands.
+          People who have committed serious crimes against their community are cast out into the wastelands. These outcasts start their own groups and often can only survive by seizing what they need from others. Sometimes these people merely become highwaymen or bandits that do what they must to get by on their own. Others, however, relish the freedom to do what they want upon the helpless inhabitants of the wastelands.
 
           The larger groups generally unite under the most extreme or ferocious warriors among them. These warlords hold great power and attract other militant zealots and power hungry followers. They have such a control over their domain that a warlord's presence is known through their diehard followers before they themselves are seen.
       ranger:
@@ -420,13 +420,13 @@ npcs:
             nature: Human
             rank: 3
             description: |-
-              A small amount of 3-5 Scavengers together in a group.
+              A small number of 3-5 Scavengers together in a group.
           clan_of_scavengers:
             name: Clan of Scavengers
             nature: Human
             rank: 4
             description: |-
-              A larger amount of 6-10 Scavengers together as a clan.
+              A larger number of 6-10 Scavengers together as a clan.
         description: |-
           People brave or desperate enough to risk venturing into the cities and other resource-rich areas claim the title of Scavenger with pride. They have an uncanny luck of finding the best gear in the best condition and can access the most hidden places. They are capable of remaining undetected and often have enough provisions to hide out for days if not weeks. Scavengers are often willing to help or trade supplies for the right price.
       technician:
@@ -453,13 +453,13 @@ npcs:
             nature: Human
             rank: 2
             description: |-
-              A small amount of 3-5 Technicians together in a group.
+              A small number of 3-5 Technicians together in a group.
           clan_of_technicians:
             name: Clan of Technicians
             nature: Human
             rank: 3
             description: |-
-              A larger amount of 6-10 Technicians together as a clan.
+              A larger number of 6-10 Technicians together as a clan.
         description: |-
           During the Uprising many people with science qualifications were selected under the mandates to form into teams. These specialists were given basic combat and survival training in the field. Many of these teams held, and now maintain, strategic positions to ensure disasters are avoided or essential services are kept operational for local enclaves. The role of Technician in the Post-Ash is a role revered by many and even the most violent warlord will not only allow but will ensure safe passage through their claimed territory.
       veteran:
@@ -482,7 +482,7 @@ npcs:
           - Take down quietly
           - Shock and awe
         description: |-
-          A veteran is a person who has long experience in a particular field, usually combat. Veterans are often found leading hunting parties, protecting enclaves or escorting Technicians through the perilous wilds. They have valuable knowledge of the wastelands that is hard-earned and well protected
+          A veteran is a person who has long experience in a particular field, usually combat. Veterans are often found leading hunting parties, protecting enclaves or escorting Technicians through the perilous wilds. They have valuable knowledge of the wastelands that is hard-earned and well protected.
       warden:
         type: npc
         name: Warden
@@ -495,8 +495,8 @@ npcs:
           - World weary
           - Suspicious of strangers
         drives:
-          - World weary
-          - Suspicious of strangers
+          - Do what needs to be done
+          - Protect the community
         tactics:
           - Use caution and diplomacy
           - Rally the community
@@ -530,7 +530,7 @@ npcs:
         description: |-
           The name anaconda applies to a group of snakes, but it is often used to refer to only one species, the green anaconda. The green anaconda is also known as the giant emerald anaconda, common anaconda or common water boa, and is the largest and heaviest snake in the world. There are reports of anacondas reaching over 5 meters in length and a typical adult weighs between 30 and 80 kilograms.
 
-          While the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but stealthy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannahs. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.
+          While the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but stealthy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannas. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.
       brown_bear:
         type: npc
         name: Brown Bear
@@ -608,7 +608,7 @@ npcs:
         nature: Animal
         _source:
           <<: *Source
-          page: 279
+          page: 252
         rank: 2
         features:
           - Ruddy brown fur
@@ -657,7 +657,7 @@ npcs:
         nature: Animal
         _source:
           <<: *Source
-          page: 282
+          page: 255
         rank: 1
         features:
           - Red belly
@@ -671,7 +671,7 @@ npcs:
           - Take small strong bites
           - Nibble and flee
         description: |-
-          Piranha are a tropical freshwater fish native to South America but they can survive in waters as low as 10 degrees celcius for brief periods. When in colder water they feed less and are unable to digest their food. However, when the water begins to warm up even slightly they become more aggressive as they will be ravenous.
+          Piranha are a tropical freshwater fish native to South America but they can survive in waters as low as 10 degrees Celsius for brief periods. When in colder water they feed less and are unable to digest their food. However, when the water begins to warm up even slightly they become more aggressive as they will be ravenous.
 
           Contrary to popular belief, piranhas are not capable of stripping a human to the bone in seconds and prefer smaller food or carrion. It is for this reason that people may release a large number of these fish into waterways that could become blocked with the undead. However, if the piranha decimated the other aquatic population, they would attack anything that wander into the water.
 
@@ -698,7 +698,7 @@ npcs:
 
           While a lone rat may not normally pose any challenge in combat, the stakes are high if it is capable of transmitting the Revenant pathogen.
 
-          Rats are notorious for eating anything and having an incredible immune system. The fleas on rats were responsible for the black plague of the 14th century. It was discovered that fleas that had contracted the Yersina pestis bacterium—that caused the bubonic plague—would have an obstruction in their midgut. The obstruction would be purged through overfeeding and regurgitation. This resulted in thousands of the Y. Pestis to flush into the feeding site, infecting the host.
+          Rats are notorious for eating anything and having an incredible immune system. The fleas on rats were responsible for the black plague of the 14th century. It was discovered that fleas that had contracted the Yersinia pestis bacterium—that caused the bubonic plague—would have an obstruction in their midgut. The obstruction would be purged through overfeeding and regurgitation. This resulted in thousands of the Y. Pestis to flush into the feeding site, infecting the host.
 
           The bubonic plague was so impactful due to the mechanism upon which it was dependant. Rats were immune to the disease, allowing for them to become hosts and spread the disease throughout Europe. Humans lacked that resistance to the disease. When the infected humans died, the fleas would move onto a new host, thus creating a human epidemic.
 
@@ -797,4 +797,4 @@ npcs:
 
           Tales of dragons ranged from being watchful protectors to malicious hunters. When Christianity spread dragons took on a solely sinister interpretation and came to represent Satan. The mouth of a dragon was at this time first depicted to breathe fire and was a symbol of the entrance to hell itself. The church even created their own legends of righteous saints battling and vanquishing Satan in the form of dragons. Dragons are, in fact, one of the only monsters whose purpose is that of a fearsome opponent to be slain.
 
-          As such, dragons make a superb foe to bring about the end of the world
+          As such, dragons make a superb foe to bring about the end of the world.

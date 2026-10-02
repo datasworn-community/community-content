@@ -2,8 +2,8 @@ _id: revenant
 datasworn_version: "0.1.0"
 type: ruleset
 assets:
-  companion:
-    name: Companion
+  talent:
+    name: Talent
     type: asset_collection
     _source:
       <<: &Source
@@ -13,6 +13,32 @@ assets:
         date: 2025-06-23
         authors:
           - name: Killian Gillespie
+    contents:
+      talent:
+        name: Talent
+        type: asset
+        category: Talent
+        options:
+          name:
+            field_type: text
+            label: name
+          description:
+            field_type: text
+            label: description
+        _source:
+          <<: *Source
+          page: 46
+        abilities:
+          - enabled: true
+            text: |-
+              When you make a move supported by this talent, choose one (decide before rolling):
+                * Add +1 and take +1 momentum on a hit
+                * Add +2 and count a weak hit as a miss
+  companion:
+    name: Companion
+    type: asset_collection
+    _source:
+      <<: *Source
     contents:
       companion:
         name: Companion
@@ -72,7 +98,7 @@ assets:
         abilities:
           - enabled: true
             text: |-
-              Envision the type of vehicle and assign a maximum integrity as follow:
+              Envision the type of vehicle and assign a maximum integrity as follows:
                 * Heavy: 5 integrity
                 * Medium: 4 integrity
                 * Light: 3 integrity
@@ -100,7 +126,7 @@ assets:
                 field_type: checkbox
                 is_impact: true
   optional_rules:
-    name: Companion
+    name: Optional Rules
     type: asset_collection
     _source:
       <<: *Source
@@ -114,7 +140,7 @@ assets:
           page: 258
         requirement: "Choose one option:"
         abilities:
-          - name: In darkness they feast
+          - name: In Darkness They Feast
             text: |-
               When you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition) or [Journey](datasworn:move:revenant/exploration/journey) and roll a 1 on your action die, start a scene challenge as you try to survive the night.
             enabled: false
@@ -122,7 +148,7 @@ assets:
             text: |-
               If you [Endure Harm](datasworn:move:revenant/suffer/endure_harm) from a rat, mark the __wounded__ impact.
             enabled: false
-          - name: Like the plague
+          - name: Like The Plague
             text: |-
               Rats are capable of transmitting the Revenant pathogen. You must [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) when fighting rats.
             enabled: false
@@ -156,7 +182,7 @@ assets:
           page: 228
         requirement: "Choose one option:"
         abilities:
-          - name: Just a scratch
+          - name: Just A Scratch
             text: |-
               When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, roll your action die. You only [Face Death](datasworn:move:revenant/suffer/face_death) if the action die is a 1.
             enabled: false

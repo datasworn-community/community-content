@@ -18,13 +18,13 @@ oracles:
       page: 300
     summary: |-
       Locations are places. The world around you, whatever state it's in. To create a location you will envision the area. You will determine the landscape, the hazards or the opportunities the location provides, and other features of the area.
-      
+
       Each location on the following pages includes a set of oracles.
         * __Feature__: Use this oracle to reveal a new aspect of the location.
-        * __Hazard__: Use this to oracle help envision a complication or hazard.
+        * __Hazard__: Use this to oracle to help envision a complication or hazard.
         * __Opportunity__: Use this oracle to help envision a beneficial encounter or event, or when you roll a strong hit with a match.
-      
-      The location oracles are divided territories and themes. A territory is an oracle to help you envision a biome or district. Themes help you envision the motif or atmosphere of a location.
+
+      The location oracles are divided into territories and themes. A territory is an oracle to help you envision a biome or district. Themes help you envision the motif or atmosphere of a location.
     contents:
       territory:
         name: Territory
@@ -69,7 +69,7 @@ oracles:
       theme:
         name: Theme
         summary: |-
-          Use this oracle when you travel to a new biome or district, or to answer a question about where someone or something can be found.
+          Use this oracle when you want a random theme. Otherwise, choose a theme from below.
         oracle_type: table_text
         type: oracle_rollable
         _source:
@@ -106,7 +106,7 @@ oracles:
             oracle_type: tables
             type: oracle_collection
             summary: |-
-              Traversing the badlands takes grit and determination, but most importantly, water. Many a traveller has had their wits dulled by dehydration, making them a prime target for those denizens adapted to the harsh environment. The extreme heat is followed by the extreme cold of the night with scarce moderation between the two
+              Traversing the badlands takes grit and determination, but most importantly, water. Many a traveller has had their wits dulled by dehydration, making them a prime target for those denizens adapted to the harsh environment. The extreme heat is followed by the extreme cold of the night with scarce moderation between the two.
             _source:
               <<: *Source
               page: 304
@@ -161,9 +161,9 @@ oracles:
                   <<: &DescriptorFocus
                     text: '[Action](datasworn:oracle_rollable:revenant/core/descriptor) + [Theme](datasworn:oracle_rollable:revenant/core/focus)'
                     oracle_rolls:
-                      - oracle: oracle_rollable:revenant/core/action
+                      - oracle: oracle_rollable:revenant/core/descriptor
                         auto: true
-                      - oracle: oracle_rollable:revenant/core/theme
+                      - oracle: oracle_rollable:revenant/core/focus
                         auto: true
                 - roll: { min: 96, max: 100 }
                   <<: &RollTwice
@@ -174,7 +174,7 @@ oracles:
               hazard:
                 <<: &Hazard
                   name: Hazard
-                  summary: Use this to oracle help envision a complication or hazard.
+                  summary: Use this oracle to help envision a complication or hazard.
                   oracle_type: table_text
                   type: oracle_rollable
                 _source:
@@ -254,7 +254,7 @@ oracles:
             oracle_type: tables
             type: oracle_collection
             summary: |-
-              Traversing the badlands takes grit and determination, but most importantly, water. Many a traveller has had their wits dulled by dehydration, making them a prime target for those denizens adapted to the harsh environment. The extreme heat is followed by the extreme cold of the night with scarce moderation between the two
+              Coasts are dynamic, constantly changing, important ecosystems. They provide unique homes for marine plants, animals and insects. Coasts are also an important aspect of tourism and they have always held a strong relationship with transportation. As such you'll often find small towns and holiday destinations.
             _source:
               <<: *Source
               page: 306
@@ -734,7 +734,7 @@ oracles:
             oracle_type: tables
             type: oracle_collection
             summary: |-
-              Leisure areas in a city are designed for recreation, entertainment, and outdoor activities. Areas such as these contribute to the overall well- being and quality of life for the residents and visitors.
+              Leisure areas in a city are designed for recreation, entertainment, and outdoor activities. Areas such as these contribute to the overall well-being and quality of life for the residents and visitors.
             _source:
               <<: *Source
               page: 314
@@ -1214,7 +1214,7 @@ oracles:
             oracle_type: tables
             type: oracle_collection
             summary: |-
-              Retail areas are places that are designed to sell goods and services directly to consumers. Retails stores can take many forms, including shopping centres, retail outlets or small convenience stores. Retail areas are often characterised by a vibrant mixture of businesses, creating a dynamic atmosphere that encourages foot traffic.
+              Retail areas are places that are designed to sell goods and services directly to consumers. Retail stores can take many forms, including shopping centres, retail outlets or small convenience stores. Retail areas are often characterised by a vibrant mixture of businesses, creating a dynamic atmosphere that encourages foot traffic.
             _source:
               <<: *Source
               page: 322
@@ -2182,7 +2182,7 @@ oracles:
             oracle_type: tables
             type: oracle_collection
             summary: |-
-              People gather in the warm places of the world for many reasons, and the motivations behind coming together is groups is deeply rooted in human nature and societal dynamics. People need social interaction, community and belonging, culture, economic exchange, education, entertainment, and security. Overall, the reasons people gather together are as complex and diverse and the people themselves.
+              People gather in the warm places of the world for many reasons, and the motivations behind coming together in groups is deeply rooted in human nature and societal dynamics. People need social interaction, community and belonging, culture, economic exchange, education, entertainment, and security. Overall, the reasons people gather together are as complex and diverse as the people themselves.
             _source:
               <<: *Source
               page: 338
@@ -2663,7 +2663,7 @@ oracles:
             type: oracle_collection
             summary: |-
               The wild, with its untamed landscapes and unpredictable beauty, embodies nature's raw and unbridled spirit, where every rustle of leaves and distant howl speaks to the untamed essence of the wilderness.
-              
+
               Nature thrives in this place.
             _source:
               <<: *Source

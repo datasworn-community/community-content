@@ -14,7 +14,7 @@ rules:
       label: endurance
       max: 5
       value: 5
-      description: Health represents your current physical condition and stamina.
+      description: Endurance represents your current physical condition and stamina.
     morale:
       label: morale
       max: 5
@@ -34,7 +34,7 @@ rules:
   impacts:
     misfortunes:
       label: misfortunes
-      description: As with all impacts, misfortunes affect your max momentum and momentum reset. In addition, if you are wounded, shaken, or unprepared, you cannot increase the associated condition meter.
+      description: As with all impacts, misfortunes affect your max momentum and momentum reset. In addition, if you are wounded, shaken, unprepared, or irradiated, you cannot increase the associated condition meter.
       contents:
         wounded:
           label: wounded
@@ -57,7 +57,10 @@ rules:
           description: Encumbered is marked as appropriate to the circumstances when you are carrying excessive or cumbersome weight.
         irradiated:
           label: irradiated
-          description: Irradiated is marked when you are at 0 radiation and fail to [Endure Radiation](datasworn:move:revenant/suffer/endure_radiation). You suffer acute radiation syndrome, and need comfort to recover.
+          description: Irradiated is marked when you are at 0 radiation and fail to [Endure Radiation](datasworn:move:revenant/suffer/endure_radiation). You suffer acute radiation syndrome, and need to [Take a Hiatus](datasworn:move:move:revenant/plan/take_a_hiatus) to recover.
+          prevents_recovery:
+            - endurance
+            - morale
     vehicle_troubles:
       label: vehicle troubles
       description: Vehicle troubles are linked to a specific vehicle. These impacts are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact and do not affect your maximum momentum and momentum reset values.

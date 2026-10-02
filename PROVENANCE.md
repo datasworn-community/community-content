@@ -33,7 +33,7 @@ source YAML and generated package metadata.
 ## Added Packages
 | Package | Author | Source URL | License |
 |---|---|---|---|
-| Revenant | Killian Gillespie | https://www.drivethrurpg.com/en/product/457762/revenant | CC-BY-4.0 |
+| Revenant | Killian Gillespie | https://www.drivethrurpg.com/en/product/457762/revenant | CC-BY-SA-4.0 |
 
 ## Notes
 

@@ -120,7 +120,7 @@
               "controls": {},
               "enabled": false,
               "moves": {},
-              "name": "In darkness they feast",
+              "name": "In Darkness They Feast",
               "options": {},
               "oracles": {},
               "text": "When you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition) or [Journey](datasworn:move:revenant/exploration/journey) and roll a 1 on your action die, start a scene challenge as you try to survive the night."
@@ -140,7 +140,7 @@
               "controls": {},
               "enabled": false,
               "moves": {},
-              "name": "Like the plague",
+              "name": "Like The Plague",
               "options": {},
               "oracles": {},
               "text": "Rats are capable of transmitting the Revenant pathogen. You must [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) when fighting rats."
@@ -226,7 +226,7 @@
               "controls": {},
               "enabled": false,
               "moves": {},
-              "name": "Just a scratch",
+              "name": "Just A Scratch",
               "options": {},
               "oracles": {},
               "text": "When you [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) and miss, roll your action die. You only [Face Death](datasworn:move:revenant/suffer/face_death) if the action die is a 1."
@@ -262,7 +262,70 @@
           "type": "asset"
         }
       },
-      "name": "Companion",
+      "name": "Optional Rules",
+      "type": "asset_collection"
+    },
+    "talent": {
+      "_id": "asset_collection:revenant/talent",
+      "_source": {
+        "authors": [
+          {
+            "name": "Killian Gillespie"
+          }
+        ],
+        "date": "2025-06-23",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0",
+        "title": "Revenant",
+        "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
+      },
+      "collections": {},
+      "contents": {
+        "talent": {
+          "_id": "asset:revenant/talent/talent",
+          "_source": {
+            "authors": [
+              {
+                "name": "Killian Gillespie"
+              }
+            ],
+            "date": "2025-06-23",
+            "license": "https://creativecommons.org/licenses/by-sa/4.0",
+            "page": 46,
+            "title": "Revenant",
+            "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
+          },
+          "abilities": [
+            {
+              "_id": "asset.ability:revenant/talent/talent.0",
+              "controls": {},
+              "enabled": true,
+              "moves": {},
+              "options": {},
+              "oracles": {},
+              "text": "When you make a move supported by this talent, choose one (decide before rolling):\n  * Add +1 and take +1 momentum on a hit\n  * Add +2 and count a weak hit as a miss"
+            }
+          ],
+          "category": "Talent",
+          "controls": {},
+          "count_as_impact": false,
+          "name": "Talent",
+          "options": {
+            "description": {
+              "field_type": "text",
+              "label": "description",
+              "value": null
+            },
+            "name": {
+              "field_type": "text",
+              "label": "name",
+              "value": null
+            }
+          },
+          "shared": false,
+          "type": "asset"
+        }
+      },
+      "name": "Talent",
       "type": "asset_collection"
     },
     "vehicle": {
@@ -302,7 +365,7 @@
               "moves": {},
               "options": {},
               "oracles": {},
-              "text": "Envision the type of vehicle and assign a maximum integrity as follow:\n  * Heavy: 5 integrity\n  * Medium: 4 integrity\n  * Light: 3 integrity\n\n__Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).\n\nVehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.\n\nThe battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity."
+              "text": "Envision the type of vehicle and assign a maximum integrity as follows:\n  * Heavy: 5 integrity\n  * Medium: 4 integrity\n  * Light: 3 integrity\n\n__Battered__ may be marked when your vehicle is at 0 integrity and you fail to [Withstand Damage](datasworn:move:revenant/suffer/withstand_damage).\n\nVehicle troubles are linked to a specific vehicle and are only a factor when you are piloting or aboard that vehicle. Otherwise, they do not count as an impact or affect your momentum.\n\nThe battered impact can be cleared when you successfully [Repair](datasworn:move:revenant/recover/repair) the vehicle. Until you do so, you cannot raise the vehicle's integrity."
             }
           ],
           "category": "Vehicle",
@@ -371,7 +434,7 @@
         ],
         "date": "2025-06-23",
         "license": "https://creativecommons.org/licenses/by-sa/4.0",
-        "page": 146,
+        "page": 82,
         "title": "Revenant",
         "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
       },
@@ -622,8 +685,8 @@
           },
           "type": "move"
         },
-        "gather_information": {
-          "_id": "move:revenant/basic/gather_information",
+        "gain_insight": {
+          "_id": "move:revenant/basic/gain_insight",
           "_source": {
             "authors": [
               {
@@ -637,28 +700,28 @@
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
           "allow_momentum_burn": true,
-          "name": "Gather Information",
+          "name": "Gain Insight",
           "oracles": {},
           "outcomes": {
             "miss": {
-              "_id": "move.outcome:revenant/basic/gather_information.miss",
+              "_id": "move.outcome:revenant/basic/gain_insight.miss",
               "text": "On a __miss__, your investigation unearths a dire threat or reveals an unwelcome truth that undermines your quest. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster)."
             },
             "strong_hit": {
-              "_id": "move.outcome:revenant/basic/gather_information.strong_hit",
+              "_id": "move.outcome:revenant/basic/gain_insight.strong_hit",
               "text": "On a __strong hit__, you discover something helpful and specific. The path you must follow or action you must take to make progress is made clear. Envision what you learn. Then, take +2 momentum."
             },
             "weak_hit": {
-              "_id": "move.outcome:revenant/basic/gather_information.weak_hit",
-              "text": "On a __weak hit__, the information provides new insight, but also complicates your quest. Envision what you discover. Then, take +1 momentum."
+              "_id": "move.outcome:revenant/basic/gain_insight.weak_hit",
+              "text": "On a __weak hit__, the information provides new insight, but also complicates your endeavours. Envision what you discover. Then, take +1 momentum."
             }
           },
           "roll_type": "action_roll",
-          "text": "__When you conduct an investigation, ask questions, do research, or search an area for clues__, roll +wits.\n\nOn a __strong hit__, you discover something helpful and specific. The path you must follow or action you must take to make progress is made clear. Envision what you learn. Then, take +2 momentum.\n\nOn a __weak hit__, the information provides new insight, but also complicates your quest. Envision what you discover. Then, take +1 momentum.\n\nOn a __miss__, your investigation unearths a dire threat or reveals an unwelcome truth that undermines your quest. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).",
+          "text": "__When you conduct an investigation, ask questions, do research, or search an area for clues__, roll +wits.\n\nOn a __strong hit__, you discover something helpful and specific. The path you must follow or action you must take to make progress is made clear. Envision what you learn. Then, take +2 momentum.\n\nOn a __weak hit__, the information provides new insight, but also complicates your endeavours. Envision what you discover. Then, take +1 momentum.\n\nOn a __miss__, your investigation unearths a dire threat or reveals an unwelcome truth that undermines your quest. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).",
           "trigger": {
             "conditions": [
               {
-                "_id": "move.condition:revenant/basic/gather_information.0",
+                "_id": "move.condition:revenant/basic/gain_insight.0",
                 "method": "player_choice",
                 "roll_options": [
                   {
@@ -804,38 +867,14 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "allow_momentum_burn": true,
+          "allow_momentum_burn": false,
           "name": "Avoid Being Bitten",
           "oracles": {},
-          "outcomes": {
-            "miss": {
-              "_id": "move.outcome:revenant/combat/avoid_being_bitten.miss",
-              "text": "On a __miss__, you get bitten and must immediately [Face Death](datasworn:move:revenant/suffer/face_death)."
-            },
-            "strong_hit": {
-              "_id": "move.outcome:revenant/combat/avoid_being_bitten.strong_hit",
-              "text": "On a __strong hit__, you prevail. Take +1 momentum. You gain the upper hand and may immediately [Take Decisive Action](datasworn:move:revenant/combat/take_decisive_action). If you do you may reroll your challenge dice."
-            },
-            "weak_hit": {
-              "_id": "move.outcome:revenant/combat/avoid_being_bitten.weak_hit",
-              "text": "On a __weak hit__, you avoid begin bitten, but it is stressful. [Endure Stress](datasworn:move:revenant/suffer/endure_stress) (-2) and you are in a bad spot."
-            }
-          },
-          "roll_type": "action_roll",
+          "outcomes": null,
+          "roll_type": "no_roll",
           "text": "__When you are in close quarters combat with a creature capable of transmitting the Revenant pathogen__ and roll a 1 on your action die when you make a suffer move, roll your challenge dice and compare to your momentum.\n\nIf you have the upper hand, check the result as normal. If you are in a bad spot, count a strong hit without a match as a weak hit, and a weak hit as a miss.\n\nOn a __strong hit__, you prevail. Take +1 momentum. You gain the upper hand and may immediately [Take Decisive Action](datasworn:move:revenant/combat/take_decisive_action). If you do you may reroll your challenge dice.\n\nOn a __weak hit__, you avoid begin bitten, but it is stressful. [Endure Stress](datasworn:move:revenant/suffer/endure_stress) (-2) and you are in a bad spot.\n\nOn a __miss__, you get bitten and must immediately [Face Death](datasworn:move:revenant/suffer/face_death).",
           "trigger": {
-            "conditions": [
-              {
-                "_id": "move.condition:revenant/combat/avoid_being_bitten.0",
-                "method": "player_choice",
-                "roll_options": [
-                  {
-                    "condition_meter": "momentum",
-                    "using": "condition_meter"
-                  }
-                ]
-              }
-            ],
+            "conditions": [],
             "text": "When you are in close quarters combat with a creature capable of transmitting the Revenant pathogen..."
           },
           "type": "move"
@@ -1441,7 +1480,7 @@
           "type": "move"
         }
       },
-      "description": "The world is a dangerous place. Nomadic warriors prey on vulnerable travellers. Rival enclaves raid each other's settlements. Exotic creatures escaped from zoos stalk the unwary. The living dead wander battle-torn cities and hordes gather in the countryside.\n\nWhen you face one or more foes in high-stakes, action-oriented  conflict, use the __combat moves__. These moves encompass on-foot action and vehicle sorties—or both as part of the same challenge.",
+      "description": "The world is a dangerous place. Nomadic warriors prey on vulnerable travellers. Rival enclaves raid each other's settlements. Exotic creatures escaped from zoos stalk the unwary. The living dead wander battle-torn cities and hordes gather in the countryside.\n\nWhen you face one or more foes in high-stakes, action-oriented conflict, use the __combat moves__. These moves encompass on-foot action and vehicle sorties—or both as part of the same challenge.",
       "name": "Combat Moves",
       "summary": "__Combat moves__ are used when fighting (but not exclusively; other moves may come into play as well).",
       "type": "move_category"
@@ -1905,11 +1944,11 @@
             },
             "strong_hit": {
               "_id": "move.outcome:revenant/exploration/explore_a_waypoint.strong_hit",
-              "text": "On a __strong hit__, choose one. On a __strong hit with a match__, you may instead [Establish a Sanctum](datasworn:move:revenant/exploration/establish_a_sanctum).\n\n * Find an opportunity: Envision a favorable insight, situation, resource, or encounter. Then, take +2 momentum.\n * Gain progress: Mark progress on your expedition, per its rank."
+              "text": "On a __strong hit__, choose one. On a __strong hit with a match__, you may instead [Establish a Sanctum](datasworn:move:revenant/exploration/establish_a_sanctum). If you do, instead of rolling you may assume a strong hit and mark two ticks on your discoveries legacy track.\n\n * Find an opportunity: Roll or choose from the table below and envision a favourable encounter, situation, resource, or insight. Then, take +2 momentum.\n * Gain progress: Mark progress on your expedition, per its rank.\n\n{{table>move.oracle_rollable:revenant/exploration/explore_a_waypoint.explore_a_waypoint}}"
             },
             "weak_hit": {
               "_id": "move.outcome:revenant/exploration/explore_a_waypoint.weak_hit",
-              "text": "On a __weak hit__, you uncover something interesting, but it is bound up in a peril or reveals an ominous aspect of this place. Envision what you encounter. Then, take +1 momentum."
+              "text": "On a __weak hit__, you uncover something interesting, but it is bound up in a peril or reveals an ominous aspect of this place. Envision what you encounter. Then, take +1 momentum.\n\n{{table>move.oracle_rollable:revenant/exploration/explore_a_waypoint.explore_a_waypoint}}"
             }
           },
           "roll_type": "action_roll",
@@ -1963,7 +2002,7 @@
             },
             "weak_hit": {
               "_id": "move.outcome:revenant/exploration/finish_an_expedition.weak_hit",
-              "text": "On a __weak hit__, you reach your destination or complete your survey, but you face an unforeseen complication at the end of your expedition. Make the legacy reward one rank lower (troublesome=0 ticks; dangerous=1 tick; formidable=2 box; extreme=1 box; epic=2 boxes), and envision what you encounter."
+              "text": "On a __weak hit__, you reach your destination or complete your survey, but you face an unforeseen complication at the end of your expedition. Make the legacy reward one rank lower (troublesome=0 ticks; dangerous=1 tick; formidable=2 ticks; extreme=1 box; epic=2 boxes), and envision what you encounter."
             }
           },
           "roll_type": "progress_roll",
@@ -2012,15 +2051,15 @@
             },
             "strong_hit": {
               "_id": "move.outcome:revenant/exploration/hunker_down.strong_hit",
-              "text": "On a __strong hit__, you and your allies may each choose two.\n\n  * Prepare: When you leave, add +1 if you [Undertake a Journey](datasworn:move:revenant/exploration/undertake_an_expedition).\n  * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.\n  * Focus: Take +1 momentum.\n  * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)\n\nIn addition, if you use the __Radiation__ meter, take +1 radiation."
+              "text": "On a __strong hit__, you and your allies may each choose two.\n\n  * Prepare: When you leave, add +1 if you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition).\n  * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.\n  * Focus: Take +1 momentum.\n  * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)\n\nIn addition, if you use the __Radiation__ meter, take +1 radiation."
             },
             "weak_hit": {
               "_id": "move.outcome:revenant/exploration/hunker_down.weak_hit",
-              "text": "On a __weak hit__, you and your allies may each choose one.\n\n  * Prepare: When you leave, add +1 if you [Undertake a Journey](datasworn:move:revenant/exploration/undertake_an_expedition).\n  * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.\n  * Focus: Take +1 momentum.\n  * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)"
+              "text": "On a __weak hit__, you and your allies may each choose one.\n\n  * Prepare: When you leave, add +1 if you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition).\n  * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.\n  * Focus: Take +1 momentum.\n  * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)"
             }
           },
           "roll_type": "action_roll",
-          "text": "__When you take shelter to rest and recover for several hours__, roll +supply.\n\nOn a __strong hit__, you and your allies may each choose two. On a __weak hit__,you and your allies may each choose one.\n\n  * Prepare: When you leave, add +1 if you [Undertake a Journey](datasworn:move:revenant/exploration/undertake_an_expedition).\n  * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.\n  * Focus: Take +1 momentum.\n  * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)\n\nIn addition, on a __strong hit__, if you use the __Radiation__ meter, take +1 radiation.\n\nOn a __miss__, you take no comfort. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).",
+          "text": "__When you take shelter to rest and recover for several hours__, roll +supply.\n\nOn a __strong hit__, you and your allies may each choose two. On a __weak hit__, you and your allies may each choose one.\n\n  * Prepare: When you leave, add +1 if you [Undertake an Expedition](datasworn:move:revenant/exploration/undertake_an_expedition).\n  * Rest: [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) (-1) to take +1 endurance for you and any companions.\n  * Focus: Take +1 momentum.\n  * Tinker: Add +1 if you [Repair](datasworn:move:revenant/recover/repair) or [Check Your Gear](datasworn:move:revenant/basic/check_your_gear)\n\nIn addition, on a __strong hit__, if you use the __Radiation__ meter, take +1 radiation.\n\nOn a __miss__, you take no comfort. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).",
           "trigger": {
             "conditions": [
               {
@@ -2187,7 +2226,7 @@
                     "max": 58,
                     "min": 43
                   },
-                  "text": "A discovery undermines or complicates your quest."
+                  "text": "A discovery undermines or complicates your plan."
                 },
                 {
                   "_id": "move.oracle_rollable.row:revenant/exploration/reveal_a_danger.reveal_a_danger.3",
@@ -2604,7 +2643,7 @@
       },
       "description": "In solo and co-op play, the __fate moves__ mediate the result of other moves or serve as inspirational prompts for your story. When you face the uncertain outcome of a move, want to know what happens next, or have a question about people, places, and events, these moves help reveal the answer.",
       "name": "Fate Moves",
-      "summary": "__Fate moves__ help you decide what happens in solo and co-op play, or support the GM's decisions and brainstorming in guided play",
+      "summary": "__Fate moves__ help you decide what happens in solo and co-op play, or support the GM's decisions and brainstorming in guided play.",
       "type": "move_category"
     },
     "legacy": {
@@ -2682,7 +2721,7 @@
             }
           },
           "roll_type": "special_track",
-          "text": "__When you retire or succumb to death or desolation__, you may create a new character in your established setting or have a connection [Rise to the Challenge](datasworn:move:revenant/connection/rise_to_the_challenge). If you do, roll the challenge dice and compare to each of the former character's legacy tracks: quests, bonds, and discoveries (one roll per track).\n\nFor each __strong hit__, choose one from below, or one from the weak hit or miss options.\n\n  * Follow their path: Gain one talent from the former character (at no cost).\n  * Share a connection: Take one connection from the former character, including any accrued progress or bond benefits.\n  * Take the wheel: Gain one vehicle from the former character.\n\nFor each __weak hit__, choose one from below, or one from the miss options.\n\n  * See it through: Choose one of the former character's unfinished plans that is not a shared plan. Then, [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done and assume an automatic strong hit. You may immediately mark up to half their earned progress (round down) on this plan.\n  * Make an acquaintance: Name one of the former character's connections that is not a shared connection. Envision how time or circumstances have changed them in a dramatic way. When you [Make a Connection](datasworn:move:revenant/connection/make_a_connection) with them, take an automatic strong hit and mark two ticks on your bonds legacy track.\n  * Explore familiar ground: Name a location that was meaningful to the former character. When you first visit that place, envision how it has changed or is endangered. Then, mark two ticks on your discoveries legacy track.\n\nFor each __miss__, choose one.\n\n  * Deal with the aftermath: Envision how one of your former character's foes has gained power or influence and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).\n  * Switch loyalties: Envision how you begin in opposition to your former character's beliefs, goals, or allegiances.\n  * Chaos: Envision how a discovery has unleashed unexpected consequences.",
+          "text": "__When you retire or succumb to death or desolation__, you may create a new character in your established setting or have a connection [Rise to the Challenge](datasworn:move:revenant/connection/rise_to_the_challenge). If you do, roll the challenge dice and compare to each of the former character’s legacy tracks: plans, bonds, and discoveries (one roll per track).\n\nFor each __strong hit__, choose one from below, or one from the weak hit or miss options.\n\n  * Follow their path: Gain one talent from the former character (at no cost).\n  * Share a connection: Take one connection from the former character, including any accrued progress or bond benefits.\n  * Take the wheel: Gain one vehicle from the former character.\n\nFor each __weak hit__, choose one from below, or one from the miss options.\n\n  * See it through: Choose one of the former character's unfinished plans that is not a shared plan. Then, [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to see it done and assume an automatic strong hit. You may immediately mark up to half their earned progress (round down) on this plan.\n  * Make an acquaintance: Name one of the former character's connections that is not a shared connection. Envision how time or circumstances have changed them in a dramatic way. When you [Make a Connection](datasworn:move:revenant/connection/make_a_connection) with them, take an automatic strong hit and mark two ticks on your bonds legacy track.\n  * Explore familiar ground: Name a location that was meaningful to the former character. When you first visit that place, envision how it has changed or is endangered. Then, mark two ticks on your discoveries legacy track.\n\nFor each __miss__, choose one.\n\n  * Deal with the aftermath: Envision how one of your former character's foes has gained power or influence and [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).\n  * Switch loyalties: Envision how you begin in opposition to your former character's beliefs, goals, or allegiances.\n  * Chaos: Envision how a discovery has unleashed unexpected consequences.",
           "trigger": {
             "conditions": [
               {
@@ -2808,7 +2847,7 @@
             },
             "weak_hit": {
               "_id": "move.outcome:revenant/plan/accomplish_your_plan.weak_hit",
-              "text": "On a __weak hit__, your plan is complete, but there is more to be done or you realize a fault in your plan. If you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to set things right, take your full legacy reward per the plan's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Otherwise, make the reward one rank lower (none for a troublesome plan). Any allies who shared this vow also mark the reward."
+              "text": "On a __weak hit__, your plan is complete, but there is more to be done or you realize a fault in your plan. If you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) to set things right, take your full legacy reward per the plan's rank: troublesome=1 tick; dangerous=2 ticks; formidable=1 box; extreme=2 boxes; epic=3 boxes. Otherwise, make the reward one rank lower (none for a troublesome plan)."
             }
           },
           "roll_type": "progress_roll",
@@ -2890,7 +2929,7 @@
           },
           "outcomes": null,
           "roll_type": "no_roll",
-          "text": "__When you give ground to a Nemesis through inaction, failure, or delay__, roll on the table below and envision how the change manifests in your world.\n\n{{table>move.oracle_rollable:revenant/plan/advance_a_nemesis.advance_a_nemesis}}\n\nOn a match, this development also exposes a surprising aspect of the Nemesis' plan or nature.\n\n__If you fill the last circle on the Nemesis' menace track__, they achieve their goal, or the final dire outcome occurs. You must [Abandon your plan](datasworn:move:revenant/plan/abandon_your_plan).",
+          "text": "__When you give ground to a Nemesis through inaction, failure, or delay__, roll on the table below and envision how the change manifests in your world.\n\n{{table>move.oracle_rollable:revenant/plan/advance_a_nemesis.advance_a_nemesis}}\n\nOn a match, this development also exposes a surprising aspect of the Nemesis' plan or nature.\n\n__If you fill the last circle on the Nemesis' menace track__, they achieve their goal, or the final dire outcome occurs. You must [Abandon Your Plan](datasworn:move:revenant/plan/abandon_your_plan).",
           "trigger": {
             "conditions": [],
             "text": "When you give ground to a Nemesis through inaction, failure, or delay..."
@@ -3022,7 +3061,7 @@
           "oracles": {},
           "outcomes": null,
           "roll_type": "no_roll",
-          "text": "When __you spend an extended time recovering in a safe place while a Nemesis is active__, do any of the following.\n\n  * Clear any marked impacts.\n  * Set your endurance, morale, supply, and radiation (if used) to +5.\n  * Set your companion's endurance to +5.\n  * Set your momentum to its reset value.\n\nThen, for each active Nemesis, [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).",
+          "text": "__When you spend an extended time recovering in a safe place while a Nemesis is active__, do any of the following.\n\n  * Clear any marked impacts.\n  * Set your endurance, morale, supply, and radiation (if used) to +5.\n  * Set your companion's endurance to +5.\n  * Set your momentum to its reset value.\n\nThen, for each active Nemesis, [Advance a Nemesis](datasworn:move:revenant/plan/advance_a_nemesis).",
           "trigger": {
             "conditions": [],
             "text": "When you spend an extended time recovering in a safe place while a Nemesis is active..."
@@ -3218,11 +3257,11 @@
             },
             "strong_hit": {
               "_id": "move.outcome:revenant/recover/repair.strong_hit",
-              "text": "On a __strong hit__, you gain repair points as appropriate to the situation, per the table below.\n\nSituation     | Strong Hit\n--------------|-----------\nAt a facility | 5 points\nIn the field  | 3 points\nUnder fire    | 2 points\n\nAdditionally, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and exchange each -1 of your supply for 1 extra repair point (up to 3 points).\n\nSpend repair points as follows. Unused points are discarded.\n\n  * Clear the battered impact on a vehicle: 2 points\n  * Fix one broken module: 2 points\n  * Take +1 integrity on a vehicle: 1 point\n  * Take +1 endurance for a mechanical companion: 1 point\n  * Repair any other device: 3 points\n  * Repair any other device, but with a complication or malfunction: 2 points"
+              "text": "On a __strong hit__, you gain repair points as appropriate to the situation, per the table below.\n\nSituation     | Strong Hit\n--------------|-----------\nAt a facility | 5 points\nIn the field  | 3 points\nUnder fire    | 2 points\n\nAdditionally, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and exchange each -1 of your supply for 1 extra repair point (up to 3 points).\n\nSpend repair points as follows. Unused points are discarded.\n\n  * Clear the battered impact on a vehicle: 2 points\n  * Take +1 integrity on a vehicle: 1 point\n  * Install or repair a vehicle upgrade: 3 points\n  * Repair any other device: 3 points\n  * Repair any other device, but with a complication or malfunction: 2 points"
             },
             "weak_hit": {
               "_id": "move.outcome:revenant/recover/repair.weak_hit",
-              "text": "On a __weak hit__, you gain repair points as appropriate to the situation, per the table below.\n\nSituation     | Weak Hit\n--------------|---------\nAt a facility | 3 points\nIn the field  | 1 points\nUnder fire    | 0 points\n\nAdditionally, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and exchange each -1 of your supply for 1 extra repair point (up to 3 points).\n\nSpend repair points as follows. Unused points are discarded.\n\n  * Clear the battered impact on a vehicle: 2 points\n  * Fix one broken module: 2 points\n  * Take +1 integrity on a vehicle: 1 point\n  * Take +1 endurance for a mechanical companion: 1 point\n  * Repair any other device: 3 points\n  * Repair any other device, but with a complication or malfunction: 2 points"
+              "text": "On a __weak hit__, you gain repair points as appropriate to the situation, per the table below.\n\nSituation     | Weak Hit\n--------------|---------\nAt a facility | 3 points\nIn the field  | 1 points\nUnder fire    | 0 points\n\nAdditionally, you may [Sacrifice Resources](datasworn:move:revenant/suffer/sacrifice_resources) and exchange each -1 of your supply for 1 extra repair point (up to 3 points).\n\nSpend repair points as follows. Unused points are discarded.\n\n  * Clear the battered impact on a vehicle: 2 points\n  * Take +1 integrity on a vehicle: 1 point\n  * Install or repair a vehicle upgrade: 3 points\n  * Repair any other device: 3 points\n  * Repair any other device, but with a complication or malfunction: 2 points"
             }
           },
           "roll_type": "action_roll",
@@ -3242,7 +3281,7 @@
                     "using": "stat"
                   }
                 ],
-                "text": "Make your own repairs, or direct a companion to make repairs"
+                "text": "Make your own repairs, or aid a connection to make repairs"
               },
               {
                 "_id": "move.condition:revenant/recover/repair.1",
@@ -3463,7 +3502,7 @@
           "outcomes": {
             "miss": {
               "_id": "move.outcome:revenant/scene_challenge/finish_the_scene.miss",
-              "text": "On a __miss__, you fail, or are undermined by a dramatic and costly turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster)."
+              "text": "On a __miss__, you fail or are undermined by a dire and costly turn of events. [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster)."
             },
             "strong_hit": {
               "_id": "move.outcome:revenant/scene_challenge/finish_the_scene.strong_hit",
@@ -3520,7 +3559,7 @@
             },
             "strong_hit": {
               "_id": "move.outcome:revenant/scene_challenge/obtain_an_opportunity.strong_hit",
-              "text": "On a __strong hit__, you are successful. Take +2 momentum and add +1 on your next move (not a progress move).\n\n On a __strong hit with a match__, take both and mark progress."
+              "text": "On a __strong hit__, you are successful. Take +2 momentum and add +1 on your next move (not a progress move).\n\nOn a __strong hit with a match__, take both and mark progress."
             },
             "weak_hit": {
               "_id": "move.outcome:revenant/scene_challenge/obtain_an_opportunity.weak_hit",
@@ -3688,7 +3727,7 @@
         }
       },
       "description": "A __scene challenge__ is a structured approach for resolving an extended non-combat scene against a threat or other characters, particularly when a time limit or looming danger adds extra urgency. Examples of a scene challenge include barricading a warehouse against an oncoming horde of zombies, participating in a debate, or competing in an off-road race.",
-      "name": "Scene Challenges",
+      "name": "Scene Challenge Moves",
       "summary": "__Scene moves__ are for extended non-combat situations.",
       "type": "move_category"
     },
@@ -3874,7 +3913,7 @@
           "oracles": {},
           "outcomes": null,
           "roll_type": "no_roll",
-          "text": "__When you end a significant session or chapter of play__, reflect on the events of the game and identify any missed opportunities to mark progress.\n\n  * If you strengthened your ties to a connection, [Develop Your Relationship](datasworn:move:revenant/connection/develop_your_relationship).\n  * If you moved forward on a quest, [Reach a Milestone](datasworn:move:revenant/plan/reach_a_milestone).\n  * If there is a plan, connection, or other situation you would like to give focus in your next session, make note of it and take +1 momentum.",
+          "text": "__When you end a significant session or chapter of play__, reflect on the events of the game and identify any missed opportunities to mark progress.\n\n  * If you strengthened your ties to a connection, you may [Develop Your Relationship](datasworn:move:revenant/connection/develop_your_relationship).\n  * If you moved forward on a plan, [Reach a Milestone](datasworn:move:revenant/plan/reach_a_milestone).\n  * If there is a plan, connection, or other situation you would like to give focus in your next session, make note of it and take +1 momentum.",
           "trigger": {
             "conditions": [],
             "text": "When you end a significant session or chapter of play..."
@@ -4019,7 +4058,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 200,
+            "page": 168,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -4083,7 +4122,7 @@
           "outcomes": {
             "miss": {
               "_id": "move.outcome:revenant/suffer/endure_harm.miss",
-              "text": "On a __miss__, it's worse than you thought. Suffer an additional -1 endurance or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your endurance is 0, you must also mark __wounded__ or __permanently__ harmed, or roll on the table below.\n\n{{table>move.oracle_rollable:revenant/suffer/endure_harm.endure_harm}}"
+              "text": "On a __miss__, it's worse than you thought. Suffer an additional -1 endurance or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your endurance is 0, you must also mark __wounded__ or __permanently harmed__, or roll on the table below.\n\n{{table>move.oracle_rollable:revenant/suffer/endure_harm.endure_harm}}"
             },
             "strong_hit": {
               "_id": "move.outcome:revenant/suffer/endure_harm.strong_hit",
@@ -4095,7 +4134,7 @@
             }
           },
           "roll_type": "action_roll",
-          "text": "__When you face physical injury, fatigue, or illness__, suffer -1 endurance for minor harm, -2 for serious harm, or -3 for terrible harm. If your endurance is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining harm.\n\nThen, if your endurance is 0 or you choose to resist the harm, roll +endurance or +iron, whichever is higher.\n\nOn a __strong hit__, choose one.\n\n  * Shake it off: If you are not wounded, take +1 endurance\n  * Embrace the pain: Take +1 momentum\n\nOn a __weak hit__, if you are not wounded, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 endurance. Otherwise, press on.\n\nOn a __miss__, it's worse than you thought. Suffer an additional -1 endurance or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your endurance is 0, you must also mark __wounded __or __permanently__ harmed, or roll on the table below.\n\n{{table>move.oracle_rollable:revenant/suffer/endure_harm.endure_harm}}",
+          "text": "__When you face physical injury, fatigue, or illness__, suffer -1 endurance for minor harm, -2 for serious harm, or -3 for terrible harm. If your endurance is 0, [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) equal to any remaining harm.\n\nThen, if your endurance is 0 or you choose to resist the harm, roll +endurance or +iron, whichever is higher.\n\nOn a __strong hit__, choose one.\n\n  * Shake it off: If you are not wounded, take +1 endurance\n  * Embrace the pain: Take +1 momentum\n\nOn a __weak hit__, if you are not wounded, you may [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-1) in exchange for +1 endurance. Otherwise, press on.\n\nOn a __miss__, it's worse than you thought. Suffer an additional -1 endurance or [Lose Momentum](datasworn:move:revenant/suffer/lose_momentum) (-2). If your endurance is 0, you must also mark __wounded__ or __permanently harmed__, or roll on the table below.\n\n{{table>move.oracle_rollable:revenant/suffer/endure_harm.endure_harm}}",
           "trigger": {
             "conditions": [
               {
@@ -4349,7 +4388,7 @@
             }
           },
           "roll_type": "action_roll",
-          "text": "__When you are brought to the brink of desolation__, roll +heart.\n\nOn a __weak hit__, your spirit breaks, but not before making a noble sacrifice. Envision your final moments. Then, if you [Continue a Legacy](datasworn:move:revenant/legacy/continue_a_legacy), you may mark four ticks across your legacy tracks as you see fit.\n\nOn a __miss__, you succumb to despair and are lost.",
+          "text": "__When you are brought to the brink of desolation__, roll +heart.\n\nOn a __strong hit__, you resist and press on.\n\nOn a __weak hit__, your spirit breaks, but not before making a noble sacrifice. Envision your final moments. Then, if you [Continue a Legacy](datasworn:move:revenant/legacy/continue_a_legacy), you may mark four ticks across your legacy tracks as you see fit.\n\nOn a __miss__, you succumb to despair and are lost.",
           "trigger": {
             "conditions": [
               {
@@ -4386,7 +4425,7 @@
           "oracles": {},
           "outcomes": null,
           "roll_type": "no_roll",
-          "text": "__When you are delayed or disadvantaged__, suffer -1 momentum for a minor setback, -2 for a serious setback, or -3 for a terrible setback.\n\nWhen your momentum is at its minimum (-6) and you must suffer -momentum, choose one.\n\n  * Envision how complicated affects you in a different way and make a different suffer move.\n  * Envision how this undermines your progress on a plan, expedition, connection, or combat. Then, clear 1 unit of progress on that track per its rank: troublesome=3 boxes; dangerous=2 boxes; formidable=1 box; extreme=2 ticks; epic=1 tick.",
+          "text": "__When you are delayed or disadvantaged__, suffer -1 momentum for a minor setback, -2 for a serious setback, or -3 for a terrible setback.\n\nWhen your momentum is at its minimum (-6) and you must suffer -momentum, choose one.\n\n  * Envision how the complication affects you in a different way and make a different suffer move.\n  * Envision how this undermines your progress on a plan, expedition, connection, or combat. Then, clear 1 unit of progress on that track per its rank: troublesome=3 boxes; dangerous=2 boxes; formidable=1 box; extreme=2 ticks; epic=1 tick.",
           "trigger": {
             "conditions": [],
             "text": "When you are delayed or disadvantaged..."
@@ -4588,7 +4627,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "The name anaconda applies to a group of snakes, but it is often used to refer to only one species, the green anaconda. The green anaconda is also known as the giant emerald anaconda, common anaconda or common water boa, and is the largest and heaviest snake in the world. There are reports of anacondas reaching over 5 meters in length and a typical adult weighs between 30 and 80 kilograms.\n\nWhile the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but stealthy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannahs. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.",
+          "description": "The name anaconda applies to a group of snakes, but it is often used to refer to only one species, the green anaconda. The green anaconda is also known as the giant emerald anaconda, common anaconda or common water boa, and is the largest and heaviest snake in the world. There are reports of anacondas reaching over 5 meters in length and a typical adult weighs between 30 and 80 kilograms.\n\nWhile the anaconda is native to the Amazon and Orinoco basins of South America they have been observed in the wild in Florida. They are slow on land but stealthy in the water and as such they live in swamps and rivers in tropical rainforests and seasonally flooded savannas. With eyes and nasal openings on the top of their heads, they can lie in wait for prey while remaining nearly completely submerged.",
           "drives": [
             "Kill and feed",
             "Lie in waiting"
@@ -4653,7 +4692,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 279,
+            "page": 252,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -4794,11 +4833,11 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 282,
+            "page": 255,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "Piranha are a tropical freshwater fish native to South America but they can survive in waters as low as 10 degrees celcius for brief periods. When in colder water they feed less and are unable to digest their food. However, when the water begins to warm up even slightly they become more aggressive as they will be ravenous.\n\nContrary to popular belief, piranhas are not capable of stripping a human to the bone in seconds and prefer smaller food or carrion. It is for this reason that people may release a large number of these fish into waterways that could become blocked with the undead. However, if the piranha decimated the other aquatic population, they would attack anything that wander into the water.\n\nPiranha have one of the strongest bites and, relative to body mass, the black piranha produces one of the most forceful bites measured among invertebrates. Although piranhas often attack as individuals, piranha only swim in large numbers to avoid other predators.",
+          "description": "Piranha are a tropical freshwater fish native to South America but they can survive in waters as low as 10 degrees Celsius for brief periods. When in colder water they feed less and are unable to digest their food. However, when the water begins to warm up even slightly they become more aggressive as they will be ravenous.\n\nContrary to popular belief, piranhas are not capable of stripping a human to the bone in seconds and prefer smaller food or carrion. It is for this reason that people may release a large number of these fish into waterways that could become blocked with the undead. However, if the piranha decimated the other aquatic population, they would attack anything that wander into the water.\n\nPiranha have one of the strongest bites and, relative to body mass, the black piranha produces one of the most forceful bites measured among invertebrates. Although piranhas often attack as individuals, piranha only swim in large numbers to avoid other predators.",
           "drives": [
             "Find warm water",
             "Feed"
@@ -4833,7 +4872,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "Rats will do everything in their power to escape a creature larger than them. But, if there is no way to escape, a cornered rat would not hesitate to attack a human. The last-ditch response of a rat to any threat it can't run away from is to go absolutely berserk, shrieking and snapping its teeth audibly while leaping up to 70cm into the air.\n\nWhile a lone rat may not normally pose any challenge in combat, the stakes are high if it is capable of transmitting the Revenant pathogen.\n\nRats are notorious for eating anything and having an incredible immune system. The fleas on rats were responsible for the black plague of the 14th century. It was discovered that fleas that had contracted the Yersina pestis bacterium—that caused the bubonic plague—would have an obstruction in their midgut. The obstruction would be purged through overfeeding and regurgitation. This resulted in thousands of the Y. Pestis to flush into the feeding site, infecting the host.\n\nThe bubonic plague was so impactful due to the mechanism upon which it was dependant. Rats were immune to the disease, allowing for them to become hosts and spread the disease throughout Europe. Humans lacked that resistance to the disease. When the infected humans died, the fleas would move onto a new host, thus creating a human epidemic.\n\nIn a zombie apocalypse it's entirely possible that rats could even feed upon the reanimated dead and contract the Revenant pathogen. When you fight an enemy that has been infected, you will need to [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) (see p. 226).",
+          "description": "Rats will do everything in their power to escape a creature larger than them. But, if there is no way to escape, a cornered rat would not hesitate to attack a human. The last-ditch response of a rat to any threat it can't run away from is to go absolutely berserk, shrieking and snapping its teeth audibly while leaping up to 70cm into the air.\n\nWhile a lone rat may not normally pose any challenge in combat, the stakes are high if it is capable of transmitting the Revenant pathogen.\n\nRats are notorious for eating anything and having an incredible immune system. The fleas on rats were responsible for the black plague of the 14th century. It was discovered that fleas that had contracted the Yersinia pestis bacterium—that caused the bubonic plague—would have an obstruction in their midgut. The obstruction would be purged through overfeeding and regurgitation. This resulted in thousands of the Y. Pestis to flush into the feeding site, infecting the host.\n\nThe bubonic plague was so impactful due to the mechanism upon which it was dependant. Rats were immune to the disease, allowing for them to become hosts and spread the disease throughout Europe. Humans lacked that resistance to the disease. When the infected humans died, the fleas would move onto a new host, thus creating a human epidemic.\n\nIn a zombie apocalypse it's entirely possible that rats could even feed upon the reanimated dead and contract the Revenant pathogen. When you fight an enemy that has been infected, you will need to [Avoid Being Bitten](datasworn:move:revenant/combat/avoid_being_bitten) (see p. 226).",
           "drives": [
             "Feed",
             "Breed"
@@ -4972,7 +5011,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "Without food, people can be driven to desperate acts. Cannibals prey on other humans for food. However, the skeletal flesh of a human contains only a meagre 32,000 calories. Assuming the minimum daily requirement of 2,400 calories per adult, one person would barely provide a days calorie needs for dozen cannibals. In post-apocalyptic times when daily exertion is greater and calorie needs higher, a single human body would stretch for much less.\n\nIt is because of this that cannibals are only found on their own or in very small groups, such as; an elderly couple in a run-down diner who drug some of their visitors to keep meat in the pies; an extended family of degenerate savages who eat whatever or whoever they can catch; or, a small town that seems wholesome enough until you learn the punishment for breaking their strict laws is forfeitting your choice of limb.",
+          "description": "Without food, people can be driven to desperate acts. Cannibals prey on other humans for food. However, the skeletal flesh of a human contains only a meagre 32,000 calories. Assuming the minimum daily requirement of 2,400 calories per adult, one person would barely provide a days calorie needs for dozen cannibals. In post-apocalyptic times when daily exertion is greater and calorie needs higher, a single human body would stretch for much less.\n\nIt is because of this that cannibals are only found on their own or in very small groups, such as; an elderly couple in a run-down diner who drug some of their visitors to keep meat in the pies; an extended family of degenerate savages who eat whatever or whoever they can catch; or, a small town that seems wholesome enough until you learn the punishment for breaking their strict laws is forfeiting your choice of limb.",
           "drives": [
             "Consume human flesh"
           ],
@@ -4992,14 +5031,14 @@
           "variants": {
             "clan_of_cannibals": {
               "_id": "npc.variant:revenant/humanity/cannibal.clan_of_cannibals",
-              "description": "A larger amount of 6-10 Cannibals together as a clan.",
+              "description": "A larger number of 6-10 Cannibals together as a clan.",
               "name": "Clan of Cannibals",
               "nature": "Human",
               "rank": 3
             },
             "group_of_cannibals": {
               "_id": "npc.variant:revenant/humanity/cannibal.group_of_cannibals",
-              "description": "A small amount of 3-5 Cannibals together in a group.",
+              "description": "A small number of 3-5 Cannibals together in a group.",
               "name": "Group of Cannibals",
               "nature": "Human",
               "rank": 2
@@ -5020,7 +5059,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "When the looting started in the cities people with firearms were able to retain the most of their possessions. Anywhere that sold firearms was overrun with people trying to take whatever they could to make it on their own. People that were shot and killed in the riots who had been hiding bites reanimated shortly afterwards as zombies and made those places hotspots for infestations.\n\nDuring the first few months of the Fall, inexperienced hunters found a temporary solution within the confines of abandoned farms. These forsaken agricultural havens became a reliable source of sustenance, harboring domesticated animals that had been left to fend for themselves in the wake of societal collapse.\n\nAmong the livestock, most of the cattle were dairy cows rather than their beef counterparts. The significance lay in the nature of dairy cows: if not milked regularly, typically within a week, they faced the risk of falling ill. With the absence of human caretakers, these once- productive creatures became vulnerable to both the unforgiving reality of the post-apocalyptic world and the imminent threat of disease. As a result, a considerable number of these dairy cows were culled. The beef cattle and other sizable domesticated animals faced an insurmountable challenge during the Ash. The ability to feed these larger animals became impossible, and regrettably, many were also culled as a harsh but pragmatic measure.\n\nAs the remnants of abandoned farms were gradually exhausted of their domesticated inhabitants, the focus of the hunters shifted toward the untamed wilderness. Now, the hunted prey primarily consisted of wild animals, as survivors adapted their strategies to the unpredictable challenges of hunting in the open, post-apocalyptic landscape. The shift from contained, domesticated animals to elusive and unpredictable wild game marked a transition in the survival tactics of the remaining human population, reflecting the evolving dynamics of their struggle for sustenance in a world forever altered by catastrophe.",
+          "description": "When the looting started in the cities people with firearms were able to retain the most of their possessions. Anywhere that sold firearms was overrun with people trying to take whatever they could to make it on their own. People that were shot and killed in the riots who had been hiding bites reanimated shortly afterwards as zombies and made those places hotspots for infestations.\n\nDuring the first few months of the Fall, inexperienced hunters found a temporary solution within the confines of abandoned farms. These forsaken agricultural havens became a reliable source of sustenance, harboring domesticated animals that had been left to fend for themselves in the wake of societal collapse.\n\nAmong the livestock, most of the cattle were dairy cows rather than their beef counterparts. The significance lay in the nature of dairy cows: if not milked regularly, typically within a week, they faced the risk of falling ill. With the absence of human caretakers, these once-productive creatures became vulnerable to both the unforgiving reality of the post-apocalyptic world and the imminent threat of disease. As a result, a considerable number of these dairy cows were culled. The beef cattle and other sizable domesticated animals faced an insurmountable challenge during the Ash. The ability to feed these larger animals became impossible, and regrettably, many were also culled as a harsh but pragmatic measure.\n\nAs the remnants of abandoned farms were gradually exhausted of their domesticated inhabitants, the focus of the hunters shifted toward the untamed wilderness. Now, the hunted prey primarily consisted of wild animals, as survivors adapted their strategies to the unpredictable challenges of hunting in the open, post-apocalyptic landscape. The shift from contained, domesticated animals to elusive and unpredictable wild game marked a transition in the survival tactics of the remaining human population, reflecting the evolving dynamics of their struggle for sustenance in a world forever altered by catastrophe.",
           "drives": [
             "Provide for the community",
             "Eradicate predatory animals",
@@ -5041,14 +5080,14 @@
           "variants": {
             "clan_of_hunters": {
               "_id": "npc.variant:revenant/humanity/hunter.clan_of_hunters",
-              "description": "A larger amount of 6-10 Hunters together as a clan.",
+              "description": "A larger number of 6-10 Hunters together as a clan.",
               "name": "Clan of Hunters",
               "nature": "Human",
               "rank": 4
             },
             "group_of_hunters": {
               "_id": "npc.variant:revenant/humanity/hunter.group_of_hunters",
-              "description": "A small amount of 3-5 Hunters together in a group.",
+              "description": "A small number of 3-5 Hunters together in a group.",
               "name": "Group of Hunters",
               "nature": "Human",
               "rank": 3
@@ -5065,7 +5104,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 270,
+            "page": 239,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -5104,7 +5143,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "People who have commited serious crimes against their community are cast out into the wastelands. These outcasts start their own groups and often can only survive by seizing what they need from others. Sometimes these people merely become highwaymen or bandits that do what they must to get by on their own. Others, however, relish the freedom to do what they want upon the helpless inhabitants of the wastelands.\n\nThe larger groups generally unite under the most extreme or ferocious warriors among them. These warlords hold great power and attract other militant zealots and power hungry followers. They have such a control over their domain that a warlord's presence is known through their diehard followers before they themselves are seen.",
+          "description": "People who have committed serious crimes against their community are cast out into the wastelands. These outcasts start their own groups and often can only survive by seizing what they need from others. Sometimes these people merely become highwaymen or bandits that do what they must to get by on their own. Others, however, relish the freedom to do what they want upon the helpless inhabitants of the wastelands.\n\nThe larger groups generally unite under the most extreme or ferocious warriors among them. These warlords hold great power and attract other militant zealots and power hungry followers. They have such a control over their domain that a warlord's presence is known through their diehard followers before they themselves are seen.",
           "drives": [
             "Loot",
             "Pillage"
@@ -5126,14 +5165,14 @@
           "variants": {
             "clan_of_outcasts": {
               "_id": "npc.variant:revenant/humanity/outcast.clan_of_outcasts",
-              "description": "A larger amount of 6-10 Outcasts together as a clan.",
+              "description": "A larger number of 6-10 Outcasts together as a clan.",
               "name": "Clan of Outcasts",
               "nature": "Human",
               "rank": 4
             },
             "group_of_outcasts": {
               "_id": "npc.variant:revenant/humanity/outcast.group_of_outcasts",
-              "description": "A small amount of 3-5 Outcasts together in a group.",
+              "description": "A small number of 3-5 Outcasts together in a group.",
               "name": "Group of Outcasts",
               "nature": "Human",
               "rank": 3
@@ -5219,14 +5258,14 @@
           "variants": {
             "clan_of_scavengers": {
               "_id": "npc.variant:revenant/humanity/scavenger.clan_of_scavengers",
-              "description": "A larger amount of 6-10 Scavengers together as a clan.",
+              "description": "A larger number of 6-10 Scavengers together as a clan.",
               "name": "Clan of Scavengers",
               "nature": "Human",
               "rank": 4
             },
             "group_of_scavengers": {
               "_id": "npc.variant:revenant/humanity/scavenger.group_of_scavengers",
-              "description": "A small amount of 3-5 Scavengers together in a group.",
+              "description": "A small number of 3-5 Scavengers together in a group.",
               "name": "Group of Scavengers",
               "nature": "Human",
               "rank": 3
@@ -5268,14 +5307,14 @@
           "variants": {
             "clan_of_technicians": {
               "_id": "npc.variant:revenant/humanity/technician.clan_of_technicians",
-              "description": "A larger amount of 6-10 Technicians together as a clan.",
+              "description": "A larger number of 6-10 Technicians together as a clan.",
               "name": "Clan of Technicians",
               "nature": "Human",
               "rank": 3
             },
             "group_of_technicians": {
               "_id": "npc.variant:revenant/humanity/technician.group_of_technicians",
-              "description": "A small amount of 3-5 Technicians together in a group.",
+              "description": "A small number of 3-5 Technicians together in a group.",
               "name": "Group of Technicians",
               "nature": "Human",
               "rank": 2
@@ -5296,7 +5335,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "A veteran is a person who has long experience in a particular field, usually combat. Veterans are often found leading hunting parties, protecting enclaves or escorting Technicians through the perilous wilds. They have valuable knowledge of the wastelands that is hard-earned and well protected",
+          "description": "A veteran is a person who has long experience in a particular field, usually combat. Veterans are often found leading hunting parties, protecting enclaves or escorting Technicians through the perilous wilds. They have valuable knowledge of the wastelands that is hard-earned and well protected.",
           "drives": [
             "Take action",
             "Complete the mission"
@@ -5333,8 +5372,8 @@
           },
           "description": "A Warden is more than just a leader to their people. They understand the resources and maintenance requirements of their enclave and how the decisions they make affect the region. They are responsible for the security of their enclave and enforcing any regulations. In the face of danger, they are skilled negotiators but they also know when deadly force is required.",
           "drives": [
-            "World weary",
-            "Suspicious of strangers"
+            "Do what needs to be done",
+            "Protect the community"
           ],
           "features": [
             "World weary",
@@ -5384,7 +5423,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "Instead of facing the slow and lumbering hordes of the walking dead you may want a foe that has fewer numbers and facing even one foe poses the likelihood of defeat.\n\nNo other mythological creature has received as much attention as the dragon. Tales of dragons are known in many cultures and were believed to be real for centuries. It's not clear where these tales originated but, huge flying serpents with venomous breath have been described in texts as early as the ancient Greeks and Sumerians. The belief in dragons was not just founded in legend but also in physical evidence. The knowledge of dinosaurs would not come for millennia and people would attribute the huge fossilised bones to those of dragons.\n\nTales of dragons ranged from being watchful protectors to malicious hunters. When Christianity spread dragons took on a solely sinister interpretation and came to represent Satan. The mouth of a dragon was at this time first depicted to breathe fire and was a symbol of the entrance to hell itself. The church even created their own legends of righteous saints battling and vanquishing Satan in the form of dragons. Dragons are, in fact, one of the only monsters whose purpose is that of a fearsome opponent to be slain.\n\nAs such, dragons make a superb foe to bring about the end of the world",
+          "description": "Instead of facing the slow and lumbering hordes of the walking dead you may want a foe that has fewer numbers and facing even one foe poses the likelihood of defeat.\n\nNo other mythological creature has received as much attention as the dragon. Tales of dragons are known in many cultures and were believed to be real for centuries. It's not clear where these tales originated but, huge flying serpents with venomous breath have been described in texts as early as the ancient Greeks and Sumerians. The belief in dragons was not just founded in legend but also in physical evidence. The knowledge of dinosaurs would not come for millennia and people would attribute the huge fossilised bones to those of dragons.\n\nTales of dragons ranged from being watchful protectors to malicious hunters. When Christianity spread dragons took on a solely sinister interpretation and came to represent Satan. The mouth of a dragon was at this time first depicted to breathe fire and was a symbol of the entrance to hell itself. The church even created their own legends of righteous saints battling and vanquishing Satan in the form of dragons. Dragons are, in fact, one of the only monsters whose purpose is that of a fearsome opponent to be slain.\n\nAs such, dragons make a superb foe to bring about the end of the world.",
           "drives": [
             "Hunt and devour",
             "Take to the skies"
@@ -5492,14 +5531,14 @@
           "variants": {
             "handful_of_runners": {
               "_id": "npc.variant:revenant/the_undead/runner.handful_of_runners",
-              "description": "A small amount of 3-5 Runners are roaming together.",
+              "description": "A small number of 3-5 Runners are roaming together.",
               "name": "Handful of Runners",
               "nature": "Undead",
               "rank": 3
             },
             "pack_of_runners": {
               "_id": "npc.variant:revenant/the_undead/runner.pack_of_runners",
-              "description": "A larger amount of 6-10 Runners are roaming together in a pack.",
+              "description": "A larger number of 6-10 Runners are roaming together in a pack.",
               "name": "Pack of Runners",
               "nature": "Undead",
               "rank": 4
@@ -5520,7 +5559,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "A sable is the result of a mutation in a zombie brain. When it's ready, or when circumstances force it, the sable will form by pushing the zombies black blood into the cranium. This will cause it to explode and any large chunks of brain matter is then drawn into the blood. \n\nSables then search out a new host and, when it enters them, begins to change their anatomy. The Revenant pathogen starts by taking control of the central nervous system and, once it has finished, goes to work on rebuilding the host's sinew and collagen.",
+          "description": "A sable is the result of a mutation in a zombie brain. When it's ready, or when circumstances force it, the sable will form by pushing the zombies black blood into the cranium. This will cause it to explode and any large chunks of brain matter is then drawn into the blood.\n\nSables then search out a new host and, when it enters them, begins to change their anatomy. The Revenant pathogen starts by taking control of the central nervous system and, once it has finished, goes to work on rebuilding the host's sinew and collagen.",
           "drives": [
             "Enter a host",
             "Stay away from fire"
@@ -5554,7 +5593,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "Initially a the host of a sable may try to verbally communicate with others and warn them away. This is because the pathogen has taken control of the body, but not completely. The host will try to flee to isolation and safety. Once it has undergone the last of its changes it will rejoin its previous companions.\n\nEventually, a sable-host is stronger and smarter than they were before and, is capable of totally replicating the host's mannerisms and remembering their memories. Due to their increased intelligence, a sable-host will wait for an opportune moment to feed and try to remain undetected.",
+          "description": "Initially the host of a sable may try to verbally communicate with others and warn them away. This is because the pathogen has taken control of the body, but not completely. The host will try to flee to isolation and safety. Once it has undergone the last of its changes it will rejoin its previous companions.\n\nEventually, a sable-host is stronger and smarter than they were before and, is capable of totally replicating the host's mannerisms and remembering their memories. Due to their increased intelligence, a sable-host will wait for an opportune moment to feed and try to remain undetected.",
           "drives": [
             "Remain undetected",
             "Feed on flesh and blood"
@@ -5588,7 +5627,7 @@
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
-          "description": "Screamers have mutated to form massive packs of the undead. A normal zombie moan can call their kin from only a short distance. Even so, when one moans and another hear it, they moan and so on and so forth.\n\nThe screamers can call other zombies from kilometers away. Their chest cavities are massive and reinforced with enough sinew and cartilage that they have been know to stop low-powered ammunition.\n\nWhen you see a screamer, you better hope you see it before it sees you or you're in for a lot of trouble.",
+          "description": "Screamers have mutated to form massive packs of the undead. A normal zombie moan can call their kin from only a short distance. Even so, when one moans and another hears it, they moan and so on and so forth.\n\nThe screamers can call other zombies from kilometers away. Their chest cavities are massive and reinforced with enough sinew and cartilage that they have been known to stop low-powered ammunition.\n\nWhen you see a screamer, you better hope you see it before it sees you or you're in for a lot of trouble.",
           "drives": [
             "Gather the undead"
           ],
@@ -5607,14 +5646,14 @@
           "variants": {
             "handful_of_screamers": {
               "_id": "npc.variant:revenant/the_undead/screamer.handful_of_screamers",
-              "description": "A small amount of 3-5 Screamers are roaming together.",
+              "description": "A small number of 3-5 Screamers are roaming together.",
               "name": "Handful of Screamers",
               "nature": "Undead",
               "rank": 3
             },
             "pack_of_screamers": {
               "_id": "npc.variant:revenant/the_undead/screamer.pack_of_screamers",
-              "description": "A larger amount of 6-10 Screamers are roaming together in a pack.",
+              "description": "A larger number of 6-10 Screamers are roaming together in a pack.",
               "name": "Pack of Screamers",
               "nature": "Undead",
               "rank": 4
@@ -5655,14 +5694,14 @@
           "variants": {
             "handful_of_spitters": {
               "_id": "npc.variant:revenant/the_undead/spitter.handful_of_spitters",
-              "description": "A small amount of 3-5 Spitters are roaming together.",
+              "description": "A small number of 3-5 Spitters are roaming together.",
               "name": "Handful of Spitters",
               "nature": "Undead",
               "rank": 3
             },
             "pack_of_spitters": {
               "_id": "npc.variant:revenant/the_undead/spitter.pack_of_spitters",
-              "description": "A larger amount of 6-10 Spitters are roaming together in a pack.",
+              "description": "A larger number of 6-10 Spitters are roaming together in a pack.",
               "name": "Pack of Spitters",
               "nature": "Undead",
               "rank": 4
@@ -5707,7 +5746,7 @@
           "variants": {
             "handful_of_zombies": {
               "_id": "npc.variant:revenant/the_undead/zombie.handful_of_zombies",
-              "description": "A small amount of 3-5 Zombies are roaming together.",
+              "description": "A small number of 3-5 Zombies are roaming together.",
               "name": "Handful of Zombies",
               "nature": "Undead",
               "rank": 2
@@ -5721,7 +5760,7 @@
             },
             "pack_of_zombies": {
               "_id": "npc.variant:revenant/the_undead/zombie.pack_of_zombies",
-              "description": "A larger amount of 6-10 Zombies are roaming together in a pack.",
+              "description": "A larger number of 6-10 Zombies are roaming together in a pack.",
               "name": "Pack of Zombies",
               "nature": "Undead",
               "rank": 3
@@ -7293,7 +7332,7 @@
                 "max": 69,
                 "min": 67
               },
-              "text": "Preform a feint or trick"
+              "text": "Perform a feint or trick"
             },
             {
               "_id": "oracle_rollable.row:revenant/character/combat_action.24",
@@ -7840,7 +7879,7 @@
               "text": "Withdraw"
             }
           ],
-          "summary": "Use this table to answer questions about the actions of of a foe or enemy force. You can use these oracles instead of, or in addition to, the [Combat Action](datasworn:oracle_rollable:revenant/character/combat_action) oracle. Roll once each on the [Method](datasworn:oracle_rollable:revenant/character/combat_method) and Target oracles. Then, interpret the response as appropriate to the current situation and the nature of your foe.",
+          "summary": "Use this table to answer questions about the actions of a foe or enemy force. You can use these oracles instead of, or in addition to, the [Combat Action](datasworn:oracle_rollable:revenant/character/combat_action) oracle. Roll once each on the [Method](datasworn:oracle_rollable:revenant/character/combat_method) and Target oracles. Then, interpret the response as appropriate to the current situation and the nature of your foe.",
           "type": "oracle_rollable"
         },
         "combat_target": {
@@ -8295,7 +8334,7 @@
               "text": "Weapon"
             }
           ],
-          "summary": "Use this table in conjunction with the [Combat Method](datasworn:oracle_rollable:revenant/character/combat_method) table to create an abstract action a foe could take in combat",
+          "summary": "Use this table in conjunction with the [Combat Method](datasworn:oracle_rollable:revenant/character/combat_method) table to create an abstract action a foe could take in combat.",
           "type": "oracle_rollable"
         },
         "first_look": {
@@ -9203,7 +9242,7 @@
               "text": "Roll twice"
             }
           ],
-          "summary": "Use this oracle to find out about what motivates a character. It can also be used when you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) for a person goal.",
+          "summary": "Use this oracle to find out about what motivates a character. It can also be used when you [Make a Plan](datasworn:move:revenant/plan/make_a_plan) for a personal goal.",
           "type": "oracle_rollable"
         },
         "initial_disposition": {
@@ -17483,7 +17522,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 283,
+            "page": 284,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -18170,7 +18209,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 269,
+            "page": 270,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -19499,7 +19538,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 298,
+            "page": 272,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -20828,7 +20867,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 299,
+            "page": 273,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -22157,7 +22196,7 @@
             ],
             "date": "2025-06-23",
             "license": "https://creativecommons.org/licenses/by-sa/4.0",
-            "page": 297,
+            "page": 271,
             "title": "Revenant",
             "url": "https://www.drivethrurpg.com/en/product/457762/revenant"
           },
@@ -23473,7 +23512,7 @@
           "suggestions": [
             "oracle_rollable:revenant/core/action"
           ],
-          "summary": "As with the [Action](datasworn:oracle_rollable:revenant/core/action) oracle, this is an interpretative table which you can use to answer questions or generate new situations. Combined, the Action and Theme tables provide creative prompts suitable for most",
+          "summary": "As with the [Action](datasworn:oracle_rollable:revenant/core/action) oracle, this is an interpretative table which you can use to answer questions or generate new situations. Combined, the Action and Theme tables provide creative prompts suitable for most situations and questions.",
           "type": "oracle_rollable"
         }
       },
@@ -23935,7 +23974,7 @@
                       "text": "Trenchwatch"
                     }
                   ],
-                  "summary": "A manmade creation. What is is? Why is it important to this enclave's history?",
+                  "summary": "A manmade creation. What is it? Why is it important to this enclave's history?",
                   "type": "oracle_rollable"
                 },
                 "ominous": {
@@ -26974,7 +27013,7 @@
                 "max": 40,
                 "min": 37
               },
-              "text": "Disasterous accident"
+              "text": "Disastrous accident"
             },
             {
               "_id": "oracle_rollable.row:revenant/enclave/trouble.11",
@@ -27352,14 +27391,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -27541,7 +27580,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -27702,7 +27741,7 @@
               },
               "name": "Badlands",
               "oracle_type": "tables",
-              "summary": "Traversing the badlands takes grit and determination, but most importantly, water. Many a traveller has had their wits dulled by dehydration, making them a prime target for those denizens adapted to the harsh environment. The extreme heat is followed by the extreme cold of the night with scarce moderation between the two",
+              "summary": "Traversing the badlands takes grit and determination, but most importantly, water. Many a traveller has had their wits dulled by dehydration, making them a prime target for those denizens adapted to the harsh environment. The extreme heat is followed by the extreme cold of the night with scarce moderation between the two.",
               "type": "oracle_collection"
             },
             "coastal": {
@@ -27895,14 +27934,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -28084,7 +28123,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -28245,7 +28284,7 @@
               },
               "name": "Coastal",
               "oracle_type": "tables",
-              "summary": "Traversing the badlands takes grit and determination, but most importantly, water. Many a traveller has had their wits dulled by dehydration, making them a prime target for those denizens adapted to the harsh environment. The extreme heat is followed by the extreme cold of the night with scarce moderation between the two",
+              "summary": "Coasts are dynamic, constantly changing, important ecosystems. They provide unique homes for marine plants, animals and insects. Coasts are also an important aspect of tourism and they have always held a strong relationship with transportation. As such you'll often find small towns and holiday destinations.",
               "type": "oracle_collection"
             },
             "commercial": {
@@ -28438,14 +28477,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -28627,7 +28666,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -28981,14 +29020,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -29170,7 +29209,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -29524,14 +29563,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -29713,7 +29752,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -30067,14 +30106,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -30256,7 +30295,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -30417,7 +30456,7 @@
               },
               "name": "Leisure",
               "oracle_type": "tables",
-              "summary": "Leisure areas in a city are designed for recreation, entertainment, and outdoor activities. Areas such as these contribute to the overall well- being and quality of life for the residents and visitors.",
+              "summary": "Leisure areas in a city are designed for recreation, entertainment, and outdoor activities. Areas such as these contribute to the overall well-being and quality of life for the residents and visitors.",
               "type": "oracle_collection"
             },
             "medical": {
@@ -30610,14 +30649,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -30799,7 +30838,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -31153,14 +31192,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -31342,7 +31381,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -31696,14 +31735,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -31885,7 +31924,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -32239,14 +32278,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -32428,7 +32467,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -32589,7 +32628,7 @@
               },
               "name": "Retail",
               "oracle_type": "tables",
-              "summary": "Retail areas are places that are designed to sell goods and services directly to consumers. Retails stores can take many forms, including shopping centres, retail outlets or small convenience stores. Retail areas are often characterised by a vibrant mixture of businesses, creating a dynamic atmosphere that encourages foot traffic.",
+              "summary": "Retail areas are places that are designed to sell goods and services directly to consumers. Retail stores can take many forms, including shopping centres, retail outlets or small convenience stores. Retail areas are often characterised by a vibrant mixture of businesses, creating a dynamic atmosphere that encourages foot traffic.",
               "type": "oracle_collection"
             },
             "sierra": {
@@ -32782,14 +32821,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -32971,7 +33010,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -33325,14 +33364,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -33514,7 +33553,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -33868,14 +33907,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -34057,7 +34096,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -34411,14 +34450,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -34600,7 +34639,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -34954,14 +34993,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -35143,7 +35182,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -35518,14 +35557,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -35707,7 +35746,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -36061,14 +36100,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -36250,7 +36289,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -36604,14 +36643,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -36793,7 +36832,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -36954,7 +36993,7 @@
               },
               "name": "Inhabited",
               "oracle_type": "tables",
-              "summary": "People gather in the warm places of the world for many reasons, and the motivations behind coming together is groups is deeply rooted in human nature and societal dynamics. People need social interaction, community and belonging, culture, economic exchange, education, entertainment, and security. Overall, the reasons people gather together are as complex and diverse and the people themselves.",
+              "summary": "People gather in the warm places of the world for many reasons, and the motivations behind coming together in groups is deeply rooted in human nature and societal dynamics. People need social interaction, community and belonging, culture, economic exchange, education, entertainment, and security. Overall, the reasons people gather together are as complex and diverse as the people themselves.",
               "type": "oracle_collection"
             },
             "protected": {
@@ -37147,14 +37186,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -37336,7 +37375,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -37690,14 +37729,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -37879,7 +37918,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -38233,14 +38272,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -38422,7 +38461,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -38776,14 +38815,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -38965,7 +39004,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -39319,14 +39358,14 @@
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/action"
+                          "oracle": "oracle_rollable:revenant/core/descriptor"
                         },
                         {
                           "auto": true,
                           "dice": null,
                           "duplicates": "reroll",
                           "number_of_rolls": 1,
-                          "oracle": "oracle_rollable:revenant/core/theme"
+                          "oracle": "oracle_rollable:revenant/core/focus"
                         }
                       ],
                       "roll": {
@@ -39508,7 +39547,7 @@
                       "text": "Roll twice"
                     }
                   ],
-                  "summary": "Use this to oracle help envision a complication or hazard.",
+                  "summary": "Use this oracle to help envision a complication or hazard.",
                   "type": "oracle_rollable"
                 },
                 "opportunity": {
@@ -39913,13 +39952,13 @@
               "text": "[Zombie Infested](datasworn:oracle_collection:revenant/location/themes/zombie_infested)"
             }
           ],
-          "summary": "Use this oracle when you travel to a new biome or district, or to answer a question about where someone or something can be found.",
+          "summary": "Use this oracle when you want a random theme. Otherwise, choose a theme from below.",
           "type": "oracle_rollable"
         }
       },
       "name": "Location Oracles",
       "oracle_type": "tables",
-      "summary": "Locations are places. The world around you, whatever state it's in. To create a location you will envision the area. You will determine the landscape, the hazards or the opportunities the location provides, and other features of the area.\n\nEach location on the following pages includes a set of oracles.\n  * __Feature__: Use this oracle to reveal a new aspect of the location.\n  * __Hazard__: Use this to oracle help envision a complication or hazard.\n  * __Opportunity__: Use this oracle to help envision a beneficial encounter or event, or when you roll a strong hit with a match.\n\nThe location oracles are divided territories and themes. A territory is an oracle to help you envision a biome or district. Themes help you envision the motif or atmosphere of a location.",
+      "summary": "Locations are places. The world around you, whatever state it's in. To create a location you will envision the area. You will determine the landscape, the hazards or the opportunities the location provides, and other features of the area.\n\nEach location on the following pages includes a set of oracles.\n  * __Feature__: Use this oracle to reveal a new aspect of the location.\n  * __Hazard__: Use this to oracle to help envision a complication or hazard.\n  * __Opportunity__: Use this oracle to help envision a beneficial encounter or event, or when you roll a strong hit with a match.\n\nThe location oracles are divided into territories and themes. A territory is an oracle to help you envision a biome or district. Themes help you envision the motif or atmosphere of a location.",
       "type": "oracle_collection"
     },
     "story": {
@@ -40506,7 +40545,7 @@
   "rules": {
     "condition_meters": {
       "endurance": {
-        "description": "Health represents your current physical condition and stamina.",
+        "description": "Endurance represents your current physical condition and stamina.",
         "label": "endurance",
         "max": 5,
         "min": 0,
@@ -40573,10 +40612,13 @@
             "shared": false
           },
           "irradiated": {
-            "description": "Irradiated is marked when you are at 0 radiation and fail to [Endure Radiation](datasworn:move:revenant/suffer/endure_radiation). You suffer acute radiation syndrome, and need comfort to recover.",
+            "description": "Irradiated is marked when you are at 0 radiation and fail to [Endure Radiation](datasworn:move:revenant/suffer/endure_radiation). You suffer acute radiation syndrome, and need to [Take a Hiatus](datasworn:move:move:revenant/plan/take_a_hiatus) to recover.",
             "label": "irradiated",
             "permanent": false,
-            "prevents_recovery": [],
+            "prevents_recovery": [
+              "endurance",
+              "morale"
+            ],
             "shared": false
           },
           "shaken": {
@@ -40607,7 +40649,7 @@
             "shared": false
           }
         },
-        "description": "As with all impacts, misfortunes affect your max momentum and momentum reset. In addition, if you are wounded, shaken, or unprepared, you cannot increase the associated condition meter.",
+        "description": "As with all impacts, misfortunes affect your max momentum and momentum reset. In addition, if you are wounded, shaken, unprepared, or irradiated, you cannot increase the associated condition meter.",
         "label": "misfortunes"
       },
       "vehicle_troubles": {

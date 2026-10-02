@@ -92,7 +92,7 @@ oracles:
               manmade:
                 name: Manmade creation
                 summary: |-
-                  A manmade creation. What is is? Why is it important to this enclave's history?
+                  A manmade creation. What is it? Why is it important to this enclave's history?
                 oracle_type: column_text
                 type: oracle_rollable
                 _source:
@@ -825,7 +825,7 @@ oracles:
           - roll: { min: 34, max: 36 }
             text: Deprived of a resource
           - roll: { min: 37, max: 40 }
-            text: Disasterous accident
+            text: Disastrous accident
           - roll: { min: 41, max: 44 }
             text: Feuding families or factions
           - roll: { min: 45, max: 47 }
