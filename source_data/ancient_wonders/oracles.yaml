@@ -2047,6 +2047,8 @@ oracles:
               RG, pg 922"
           - roll: { min: 86, max: 95 }
             text: "Character focus : Interlude Scene"
+          - roll: { min: 96, max: 100 }
+            text: "Roll twice"
       planetary_class_expanded_cold:
         name: "Planetary Class (Expanded) - Cold"
         oracle_type: table_text
