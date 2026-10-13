@@ -4077,7 +4077,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Exploring The Megacity",
           "oracle_type": "table_text",
           "rows": [
@@ -6256,7 +6256,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Opportunity In The Megacity",
           "oracle_type": "table_text",
           "rows": [
@@ -6305,7 +6305,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Trouble In The Megacity",
           "oracle_type": "table_text",
           "rows": [
@@ -6761,7 +6761,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Exploring The Megastructure",
           "oracle_type": "table_text",
           "rows": [
@@ -8555,7 +8555,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Opportunity In The Megastructure",
           "oracle_type": "table_text",
           "rows": [
@@ -9154,7 +9154,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Trouble In The Megastructure",
           "oracle_type": "table_text",
           "rows": [

@@ -11548,6 +11548,7 @@ oracles:
       trouble_in_the_megastructure:
         name: "Trouble In The Megastructure"
         oracle_type: table_text
+        dice: 1d6
         type: oracle_rollable
         summary: |-
           Use this set of oracles to detail your exploration into the depths of a megastructure.
@@ -12186,6 +12187,7 @@ oracles:
       exploring_the_megastructure:
         name: "Exploring The Megastructure"
         oracle_type: table_text
+        dice: 1d6
         type: oracle_rollable
         summary: |-
           Use this set of oracles to detail your exploration into the depths of a megastructure.
@@ -12303,6 +12305,7 @@ oracles:
       opportunity_in_the_megastructure:
         name: "Opportunity In The Megastructure"
         oracle_type: table_text
+        dice: 1d6
         type: oracle_rollable
         summary: |-
           Use this set of oracles to detail your exploration into the depths of a megastructure.
@@ -12539,6 +12542,7 @@ oracles:
       trouble_in_the_megacity:
         name: "Trouble In The Megacity"
         oracle_type: table_text
+        dice: 1d6
         type: oracle_rollable
         summary: |-
           Use this set of oracles to detail your exploration in the depths of a megacity.
@@ -12625,6 +12629,7 @@ oracles:
       exploring_the_megacity:
         name: "Exploring The Megacity"
         oracle_type: table_text
+        dice: 1d6
         type: oracle_rollable
         summary: |-
           Use this set of oracles to detail your exploration in the depths of a megacity.
@@ -13237,6 +13242,7 @@ oracles:
       opportunity_in_the_megacity:
         name: "Opportunity In The Megacity"
         oracle_type: table_text
+        dice: 1d6
         type: oracle_rollable
         summary: |-
           Use this set of oracles to detail your exploration in the depths of a megacity.
