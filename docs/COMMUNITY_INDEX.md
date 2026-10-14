@@ -15,6 +15,7 @@ per-package details.
 | Fe-Runners | [`@datasworn-community/fe-runners`](https://www.npmjs.com/package/@datasworn-community/fe-runners) | `source_data/fe_runners` |
 | Ironsmith | [`@datasworn-community/ironsmith`](https://www.npmjs.com/package/@datasworn-community/ironsmith) | `source_data/ironsmith` |
 | Ancient Wonders | [`@datasworn-community/ancient-wonders`](https://www.npmjs.com/package/@datasworn-community/ancient-wonders) | `source_data/ancient_wonders` |
+| Revenant | [`@datasworn-community/revenant`](https://www.npmjs.com/package/@datasworn-community/revenant) | `source_data/revenant` |
 
 ## Author-Maintained Packages
 
