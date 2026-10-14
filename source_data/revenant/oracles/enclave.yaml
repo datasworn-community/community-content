@@ -1,0 +1,968 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  enclave:
+    name: Enclave Oracles
+    canonical_name: Enclaves
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
+        authors:
+          - name: Killian Gillespie
+      page: 290
+    summary: |-
+      An enclave is any location that people inhabit the wasteland. There are no specific entries in the Location oracles to tell you if you have come across an enclave. This is to ensure that the population level in Revenant is left up to you.
+    collections:
+      name:
+        name: Enclave Name
+        summary: |-
+          Use this oracle to generate a name for a place you have discovered or a location to which you need to travel. Roll your array dice once for the category and then roll your oracle dice for the name. Alternatively, you could come up with a name that fits the theme.
+        oracle_type: tables
+        type: oracle_collection
+        _source:
+          <<: *Source
+          page: 292
+        contents:
+          category:
+            name: Enclave Name Category
+            oracle_type: table_text
+            type: oracle_rollable
+            dice: 1d6
+            _source:
+              <<: *Source
+              page: 292
+            rows:
+              - roll: { min: 1, max: 1 }
+                text: "[Landscape](datasworn:oracle_rollable:revenant/enclave/name/category/landscape)"
+              - roll: { min: 2, max: 2 }
+                text: "[Manmade creation](datasworn:oracle_rollable:revenant/enclave/name/category/manmade)"
+              - roll: { min: 3, max: 3 }
+                text: "[Animal](datasworn:oracle_rollable:revenant/enclave/name/category/animal)"
+              - roll: { min: 4, max: 4 }
+                text: "[Historical event](datasworn:oracle_rollable:revenant/enclave/name/category/historical)"
+              - roll: { min: 5, max: 5 }
+                text: "[Ominous or inspirational name](datasworn:oracle_rollable:revenant/enclave/name/category/ominous)"
+              - roll: { min: 6, max: 6 }
+                text: "[Seasonal or environmental aspect](datasworn:oracle_rollable:revenant/enclave/name/category/seasonal)"
+        collections:
+          category:
+            name: Category
+            type: oracle_collection
+            oracle_type: table_shared_rolls
+            _source:
+              <<: *Source
+              page: 292
+            contents:
+              landscape:
+                name: Feature of the landscape
+                summary: |-
+                  A feature of the landscape. Envision what it is. What makes it unusual or distinctive?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 292
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Clearwater
+                  - roll: { min: 11, max: 20 }
+                    text: Darkwood
+                  - roll: { min: 21, max: 30 }
+                    text: Edgedrop
+                  - roll: { min: 31, max: 40 }
+                    text: Grassfields
+                  - roll: { min: 41, max: 50 }
+                    text: Highway
+                  - roll: { min: 51, max: 60 }
+                    text: Limestone
+                  - roll: { min: 61, max: 70 }
+                    text: Marshlands
+                  - roll: { min: 71, max: 80 }
+                    text: Rock Hall
+                  - roll: { min: 81, max: 90 }
+                    text: Snowy Peak
+                  - roll: { min: 91, max: 100 }
+                    text: Trainstop
+              manmade:
+                name: Manmade creation
+                summary: |-
+                  A manmade creation. What is it? Why is it important to this enclave's history?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 292
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Artillery Skies
+                  - roll: { min: 11, max: 20 }
+                    text: Bullet town
+                  - roll: { min: 21, max: 30 }
+                    text: Forge
+                  - roll: { min: 31, max: 40 }
+                    text: Junkyard
+                  - roll: { min: 41, max: 50 }
+                    text: Lighthouse
+                  - roll: { min: 51, max: 60 }
+                    text: Lonetower
+                  - roll: { min: 61, max: 70 }
+                    text: Stonewall
+                  - roll: { min: 71, max: 80 }
+                    text: The Underground
+                  - roll: { min: 81, max: 90 }
+                    text: Timbermill
+                  - roll: { min: 91, max: 100 }
+                    text: Trenchwatch
+              animal:
+                name: Animal
+                summary: |-
+                  An animal. Why have the people of this enclave chosen this animal?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 292
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Anaconda Falls
+                  - roll: { min: 11, max: 20 }
+                    text: "'Gator"
+                  - roll: { min: 21, max: 30 }
+                    text: Bearskin
+                  - roll: { min: 31, max: 40 }
+                    text: "Cougar' Caverns"
+                  - roll: { min: 41, max: 50 }
+                    text: Staghorn
+                  - roll: { min: 51, max: 60 }
+                    text: Lionfield
+                  - roll: { min: 61, max: 70 }
+                    text: Piranhas
+                  - roll: { min: 71, max: 80 }
+                    text: "The Rat's Nest"
+                  - roll: { min: 81, max: 90 }
+                    text: Wolfpack
+                  - roll: { min: 91, max: 100 }
+                    text: "Wild Dog's Run"
+              historical:
+                name: Historical event
+                summary: |-
+                  A historical event. What happened here? What commemorates this event?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 293
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Betrayal
+                  - roll: { min: 11, max: 20 }
+                    text: Bitten Hand
+                  - roll: { min: 21, max: 30 }
+                    text: Freedom
+                  - roll: { min: 31, max: 40 }
+                    text: Great Escape
+                  - roll: { min: 41, max: 50 }
+                    text: Grounded
+                  - roll: { min: 51, max: 60 }
+                    text: Minefield
+                  - roll: { min: 61, max: 70 }
+                    text: Shellshock
+                  - roll: { min: 71, max: 80 }
+                    text: The Battlefield
+                  - roll: { min: 81, max: 90 }
+                    text: The Stand
+                  - roll: { min: 91, max: 100 }
+                    text: Victory
+              ominous:
+                name: Ominous or inspirational name
+                summary: |-
+                  An ominous or inspirational name. What grim event inspired this name or what motivation was required to overcome adversity here?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 293
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Brave
+                  - roll: { min: 11, max: 20 }
+                    text: Broken
+                  - roll: { min: 21, max: 30 }
+                    text: Haven
+                  - roll: { min: 31, max: 40 }
+                    text: Ghosts
+                  - roll: { min: 41, max: 50 }
+                    text: Independence
+                  - roll: { min: 51, max: 60 }
+                    text: Murder
+                  - roll: { min: 61, max: 70 }
+                    text: Nowhere
+                  - roll: { min: 71, max: 80 }
+                    text: Oasis
+                  - roll: { min: 81, max: 90 }
+                    text: Purged
+                  - roll: { min: 91, max: 100 }
+                    text: Solace
+              seasonal:
+                name: Seasonal or environmental aspect
+                summary: |-
+                  A seasonal or environmental aspect. What influence does the weather have here?
+                oracle_type: column_text
+                type: oracle_rollable
+                _source:
+                  <<: *Source
+                  page: 293
+                rows:
+                  - roll: { min: 1, max: 10 }
+                    text: Dawndale
+                  - roll: { min: 11, max: 20 }
+                    text: Dusty
+                  - roll: { min: 21, max: 30 }
+                    text: Fort Frozenriver
+                  - roll: { min: 31, max: 40 }
+                    text: Good Hunting
+                  - roll: { min: 41, max: 50 }
+                    text: Hightide
+                  - roll: { min: 51, max: 60 }
+                    text: "Spring's Scent"
+                  - roll: { min: 61, max: 70 }
+                    text: Summerstead
+                  - roll: { min: 71, max: 80 }
+                    text: The Evergreens
+                  - roll: { min: 81, max: 90 }
+                    text: Windchime
+                  - roll: { min: 91, max: 100 }
+                    text: "Winter's End"
+    contents:
+      first_look:
+        name: First Look
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 294
+        summary: |-
+          Use this oracle to determine what features of the enclave stand out the most. The details could affect how you decide to name the enclave.
+        # usage:
+        #   initial: true
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Beautiful architecture
+          - roll: { min: 5, max: 8 }
+            text: Built around notable object
+          - roll: { min: 9, max: 14 }
+            text: Built from natural materials
+          - roll: { min: 15, max: 20 }
+            text: Built from salvage or scrap
+          - roll: { min: 21, max: 25 }
+            text: Repurposed structure
+          - roll: { min: 26, max: 29 }
+            text: Built within terrain
+          - roll: { min: 30, max: 35 }
+            text: Elevated or multi-leveled
+          - roll: { min: 36, max: 39 }
+            text: Subsurface location
+          - roll: { min: 40, max: 44 }
+            text: Intimidating defenses
+          - roll: { min: 45, max: 50 }
+            text: Mechanical architecture
+          - roll: { min: 51, max: 53 }
+            text: Hidden location
+          - roll: { min: 54, max: 57 }
+            text: Obvious social separation
+          - roll: { min: 58, max: 60 }
+            text: Polluted habitat
+          - roll: { min: 61, max: 63 }
+            text: Precarious location
+          - roll: { min: 64, max: 67 }
+            text: Notable emblem or signage
+          - roll: { min: 68, max: 73 }
+            text: Rough or rustic architecture
+          - roll: { min: 74, max: 78 }
+            text: Obvious structural damage
+          - roll: { min: 79, max: 84 }
+            text: Sprawling structures
+          - roll: { min: 85, max: 89 }
+            text: Temporary location
+          - roll: { min: 90, max: 100 }
+            text: '[Descriptor](datasworn:oracle_rollable:revenant/core/descriptor) + [Focus](datasworn:oracle_rollable:revenant/core/focus)'
+            oracle_rolls:
+              - oracle: oracle_rollable:revenant/core/descriptor
+                auto: true
+              - oracle: oracle_rollable:revenant/core/focus
+                auto: true
+      location_description:
+        name: Location Description
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 295
+        summary: |-
+          Use this oracle to add detail to the [First Look](datasworn:oracle_rollable:revenant/enclave/first_look) oracle, or by itself to generate a description of a location (p. 301). Roll more than once for extra detail.
+        recommended_rolls: { min: 1, max: 3 }
+        rows:
+          - _i18n: &Adjective
+              text:
+                part_of_speech: adjective
+            roll: { min: 1, max: 1 }
+            text: Abandoned
+          - _i18n: *Adjective
+            roll: { min: 2, max: 2 }
+            text: Abundant
+          - _i18n: *Adjective
+            roll: { min: 3, max: 3 }
+            text: Barren
+          - _i18n: *Adjective
+            roll: { min: 4, max: 4 }
+            text: Beautiful
+          - _i18n: *Adjective
+            roll: { min: 5, max: 5 }
+            text: Big
+          - _i18n: *Adjective
+            roll: { min: 6, max: 6 }
+            text: Blighted
+          - _i18n: *Adjective
+            roll: { min: 7, max: 7 }
+            text: Blocked
+          - _i18n: *Adjective
+            roll: { min: 8, max: 8 }
+            text: Broken
+          - _i18n: *Adjective
+            roll: { min: 9, max: 9 }
+            text: Chemical
+          - _i18n: *Adjective
+            roll: { min: 10, max: 10 }
+            text: Civilised
+          - _i18n: *Adjective
+            roll: { min: 11, max: 11 }
+            text: Cold
+          - _i18n: *Adjective
+            roll: { min: 12, max: 12 }
+            text: Colourful
+          - _i18n: *Adjective
+            roll: { min: 13, max: 13 }
+            text: Condemned
+          - _i18n: *Adjective
+            roll: { min: 14, max: 14 }
+            text: Connected
+          - _i18n: *Adjective
+            roll: { min: 15, max: 15 }
+            text: Contested
+          - _i18n: *Adjective
+            roll: { min: 16, max: 16 }
+            text: Corrupted
+          - _i18n: *Adjective
+            roll: { min: 17, max: 17 }
+            text: Crowded
+          - _i18n: *Adjective
+            roll: { min: 18, max: 18 }
+            text: Cultural
+          - _i18n: *Adjective
+            roll: { min: 19, max: 19 }
+            text: Dark
+          - _i18n: *Adjective
+            roll: { min: 20, max: 20 }
+            text: Dead
+          - _i18n: *Adjective
+            roll: { min: 21, max: 21 }
+            text: Defended
+          - _i18n: *Adjective
+            roll: { min: 22, max: 22 }
+            text: Dense
+          - _i18n: *Adjective
+            roll: { min: 23, max: 23 }
+            text: Desolate
+          - _i18n: *Adjective
+            roll: { min: 24, max: 24 }
+            text: Disguised
+          - _i18n: *Adjective
+            roll: { min: 25, max: 25 }
+            text: Diverse
+          - _i18n: *Adjective
+            roll: { min: 26, max: 26 }
+            text: Electrical
+          - _i18n: *Adjective
+            roll: { min: 27, max: 27 }
+            text: Elite
+          - _i18n: *Adjective
+            roll: { min: 28, max: 28 }
+            text: Emotional
+          - _i18n: *Adjective
+            roll: { min: 29, max: 29 }
+            text: Empty
+          - _i18n: *Adjective
+            roll: { min: 30, max: 30 }
+            text: Expansive
+          - _i18n: *Adjective
+            roll: { min: 31, max: 31 }
+            text: Exposed
+          - _i18n: *Adjective
+            roll: { min: 32, max: 32 }
+            text: Extreme
+          - _i18n: *Adjective
+            roll: { min: 33, max: 33 }
+            text: Familiar
+          - _i18n: *Adjective
+            roll: { min: 34, max: 34 }
+            text: Famous
+          - _i18n: *Adjective
+            roll: { min: 35, max: 35 }
+            text: Fancy
+          - _i18n: *Adjective
+            roll: { min: 36, max: 36 }
+            text: Fertile
+          - _i18n: *Adjective
+            roll: { min: 37, max: 37 }
+            text: Flooded
+          - _i18n: *Adjective
+            roll: { min: 38, max: 38 }
+            text: Forgotten
+          - _i18n: *Adjective
+            roll: { min: 39, max: 39 }
+            text: Foul
+          - _i18n: *Adjective
+            roll: { min: 40, max: 40 }
+            text: Fun
+          - _i18n: *Adjective
+            roll: { min: 41, max: 41 }
+            text: Futuristic
+          - _i18n: *Adjective
+            roll: { min: 42, max: 42 }
+            text: Grim
+          - _i18n: *Adjective
+            roll: { min: 43, max: 43 }
+            text: Hidden
+          - _i18n: *Adjective
+            roll: { min: 44, max: 44 }
+            text: High
+          - _i18n: *Adjective
+            roll: { min: 45, max: 45 }
+            text: Hot
+          - _i18n: *Adjective
+            roll: { min: 46, max: 46 }
+            text: Huge
+          - _i18n: *Adjective
+            roll: { min: 47, max: 47 }
+            text: Illegal
+          - _i18n: *Adjective
+            roll: { min: 48, max: 48 }
+            text: Inaccessible
+          - _i18n: *Adjective
+            roll: { min: 49, max: 49 }
+            text: Incomplete
+          - _i18n: *Adjective
+            roll: { min: 50, max: 50 }
+            text: Industrial
+          - _i18n: *Adjective
+            roll: { min: 51, max: 51 }
+            text: Inviting
+          - _i18n: *Adjective
+            roll: { min: 52, max: 52 }
+            text: Isolated
+          - _i18n: *Adjective
+            roll: { min: 53, max: 53 }
+            text: Limited
+          - _i18n: *Adjective
+            roll: { min: 54, max: 54 }
+            text: Local
+          - _i18n: *Adjective
+            roll: { min: 55, max: 55 }
+            text: Low
+          - _i18n: *Adjective
+            roll: { min: 56, max: 56 }
+            text: Lush
+          - _i18n: *Adjective
+            roll: { min: 57, max: 57 }
+            text: Musty
+          - _i18n: *Adjective
+            roll: { min: 58, max: 58 }
+            text: Narrow
+          - _i18n: *Adjective
+            roll: { min: 59, max: 59 }
+            text: Natural
+          - _i18n: *Adjective
+            roll: { min: 60, max: 60 }
+            text: New
+          - _i18n: *Adjective
+            roll: { min: 61, max: 61 }
+            text: Noisy
+          - _i18n: *Adjective
+            roll: { min: 62, max: 62 }
+            text: Nostalgic
+          - _i18n: *Adjective
+            roll: { min: 63, max: 63 }
+            text: Official
+          - _i18n: *Adjective
+            roll: { min: 64, max: 64 }
+            text: Old
+          - _i18n: *Adjective
+            roll: { min: 65, max: 65 }
+            text: Open
+          - _i18n: *Adjective
+            roll: { min: 66, max: 66 }
+            text: Peaceful
+          - _i18n: *Adjective
+            roll: { min: 67, max: 67 }
+            text: Perfect
+          - _i18n: *Adjective
+            roll: { min: 68, max: 68 }
+            text: Perilous
+          - _i18n: *Adjective
+            roll: { min: 69, max: 69 }
+            text: Popular
+          - _i18n: *Adjective
+            roll: { min: 70, max: 70 }
+            text: Protected
+          - _i18n: *Adjective
+            roll: { min: 71, max: 71 }
+            text: Public
+          - _i18n: *Adjective
+            roll: { min: 72, max: 72 }
+            text: Religious
+          - _i18n: *Adjective
+            roll: { min: 73, max: 73 }
+            text: Remote
+          - _i18n: *Adjective
+            roll: { min: 74, max: 74 }
+            text: Restricted
+          - _i18n: *Adjective
+            roll: { min: 75, max: 75 }
+            text: Rich
+          - _i18n: *Adjective
+            roll: { min: 76, max: 76 }
+            text: Rotting
+          - _i18n: *Adjective
+            roll: { min: 77, max: 77 }
+            text: Rough
+          - _i18n: *Adjective
+            roll: { min: 78, max: 78 }
+            text: Ruined
+          - _i18n: *Adjective
+            roll: { min: 79, max: 79 }
+            text: Rural
+          - _i18n: *Adjective
+            roll: { min: 80, max: 80 }
+            text: Sacred
+          - _i18n: *Adjective
+            roll: { min: 81, max: 81 }
+            text: Sad
+          - _i18n: *Adjective
+            roll: { min: 82, max: 82 }
+            text: Savage
+          - _i18n: *Adjective
+            roll: { min: 83, max: 83 }
+            text: Secret
+          - _i18n: *Adjective
+            roll: { min: 84, max: 84 }
+            text: Sensitive
+          - _i18n: *Adjective
+            roll: { min: 85, max: 85 }
+            text: Settled
+          - _i18n: *Adjective
+            roll: { min: 86, max: 86 }
+            text: Shadowy
+          - _i18n: *Adjective
+            roll: { min: 87, max: 87 }
+            text: Small
+          - _i18n: *Adjective
+            roll: { min: 88, max: 88 }
+            text: Smoky
+          - _i18n: *Adjective
+            roll: { min: 89, max: 89 }
+            text: Specialised
+          - _i18n: *Adjective
+            roll: { min: 90, max: 90 }
+            text: Strange
+          - _i18n: *Adjective
+            roll: { min: 91, max: 91 }
+            text: Stunning
+          - _i18n: *Adjective
+            roll: { min: 92, max: 92 }
+            text: Suspicious
+          - _i18n: *Adjective
+            roll: { min: 93, max: 93 }
+            text: Temporary
+          - _i18n: *Adjective
+            roll: { min: 94, max: 94 }
+            text: Unprotected
+          - _i18n: *Adjective
+            roll: { min: 95, max: 95 }
+            text: Vital
+          - _i18n: *Adjective
+            roll: { min: 96, max: 96 }
+            text: Watery
+          - _i18n: *Adjective
+            roll: { min: 97, max: 97 }
+            text: Welcoming
+          - _i18n: *Adjective
+            roll: { min: 98, max: 98 }
+            text: Wide
+          - _i18n: *Adjective
+            roll: { min: 99, max: 99 }
+            text: Wild
+          - _i18n: *Adjective
+            roll: { min: 100, max: 100 }
+            text: Withered
+      initial_contact:
+        name: Initial Contact
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 296
+        summary: |-
+          Use this oracle when you want to define the initial tone of an encounter with an enclave.
+        # usage:
+        #   initial: true
+        rows:
+          - _i18n: *Adjective
+            roll: { min: 1, max: 20 }
+            text: Welcoming
+          - _i18n: *Adjective
+            roll: { min: 21, max: 30 }
+            text: Neutral
+          - _i18n: *Adjective
+            roll: { min: 31, max: 50 }
+            text: Wary
+          - _i18n: *Adjective
+            roll: { min: 51, max: 60 }
+            text: Uncooperative
+          - _i18n: *Adjective
+            roll: { min: 61, max: 70 }
+            text: Hostile
+          - _i18n: *Adjective
+            roll: { min: 71, max: 83 }
+            text: Asking for help
+          - _i18n: *Adjective
+            roll: { min: 84, max: 86 }
+            text: In battle
+          - _i18n: *Adjective
+            roll: { min: 87, max: 89 }
+            text: Captured
+          - _i18n: *Adjective
+            roll: { min: 90, max: 92 }
+            text: Unresponsive
+          - _i18n: *Adjective
+            roll: { min: 93, max: 100 }
+            text: Destroyed
+      projects:
+        name: Enclave Projects
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 296
+        summary: |-
+          Use this oracle when it's appropriate for your character to know or uncover these details. They do not necessarily represent every activity at the site but might be the most visible or noteworthy aspects.
+        rows:
+          - _i18n: &CommonNoun
+              text:
+                part_of_speech: common_noun
+            roll: { min: 1, max: 9 }
+            text: Agriculture
+          - _i18n: *CommonNoun
+            roll: { min: 10, max: 13 }
+            text: Black market
+          - _i18n: *CommonNoun
+            roll: { min: 14, max: 18 }
+            text: Defense
+          - _i18n: *CommonNoun
+            roll: { min: 19, max: 22 }
+            text: Energy
+          - _i18n: &Gerund
+              text:
+                part_of_speech: gerund
+            roll: { min: 23, max: 25 }
+            text: Engineering
+          - _i18n: *CommonNoun
+            roll: { min: 26, max: 29 }
+            text: Entertainment
+          - _i18n: *CommonNoun
+            roll: { min: 30, max: 34 }
+            text: Evacuation
+          - _i18n: *CommonNoun
+            roll: { min: 35, max: 40 }
+            text: Expansion
+          - _i18n: *CommonNoun
+            roll: { min: 41, max: 44 }
+            text: Exploration
+          - _i18n: *CommonNoun
+            roll: { min: 45, max: 50 }
+            text: Fuel
+          - _i18n: *Gerund
+            roll: { min: 51, max: 57 }
+            text: Hunting
+          - _i18n: *Gerund
+            roll: { min: 58, max: 62 }
+            text: Manufacturing
+          - _i18n: *CommonNoun
+            roll: { min: 63, max: 65 }
+            text: Medical
+          - _i18n: *Gerund
+            roll: { min: 66, max: 69 }
+            text: Mining
+          - _i18n: *CommonNoun
+            roll: { min: 70, max: 79 }
+            text: Salvage
+          - _i18n: *CommonNoun
+            roll: { min: 80, max: 84 }
+            text: Surveillance
+          - _i18n: *CommonNoun
+            roll: { min: 85, max: 90 }
+            text: Trade
+          - _i18n: *CommonNoun
+            roll: { min: 91, max: 93 }
+            text: Warfare
+          - roll: { min: 94, max: 98 }
+            <<: &ActionTheme
+              text: '[Action](datasworn:oracle_rollable:revenant/core/action) + [Theme](datasworn:oracle_rollable:revenant/core/theme)'
+              oracle_rolls:
+                - oracle: oracle_rollable:revenant/core/action
+                  auto: true
+                - oracle: oracle_rollable:revenant/core/theme
+                  auto: true
+          - roll: { min: 99, max: 100 }
+            <<: &RollTwice
+              text: Roll twice
+              oracle_rolls:
+                - number_of_rolls: 2
+                  auto: true
+      authority:
+        name: Authority
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 296
+        summary: |-
+          Use this oracle to help flesh out the kind of justice meted out in the enclave.
+        # usage:
+        #   initial: true
+        rows:
+          - _i18n: *Adjective
+            roll: { min: 1, max: 20 }
+            text: None / Lawless
+          - _i18n: *Adjective
+            roll: { min: 21, max: 30 }
+            text: Incompetent
+          - _i18n: *Adjective
+            roll: { min: 31, max: 40 }
+            text: Tolerant
+          - _i18n: *Adjective
+            roll: { min: 41, max: 50 }
+            text: Prejudiced
+          - _i18n: *Adjective
+            roll: { min: 51, max: 65 }
+            text: Charitable
+          - _i18n: *Adjective
+            roll: { min: 66, max: 80 }
+            text: Democratic
+          - _i18n: *Adjective
+            roll: { min: 81, max: 90 }
+            text: Punitive
+          - _i18n: *Adjective
+            roll: { min: 91, max: 100 }
+            text: Feudalistic
+      influence:
+        name: Influence
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 297
+        summary: |-
+          Use this oracle to determine the power the enclave has across your world.
+        rows:
+          - roll: { min: 1, max: 10 }
+            text: Banished, forsaken, or forgotten
+          - roll: { min: 11, max: 30 }
+            text: Limited influence in a remote area
+          - roll: { min: 31, max: 50 }
+            text: Reasonable influence in a small area
+          - roll: { min: 51, max: 70 }
+            text: Strong influence in a well established area
+          - roll: { min: 71, max: 85 }
+            text: Extensive influence across a few areas
+          - roll: { min: 86, max: 95 }
+            text: Dominant and far-reaching influence
+          - roll: { min: 96, max: 100 }
+            text: Inescapable influence
+      trouble:
+        name: Enclave Trouble
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 297
+        summary: |-
+          Use this oracle to generate a narrative hook for a problem faced by a community. This oracle can help inspire a plan or serve as a prompt for a trouble you encounter when you interact with an enclave. This trouble may be shared by all or just a small few within the settlement.
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Accusation of the innocent
+          - roll: { min: 5, max: 8 }
+            text: Battle for leadership
+          - roll: { min: 9, max: 11 }
+            text: Betrayal from within
+          - roll: { min: 12, max: 14 }
+            text: Broken truce or alliance
+          - roll: { min: 15, max: 18 }
+            text: Caught in the crossfire
+          - roll: { min: 19, max: 22 }
+            text: Changing environment
+          - roll: { min: 23, max: 25 }
+            text: Clash of cultures
+          - roll: { min: 26, max: 29 }
+            text: Dangerous discovery
+          - roll: { min: 30, max: 33 }
+            text: Depleted supplies
+          - roll: { min: 34, max: 36 }
+            text: Deprived of a resource
+          - roll: { min: 37, max: 40 }
+            text: Disastrous accident
+          - roll: { min: 41, max: 44 }
+            text: Feuding families or factions
+          - roll: { min: 45, max: 47 }
+            text: Impassible route
+          - roll: { min: 48, max: 51 }
+            text: Impending attack
+          - roll: { min: 52, max: 54 }
+            text: Impending natural disaster
+          - roll: { min: 55, max: 58 }
+            text: Important event threatened
+          - roll: { min: 59, max: 61 }
+            text: Important object is stolen
+          - roll: { min: 62, max: 65 }
+            text: Incompetent or unjust leader
+          - roll: { min: 66, max: 67 }
+            text: Mounting debt
+          - roll: { min: 68, max: 70 }
+            text: Mysterious deaths
+          - roll: { min: 71, max: 74 }
+            text: Overdue delivery
+          - roll: { min: 75, max: 78 }
+            text: Plagued by sickness
+          - roll: { min: 79, max: 81 }
+            text: Preyed upon by raiders
+          - roll: { min: 82, max: 85 }
+            text: Revolt against leadership
+          - roll: { min: 86, max: 89 }
+            text: Shunned by others
+          - roll: { min: 90, max: 92 }
+            text: Someone is ill or injured
+          - roll: { min: 93, max: 96 }
+            text: Someone is missing
+          - roll: { min: 97, max: 100 }
+            <<: *RollTwice
+      objective:
+        name: Faction Objective
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 298
+        summary: |-
+          Use this oracle when you uncover a plan a faction has made in order to bolster their position or influence.
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Break an alliance
+          - roll: { min: 3, max: 4 }
+            text: Broaden their scope
+          - roll: { min: 5, max: 6 }
+            text: Collect a debt
+          - roll: { min: 7, max: 8 }
+            text: Convince a rival asset
+          - roll: { min: 9, max: 10 }
+            text: Defeat a rival
+          - roll: { min: 11, max: 12 }
+            text: Destroy a powerful device
+          - roll: { min: 13, max: 14 }
+            text: Destroy a symbolic target
+          - roll: { min: 15, max: 16 }
+            text: Destroy evidence
+          - roll: { min: 17, max: 18 }
+            text: "Discredit a rival\u2019s plan"
+          - roll: { min: 19, max: 20 }
+            text: Discredit a rival leader
+          - roll: { min: 21, max: 22 }
+            text: Disrupt communications
+          - roll: { min: 23, max: 24 }
+            text: "Escape another\u2019s control"
+          - roll: { min: 25, max: 26 }
+            text: Establish a new leader
+          - roll: { min: 27, max: 28 }
+            text: Establish a safe refuge
+          - roll: { min: 29, max: 30 }
+            text: Expand to a new location
+          - roll: { min: 31, max: 32 }
+            text: Find new ways to influence
+          - roll: { min: 33, max: 34 }
+            text: Form an alliance
+          - roll: { min: 35, max: 36 }
+            text: Gain leverage over another
+          - roll: { min: 37, max: 38 }
+            text: Give aid to a faction
+          - roll: { min: 39, max: 40 }
+            text: Heighten abilities
+          - roll: { min: 41, max: 42 }
+            text: Hunt down a rogue asset
+          - roll: { min: 43, max: 44 }
+            text: Improve public opinion
+          - roll: { min: 45, max: 46 }
+            text: Incite conflict among rivals
+          - roll: { min: 47, max: 48 }
+            text: Infiltrate a rival faction
+          - roll: { min: 49, max: 50 }
+            text: Make a rival pay for aid
+          - roll: { min: 51, max: 52 }
+            text: Narrow their scope
+          - roll: { min: 53, max: 54 }
+            text: Negotiate a truce
+          - roll: { min: 55, max: 56 }
+            text: Negotiate for territory
+          - roll: { min: 57, max: 58 }
+            text: Obtain a commodity
+          - roll: { min: 59, max: 60 }
+            text: Obtain crucial information
+          - roll: { min: 61, max: 62 }
+            text: Put down an internal revolt
+          - roll: { min: 63, max: 64 }
+            text: Repay a debt
+          - roll: { min: 65, max: 66 }
+            text: Rescue a group or asset
+          - roll: { min: 67, max: 68 }
+            text: Research an innovation
+          - roll: { min: 69, max: 70 }
+            text: Resolve a conflict
+          - roll: { min: 71, max: 72 }
+            text: Retake lost territory
+          - roll: { min: 73, max: 74 }
+            text: Sabotage negotiations
+          - roll: { min: 75, max: 76 }
+            text: Secure aid from a rival
+          - roll: { min: 77, max: 78 }
+            text: Secure a supply route
+          - roll: { min: 79, max: 80 }
+            text: Seize rival territory
+          - roll: { min: 81, max: 82 }
+            text: Spread misinformation
+          - roll: { min: 83, max: 84 }
+            text: Transport a valued asset
+          - roll: { min: 85, max: 86 }
+            text: "Twist a rival's public opinion"
+          - roll: { min: 87, max: 88 }
+            text: Uncover a rival safehouse
+          - roll: { min: 89, max: 90 }
+            text: Upgrade facilities
+          - roll: { min: 91, max: 92 }
+            text: Withdraw from a location
+          - roll: { min: 93, max: 95 }
+            <<: *ActionTheme
+          - roll: { min: 96, max: 100 }
+            <<: *RollTwice

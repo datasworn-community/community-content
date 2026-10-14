@@ -1,0 +1,167 @@
+_id: revenant
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  story:
+    name: Story Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+        title: 'Revenant'
+        license: https://creativecommons.org/licenses/by-sa/4.0
+        url: https://www.drivethrurpg.com/en/product/457762/revenant
+        date: 2025-06-23
+        authors:
+          - name: Killian Gillespie
+      page: 350
+    summary: |-
+      The following oracles fill niche roles, but still provide useful resources to inspire your imagination.
+    contents:
+      conversation:
+        name: Conversation
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 351
+        summary: |-
+          Use this oracle when you want a topic starter for a conversation. This conversation opening will allow some of your character's personality to come through without having to also force the plot.
+        rows:
+          - roll: { min: 1, max: 3 }
+            text: Acquisition of knowledge
+          - roll: { min: 4, max: 6 }
+            text: Culture of the community
+          - roll: { min: 7, max: 9 }
+            text: Current events
+          - roll: { min: 10, max: 12 }
+            text: Current leadership
+          - roll: { min: 13, max: 15 }
+            text: Famous people
+          - roll: { min: 16, max: 18 }
+            text: Famous places
+          - roll: { min: 19, max: 21 }
+            text: Future of the community
+          - roll: { min: 22, max: 24 }
+            text: Knowledge about a region
+          - roll: { min: 25, max: 27 }
+            text: Knowledge about an enemy
+          - roll: { min: 28, max: 30 }
+            text: Information recently found
+          - roll: { min: 31, max: 33 }
+            text: Information recently lost
+          - roll: { min: 34, max: 36 }
+            text: Ingenious idea
+          - roll: { min: 37, max: 39 }
+            text: Items of importance
+          - roll: { min: 40, max: 42 }
+            text: Local benevolent faction
+          - roll: { min: 43, max: 45 }
+            text: Local malevolent faction
+          - roll: { min: 46, max: 48 }
+            text: Most valuable experience
+          - roll: { min: 49, max: 50 }
+            text: Particular skills of a trade
+          - roll: { min: 51, max: 52 }
+            text: Personal injury
+          - roll: { min: 53, max: 54 }
+            text: Powerful people
+          - roll: { min: 55, max: 57 }
+            text: Recent change in an NPC
+          - roll: { min: 58, max: 60 }
+            text: Recent change of their own
+          - roll: { min: 61, max: 63 }
+            text: Recent inaction or failure
+          - roll: { min: 64, max: 66 }
+            text: Shifting political alliances
+          - roll: { min: 67, max: 69 }
+            text: Significant death
+          - roll: { min: 70, max: 72 }
+            text: Small jobs that need finishing
+          - roll: { min: 73, max: 75 }
+            text: Specific location
+          - roll: { min: 76, max: 78 }
+            text: Their own failures
+          - roll: { min: 79, max: 81 }
+            text: Their own heritage
+          - roll: { min: 82, max: 84 }
+            text: Their own skills or craft
+          - roll: { min: 85, max: 87 }
+            text: Upcoming events
+          - roll: { min: 88, max: 90 }
+            text: Useful contacts
+          - roll: { min: 91, max: 93 }
+            text: Where the power lies
+          - roll: { min: 94, max: 96 }
+            text: Why a change is needed
+          - roll: { min: 97, max: 100 }
+            text: Roll twice
+            oracle_rolls:
+              - number_of_rolls: 2
+                auto: true
+      complication:
+        name: Complication
+        oracle_type: table_text
+        type: oracle_rollable
+        _source:
+          <<: *Source
+          page: 352
+        summary: |-
+          This oracle can be used to introduce narrative troubles in crucial moments or as an alternative to the table when you [Meet with Disaster](datasworn:move:revenant/fate/meet_with_disaster).
+        rows:
+          - roll: { min: 1, max: 4 }
+            text: Crucial equipment or device fails
+          - roll: { min: 5, max: 8 }
+            text: Crucial equipment or device is sabotaged
+          - roll: { min: 9, max: 12 }
+            text: Debt or promise becomes due
+          - roll: { min: 13, max: 16 }
+            text: Enemy reveals unexpected power, ability or influence
+          - roll: { min: 17, max: 20 }
+            text: Enemy reveals their true agenda or nature
+          - roll: { min: 21, max: 23 }
+            text: Enemy unexpectedly benefits from your actions
+          - roll: { min: 24, max: 26 }
+            text: Key location is made inaccessible
+          - roll: { min: 27, max: 29 }
+            text: Key location is threatened or made unsafe
+          - roll: { min: 30, max: 33 }
+            text: Natural disaster is imminent
+          - roll: { min: 34, max: 36 }
+            text: Needed item or resource is unavailable
+          - roll: { min: 37, max: 39 }
+            text: Object of a goal is not what you assumed
+          - roll: { min: 40, max: 42 }
+            text: Old enemy resurfaces
+          - roll: { min: 43, max: 45 }
+            text: Simultaneous problems cause you to face a hard choice
+          - roll: { min: 46, max: 48 }
+            text: Someone important betrays your trust or loyalty
+          - roll: { min: 49, max: 51 }
+            text: Someone important is threatened or endangered
+          - roll: { min: 52, max: 54 }
+            text: Someone important has their problematic secret revealed
+          - roll: { min: 55, max: 57 }
+            text: Someone important goes missing
+          - roll: { min: 58, max: 61 }
+            text: Technology or device has unexpected side effects
+          - roll: { min: 62, max: 65 }
+            text: Time pressure suddenly increases
+          - roll: { min: 66, max: 68 }
+            text: Trap is sprung
+          - roll: { min: 69, max: 72 }
+            text: True agenda of a connection is revealed
+          - roll: { min: 73, max: 76 }
+            text: Trusted information is shown to be false
+          - roll: { min: 77, max: 80 }
+            text: Two seemingly unrelated problems are connected
+          - roll: { min: 81, max: 84 }
+            text: Undermined by self-doubt or vulnerabilities
+          - roll: { min: 85, max: 88 }
+            text: Unexpected enemies appear
+          - roll: { min: 89, max: 92 }
+            text: Urgent message distracts you from your mission
+          - roll: { min: 93, max: 95 }
+            text: You have been tracked or followed
+          - roll: { min: 96, max: 100 }
+            text: You were diverted from the true crisis

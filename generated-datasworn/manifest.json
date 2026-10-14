@@ -38,6 +38,15 @@
         "delve"
       ]
     },
+    "revenant": {
+      "id": "revenant",
+      "type": "ruleset",
+      "schemaLine": "0.3",
+      "packageName": "@datasworn-community/revenant",
+      "path": "revenant.json",
+      "description": "Datasworn JSON data for Revenant, a post-apocalyptic ruleset by Killian Gillespie, based on Starforged.",
+      "license": "CC-BY-SA-4.0"
+    },
     "starsmith": {
       "id": "starsmith",
       "type": "expansion",
