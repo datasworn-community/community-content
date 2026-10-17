@@ -4077,7 +4077,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Exploring The Megacity",
           "oracle_type": "table_text",
           "rows": [
@@ -6256,7 +6256,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Opportunity In The Megacity",
           "oracle_type": "table_text",
           "rows": [
@@ -6305,7 +6305,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Trouble In The Megacity",
           "oracle_type": "table_text",
           "rows": [
@@ -6761,7 +6761,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Exploring The Megastructure",
           "oracle_type": "table_text",
           "rows": [
@@ -8555,7 +8555,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Opportunity In The Megastructure",
           "oracle_type": "table_text",
           "rows": [
@@ -9154,7 +9154,7 @@
             "roll": "Roll",
             "text": "Result"
           },
-          "dice": "1d100",
+          "dice": "1d6",
           "name": "Trouble In The Megastructure",
           "oracle_type": "table_text",
           "rows": [
@@ -59944,6 +59944,14 @@
                 "min": 86
               },
               "text": "Character focus : Interlude Scene"
+            },
+            {
+              "_id": "oracle_rollable.row:ancient_wonders/planets_expanded/planetside_waypoint_expanse.8",
+              "roll": {
+                "max": 100,
+                "min": 96
+              },
+              "text": "Roll twice"
             }
           ],
           "summary": "When you reach a waypoint while exploring a planet, use the table below to provide an event, encounter, or moment of character focus.\n\nIf you get the \"Planetside community\" result but have previously determined there are no settlements in the world, reroll or envision how this contradiction adds an unexpected revelation.",
